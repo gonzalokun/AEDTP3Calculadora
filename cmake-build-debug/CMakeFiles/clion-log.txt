@@ -1,0 +1,4 @@
+"D:\JetBrains\CLion 2017.2.3\bin\cmake\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" E:\Proyectos\AEDTP3Calculadora
+-- Configuring done
+-- Generating done
+-- Build files have been written to: E:/Proyectos/AEDTP3Calculadora/cmake-build-debug

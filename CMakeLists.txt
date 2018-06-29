@@ -12,7 +12,7 @@ file(GLOB TEST_SOURCES tests/*.cpp)
 add_subdirectory(tests/google-test)
 
 # Creamos el ejecutable para correr los tests
-add_executable(correrTests ${TEST_SOURCES} ${SOURCE_FILES})
+add_executable(correrTests ${TEST_SOURCES} ${SOURCE_FILES} src/Calculadora.cpp)
 
 # Necesitamos asociar los archivos del framework de testing
 target_link_libraries(correrTests gtest gtest_main)
