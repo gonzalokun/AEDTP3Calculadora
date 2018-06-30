@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/pablo/w/materias/algo2/repo/2018/c1/tps/tp3/tp3/alumnos/tests/google-test/src/gtest_main.cc" "/home/pablo/w/materias/algo2/repo/2018/c1/tps/tp3/tp3/alumnos/tests/google-test/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o"
+  "/home/diego/Documentos/Facultad/Algoritmos/tp3/alumnos/tests/google-test/src/gtest_main.cc" "/home/diego/Documentos/Facultad/Algoritmos/tp3/alumnos/tests/google-test/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -16,7 +16,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/pablo/w/materias/algo2/repo/2018/c1/tps/tp3/tp3/alumnos/tests/google-test/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "/home/diego/Documentos/Facultad/Algoritmos/tp3/alumnos/tests/google-test/CMakeFiles/gtest.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

@@ -1,6 +1,21 @@
 #include "gtest/gtest.h"
 
 #include "../src/Driver.h"
+#include <iostream>
+
+TEST(test_driver, primer_test){
+    cout << "hello world"<<endl;
+    Driver d;
+    cout << "Finish"<<endl;
+    d.begin("Rutina1");
+    d.push(5);
+    d.push(2);
+    cout << "antes de int2"<<endl;
+    cout <<"op: "<< d.prog->instruccion2("Rutina1", 0)<<endl;
+    d.end("Rutina1");
+}
+
+/*
 
 TEST(test_driver, programa_vacio) {
 	Driver d;
@@ -652,4 +667,4 @@ TEST(test_driver, programa_factorial) {
 		ASSERT_EQ(d.valorVariable("y"), factorial(a));
 	}
 }
-
+*/
