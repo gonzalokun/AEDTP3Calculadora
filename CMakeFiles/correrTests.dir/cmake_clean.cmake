@@ -1,12 +1,14 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/correrTests.dir/tests/test_driver.cpp.o"
-  "CMakeFiles/correrTests.dir/tests/test_ventana.cpp.o"
-  "CMakeFiles/correrTests.dir/src/Calculadora.cpp.o"
-  "CMakeFiles/correrTests.dir/src/Driver.cpp.o"
-  "CMakeFiles/correrTests.dir/src/Instruccion.cpp.o"
-  "CMakeFiles/correrTests.dir/src/Programa.cpp.o"
+  "CMakeFiles/correrTests.dir/tests/test_driver.cpp.obj"
+  "CMakeFiles/correrTests.dir/tests/test_ventana.cpp.obj"
+  "CMakeFiles/correrTests.dir/src/Calculadora.cpp.obj"
+  "CMakeFiles/correrTests.dir/src/Driver.cpp.obj"
+  "CMakeFiles/correrTests.dir/src/Instruccion.cpp.obj"
+  "CMakeFiles/correrTests.dir/src/Programa.cpp.obj"
   "correrTests.pdb"
-  "correrTests"
+  "correrTests.exe"
+  "correrTests.exe.manifest"
+  "libcorrerTests.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

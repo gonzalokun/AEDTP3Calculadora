@@ -8,22 +8,21 @@ using namespace std;
 #include <list>
 #include <set> //conj lineal
 
-
-
 class Programa {
 public:
     Programa();
     ~Programa();
     void agregarInstruccion(rutina r, Instruccion i);
-    const set<rutina>& getRutinas() const;
+    list<rutina>& getRutinas() const;
     Instruccion instruccion(const rutina r, const int iesima);
     Operacion instruccion2(const rutina r, const int iesima);
     int longitud(rutina r) ;
 
 private:
 
-    trie<list<Instruccion>* > rutinasPorNombre; //clave rutinas
-    vector<rutina> rutinas;
+    trie<list<Instruccion> > rutinasPorNombre; //clave rutinas
+    list<rutina> rutinas;
+
 };
 
 #endif

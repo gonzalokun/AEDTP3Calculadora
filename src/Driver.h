@@ -32,7 +32,7 @@ public:
 	int valorVariable(string idVariable) const;
 	int valorHistoricoVariable(string idVariable, int t) const;
 	int instanteActual() const;
-	Programa* prog;
+	Programa* prog; //publico temporalmente
 private:
 	// COMPLETAR
 

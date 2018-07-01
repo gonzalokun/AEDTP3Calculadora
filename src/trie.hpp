@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <iostream>
+#include <tuple>
+
 template <typename T>
 
 trie<T>::trie():_size(0){
@@ -114,6 +116,45 @@ T& trie<T>::operator[](const string& clave){
         return *(nodoAct->definicion);
     }
 }
+
+template <typename T>
+T& trie<T>::operator[](const tuple<string, int> &clave_w){
+    //veo si existe y devuelvo significado, si no la creo
+    string clave = get<0>(clave_w);
+    int w = get<1>(clave_w);
+
+    if(count(clave) == 0) {//no existe
+        //Puede pasar que este vacio el trie o no
+        Nodo* nodoAct = raiz;
+        for (int i = 0; i < clave.length(); i++)
+        {
+            //cout << "quiero nodo: "<< clave[i]<<endl;
+            int indexAscii = int(clave[i]) - int('A');//lo centramos en 0 los index
+            if(nodoAct->siguientes[indexAscii] != NULL) { //si existe
+                //cout << "exis nodo"<<endl;
+            }else {//si es null => lo creo
+                //cout <<"t]engo q crearlo"<<endl;
+                Nodo* nuevoNodo = iniciarNodo();
+                nodoAct->siguientes[indexAscii] = nuevoNodo;
+            }
+            nodoAct = nodoAct->siguientes[indexAscii];
+        }
+
+        nodoAct->definicion = new T(w);
+        _size++;
+        return *(nodoAct->definicion);
+    }else { //existe
+        Nodo* nodoAct = raiz;
+        for (int i = 0; i < clave.length(); ++i)
+        {
+            int indexAscii = int(clave[i]) - int('A');//lo centramos en 0 los index
+            nodoAct = nodoAct->siguientes[indexAscii];
+        }
+        return *(nodoAct->definicion);
+    }
+}
+
+
 
 template<typename T>
 typename trie<T>::Nodo* trie<T>::iniciarNodo() {

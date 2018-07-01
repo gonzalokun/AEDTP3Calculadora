@@ -69,7 +69,7 @@ void Driver::comenzarEjecucion(string rutina, int capacidadVentana) {
 }
 
 void Driver::asignarVariable(string x, int valor) {
-
+    calc->asignarVariable(x,valor);
 }
 
 bool Driver::ejecucionFinalizada() const {

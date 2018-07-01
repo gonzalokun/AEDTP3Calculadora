@@ -10,8 +10,8 @@ TEST(test_driver, primer_test){
     d.begin("Rutina1");
     d.push(5);
     d.push(2);
-    cout << "antes de int2"<<endl;
-    cout <<"op: "<< d.prog->instruccion2("Rutina1", 0)<<endl;
+    cout <<"operacion 0 de Rutina1: "<< d.prog->instruccion2("Rutina1", 0)<<endl;
+    //d.asignarVariable("a",5);
     d.end("Rutina1");
 }
 

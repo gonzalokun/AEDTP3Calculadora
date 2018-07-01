@@ -37,7 +37,7 @@ public:
     **/
 
     T &operator[](const string &key);
-
+    T &operator[](const tuple<string, int>& clave_w);
     /**
     COUNT
     * Devuelve la cantidad de apariciones de la clave (0 o 1).
@@ -79,7 +79,6 @@ private:
     struct Nodo {
         Nodo** siguientes;
         T* definicion;
-
     };
 
     Nodo* raiz;

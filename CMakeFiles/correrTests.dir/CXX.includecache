@@ -6,17 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/home/diego/Documentos/Facultad/Algoritmos/tp3/alumnos/src/Calculadora.cpp
+C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Calculadora.cpp
 Calculadora.h
-/home/diego/Documentos/Facultad/Algoritmos/tp3/alumnos/src/Calculadora.h
+C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Calculadora.h
 
-/home/diego/Documentos/Facultad/Algoritmos/tp3/alumnos/src/Calculadora.h
+C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Calculadora.h
 Instruccion.h
-/home/diego/Documentos/Facultad/Algoritmos/tp3/alumnos/src/Instruccion.h
+C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Instruccion.h
 Programa.h
-/home/diego/Documentos/Facultad/Algoritmos/tp3/alumnos/src/Programa.h
+C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Programa.h
 Ventana.h
-/home/diego/Documentos/Facultad/Algoritmos/tp3/alumnos/src/Ventana.h
+C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Ventana.h
 queue
 -
 map
@@ -26,75 +26,77 @@ stack
 tuple
 -
 
-/home/diego/Documentos/Facultad/Algoritmos/tp3/alumnos/src/Driver.cpp
+C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Driver.cpp
 Driver.h
-/home/diego/Documentos/Facultad/Algoritmos/tp3/alumnos/src/Driver.h
+C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Driver.h
 
-/home/diego/Documentos/Facultad/Algoritmos/tp3/alumnos/src/Driver.h
+C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Driver.h
 iostream
 -
 Calculadora.h
-/home/diego/Documentos/Facultad/Algoritmos/tp3/alumnos/src/Calculadora.h
+C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Calculadora.h
 
-/home/diego/Documentos/Facultad/Algoritmos/tp3/alumnos/src/Instruccion.cpp
+C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Instruccion.cpp
 Instruccion.h
-/home/diego/Documentos/Facultad/Algoritmos/tp3/alumnos/src/Instruccion.h
+C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Instruccion.h
 
-/home/diego/Documentos/Facultad/Algoritmos/tp3/alumnos/src/Instruccion.h
+C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Instruccion.h
 string
 -
 iostream
 -
 
-/home/diego/Documentos/Facultad/Algoritmos/tp3/alumnos/src/Programa.cpp
+C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Programa.cpp
 Programa.h
-/home/diego/Documentos/Facultad/Algoritmos/tp3/alumnos/src/Programa.h
+C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Programa.h
 iostream
 -
 
-/home/diego/Documentos/Facultad/Algoritmos/tp3/alumnos/src/Programa.h
+C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Programa.h
 Instruccion.h
-/home/diego/Documentos/Facultad/Algoritmos/tp3/alumnos/src/Instruccion.h
+C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Instruccion.h
 vector
 -
 trie.h
-/home/diego/Documentos/Facultad/Algoritmos/tp3/alumnos/src/trie.h
+C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/trie.h
 list
 -
 set
 -
 
-/home/diego/Documentos/Facultad/Algoritmos/tp3/alumnos/src/Ventana.h
+C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Ventana.h
 Ventana.hpp
-/home/diego/Documentos/Facultad/Algoritmos/tp3/alumnos/src/Ventana.hpp
+C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Ventana.hpp
 
-/home/diego/Documentos/Facultad/Algoritmos/tp3/alumnos/src/Ventana.hpp
+C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Ventana.hpp
 
-/home/diego/Documentos/Facultad/Algoritmos/tp3/alumnos/src/trie.h
+C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/trie.h
 string
 -
 vector
 -
 trie.hpp
-/home/diego/Documentos/Facultad/Algoritmos/tp3/alumnos/src/trie.hpp
+C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/trie.hpp
 
-/home/diego/Documentos/Facultad/Algoritmos/tp3/alumnos/src/trie.hpp
+C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/trie.hpp
 stdio.h
 -
 iostream
 -
+tuple
+-
 
-/home/diego/Documentos/Facultad/Algoritmos/tp3/alumnos/tests/test_driver.cpp
+C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/tests/test_driver.cpp
 gtest/gtest.h
-/home/diego/Documentos/Facultad/Algoritmos/tp3/alumnos/tests/gtest/gtest.h
+C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/tests/gtest/gtest.h
 ../src/Driver.h
-/home/diego/Documentos/Facultad/Algoritmos/tp3/alumnos/src/Driver.h
+C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Driver.h
 iostream
 -
 
-/home/diego/Documentos/Facultad/Algoritmos/tp3/alumnos/tests/test_ventana.cpp
+C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/tests/test_ventana.cpp
 ../src/Ventana.h
-/home/diego/Documentos/Facultad/Algoritmos/tp3/alumnos/src/Ventana.h
+C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Ventana.h
 
 tests/google-test/include/gtest/gtest-death-test.h
 gtest/internal/gtest-death-test-internal.h

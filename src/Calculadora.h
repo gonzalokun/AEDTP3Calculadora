@@ -39,15 +39,25 @@ public:
         bool haySalto();
 
 private:
+    struct estructuraDeVariablePorNombre{
 
-    trie<tuple<Ventana<tuple<instante,valor> >, valorHistorico> > variablePorNombre;
-    int instanteActual;
-    bool ejecutando;
-    vector<superInstruccion>*  rutinaActual;
-    int indiceInstruccionActual;
+        Ventana<tuple<instante,valor> > vent;
+        list<tuple<instante,valor> > valorHistorico;
+        estructuraDeVariablePorNombre(int w) : vent(Ventana<tuple<instante,valor> >(w)), valorHistorico(list<tuple<instante, valor> >()){        };
+    };
+    trie<estructuraDeVariablePorNombre> variablePorNombre;
+
+    vector<superInstruccion>* rutinaActual;
+
+
+    trie<vector<superInstruccion> > rutinasProg;
+
     stack<int> pila;
     Programa * programa;
     int W;
+    int instanteActual;
+    bool ejecutando;
+    int indiceInstruccionActual;
 };
 
 
