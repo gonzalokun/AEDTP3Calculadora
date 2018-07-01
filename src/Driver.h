@@ -35,7 +35,7 @@ public:
 	Programa* prog; //publico temporalmente
 private:
 	// COMPLETAR
-
+	bool comenzoEjecucion;
 	rutina rutinaActual;
 	Instruccion* instAct;
 	Calculadora* calc;

@@ -105,6 +105,7 @@ valor Calculadora::valorActualVariable(variable var){
     return get<0>(variablePorNombre[make_tuple(var,W)].vent[W-1]);
 }
 const stack<valor>& Calculadora::getPila() const{
+    return pila;
 
 }
 valor Calculadora::primeroPila() const{
