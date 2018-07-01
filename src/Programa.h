@@ -1,35 +1,28 @@
-#ifndef SOLUCION_PROGRAMA_H
-#define SOLUCION_PROGRAMA_H
-
-#include <list>
-#include <vector>
-
-#include "DiccionarioTrie.h"
-#include "Instruccion.h"
-
+#ifndef H_PROGRAMA
+#define H_PROGRAMA
 using namespace std;
 
-class Programa{
+#include "Instruccion.h"
+#include <vector>
+#include "trie.h"
+#include <list>
+#include <set> //conj lineal
+
+class Programa {
 public:
-
     Programa();
-
-    void agregarInstruccion(Id rutina, Instruccion i);
-
-    list<Id>&  rutinas() const;
-
-    //Pre: rutina pertenece a rutinas(p) e i<= longitud(rutina)
-    Instruccion& DameInstruccion(Id rutina, int i) const;
-
-    //Pre: rutina pertenece a rutinas(p)
-    int longitudDeRutina(Id rutina) const;
-
     ~Programa();
+    void agregarInstruccion(rutina r, Instruccion i);
+    list<rutina>& getRutinas() const;
+    Instruccion instruccion(const rutina r, const int iesima);
+    Operacion instruccion2(const rutina r, const int iesima);
+    int longitud(rutina r) ;
 
 private:
-    DiccTrie<list<Instruccion>> _rutinasPorNombre;
-    vector<Id> _rutinas;
+
+    trie<list<Instruccion> > rutinasPorNombre; //clave rutinas
+    list<rutina> rutinas;
 
 };
 
-#endif //SOLUCION_PROGRAMA_H
+#endif

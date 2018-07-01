@@ -1,23 +1,58 @@
-
 #include "Instruccion.h"
 
-Instruccion::Instruccion(Operacion operacion, int valor){
-    _operacion = operacion;
-    _valor = valor;
+Instruccion::Instruccion(rutina r) {
+    cout << "Nueva instruccion perteneciente a rutina: " << r<<endl;
+    nombreRut = r;
+    nombreVar = "";
+    consNum = -1;
 }
-Instruccion::Instruccion(Operacion operacion){
-    _operacion = operacion;
+
+
+
+Instruccion::~Instruccion(){
+
 }
-Instruccion::Instruccion(Operacion operacion, Id nombre){
-    _operacion = operacion;
-    _nombre = nombre;
+
+
+void Instruccion::push(valor &n){
+    op = oPush;
+    consNum = n;
 }
-int Instruccion::valor() const{
-    return _valor;
+void Instruccion::add(){
+    op = oAdd;
+
 }
-Operacion Instruccion::operacion() const{
-    return _operacion;
+void Instruccion::sub(){
+    op = oSub;
 }
-Id Instruccion::nombre() const{
-    return _nombre;
+void Instruccion::mul(){
+    op = oMul;
+}
+void Instruccion::read(const variable& var){
+    op = oRead;
+    nombreVar = var;
+}
+void Instruccion::write(const variable& var){
+    op = oWrite;
+    nombreVar = var;
+}
+void Instruccion::jump(const rutina& r){
+    op = oJump;
+    nombreRut = r;
+}
+void Instruccion::jumpz(const rutina& r){
+    op = oJumpz;
+    nombreRut = r;
+}
+Operacion Instruccion::getOp(){
+    return op;
+}
+valor Instruccion::constanteNumerica() const{
+    return consNum;
+}
+variable Instruccion::nombreVariable() const{
+    return nombreVar;
+}
+rutina Instruccion::nombreRutina() const{
+    return nombreRut;
 }

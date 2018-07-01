@@ -1,12 +1,13 @@
 #ifndef DRIVER_CALCULADORA_H
 #define DRIVER_CALCULADORA_H
-
-#include <string>
+#include <iostream>
+#include "Calculadora.h"
 
 using namespace std;
 
 class Driver {
 public:
+
 	Driver();
 	~Driver();
 
@@ -31,9 +32,14 @@ public:
 	int valorVariable(string idVariable) const;
 	int valorHistoricoVariable(string idVariable, int t) const;
 	int instanteActual() const;
-
+	Programa* prog; //publico temporalmente
 private:
 	// COMPLETAR
+
+	rutina rutinaActual;
+	Instruccion* instAct;
+	Calculadora* calc;
+
 };
 
 #endif

@@ -1,33 +1,39 @@
-#ifndef SOLUCION_INSTRUCCION_H
-#define SOLUCION_INSTRUCCION_H
+#ifndef INSTRUCCION_H
+#define INSTRUCCION_H
 
+#include <string>
+#include <iostream>
+using namespace std;
 
-#include "Utiles.h"
+typedef string rutina;
+typedef int valor;
+typedef string variable;
+enum Operacion {oAdd,oSub,oMul,oPush,oRead,oWrite,oJump,oJumpz};
 
-class Instruccion {
+class Instruccion
+{
 public:
-    // Precondición: la operación es PUSH
-    Instruccion(Operacion operacion, int valor);
+    Instruccion(rutina r);
+    ~Instruccion();
+    void push(valor &n); //crea inst push
+    void add(); //crea inst add
+    void sub();
+    void mul();
+    void read(const variable& var);
+    void write(const variable& var);
+    void jump(const rutina& r);
+    void jumpz(const rutina& r);
+    Operacion getOp();
+    valor constanteNumerica() const;
+    variable nombreVariable() const;
+    rutina nombreRutina() const;
 
-    // Precondición: la operación es ADD, SUB o MUL
-    Instruccion(Operacion operacion);
-
-    // Precondición: la operación es READ, WRITE, JUMP o JUMPZ
-    Instruccion(Operacion operacion, Id nombre);
-
-    Operacion operacion() const;
-
-    // Precondición: la operación es PUSH
-    int valor() const;
-
-    // Precondición: la operación es READ, WRITE, JUMP o JUMPZ
-    Id nombre() const;
 
 private:
-    Operacion _operacion;
-    int _valor;
-    Id _nombre;
-
+    Operacion op;
+    int consNum;
+    variable nombreVar;
+    rutina nombreRut;
 };
 
-#endif /*__INSTRUCCION_H__*/
+#endif

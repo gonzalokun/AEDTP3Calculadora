@@ -1,7 +1,7 @@
 #include "Driver.h"
 
-Driver::Driver() {
-	// COMPLETAR
+Driver::Driver() : prog(new Programa), calc(new Calculadora()) {
+	cout << "Se crea nuevo driver"<<endl;
 }
 
 Driver::~Driver() {
@@ -11,57 +11,69 @@ Driver::~Driver() {
 // Operaciones para agregar instrucciones
 
 void Driver::begin(string rutina) {
-	// COMPLETAR
+	rutinaActual = rutina;
+	instAct = new Instruccion(rutina);
 }
 
 void Driver::end(string rutina) {
-	// COMPLETAR
+	rutinaActual =rutina;
+	delete instAct;
+	instAct = nullptr;
 }
 
 void Driver::push(int n) {
-	// COMPLETAR
+	instAct->push(n);
+	prog->agregarInstruccion(rutinaActual, *instAct);
 }
 
 void Driver::add() {
-	// COMPLETAR
+	instAct->add();
+	prog->agregarInstruccion(rutinaActual, *instAct);
 }
 
 void Driver::sub() {
-	// COMPLETAR
+	instAct->sub();
+	prog->agregarInstruccion(rutinaActual, *instAct);
 }
 
 void Driver::mul() {
-	// COMPLETAR
+	instAct->mul();
+	prog->agregarInstruccion(rutinaActual, *instAct);
 }
 
 void Driver::read(string variable) {
-	// COMPLETAR
+	instAct->read(variable);
+	prog->agregarInstruccion(rutinaActual, *instAct);
 }
 
 void Driver::write(string variable) {
-	// COMPLETAR
+	instAct->write(variable);
+	prog->agregarInstruccion(rutinaActual, *instAct);
 }
 
 void Driver::jump(string rutina) {
-	// COMPLETAR
+	instAct->jump(rutina);
+	prog->agregarInstruccion(rutinaActual, *instAct);
 }
 
 void Driver::jumpz(string rutina) {
-	// COMPLETAR
+	instAct->jumpz(rutina);
+	prog->agregarInstruccion(rutinaActual, *instAct);
+
 }
 
 // Operaciones para ejecutar programas
 
 void Driver::comenzarEjecucion(string rutina, int capacidadVentana) {
-	// COMPLETAR
+	calc->nuevaCalculadora(*prog,rutina, capacidadVentana);
 }
 
 void Driver::asignarVariable(string x, int valor) {
-	// COMPLETAR
+    calc->asignarVariable(x,valor);
 }
 
 bool Driver::ejecucionFinalizada() const {
-	// COMPLETAR
+	return calc->getEjecutando();
 }
 
 void Driver::ejecutarInstruccionActual() {
@@ -69,7 +81,7 @@ void Driver::ejecutarInstruccionActual() {
 }
 
 int Driver::topePila() const {
-	// COMPLETAR
+	return calc->primeroPila();
 }
 
 int Driver::valorVariable(string x) const {
@@ -81,6 +93,5 @@ int Driver::valorHistoricoVariable(string x, int t) const {
 }
 
 int Driver::instanteActual() const {
-	// COMPLETAR
+	return calc->getInstanteActual();;
 }
-
