@@ -70,11 +70,23 @@ void Calculadora::ejecutarUnPaso(){
 
 }
 void Calculadora::asignarVariable(variable x, valor v){
+    //si el ultimo instante de la variable x es el instante actual, modificamos el valor
+    //si el ultimo instante es menor al isntante actual, creamos un nuevo nodo en la lista
     if(variablePorNombre.count(x) > 0){ //si existe
-        int instAct = get<0>(((variablePorNombre[make_tuple(x,W)]).valorHistorico).back());
-        //int indiceVentana = (get<0>(variablePorNombre[x])).capacidad();
-        //(get<1>(variablePorNombre[x])).push_back(make_tuple(instAct,v));
-        //(get<0>(variablePorNombre[x]))[indiceVentana-1] = make_tuple(instAct, v);
+        int actual = get<0>(variablePorNombre[make_tuple(x,W)].valorHistorico.back());
+        if(actual < instanteActual) {
+            //trie
+            variablePorNombre[make_tuple(x,W)].valorHistorico.push_back(make_tuple(instanteActual,v));
+            //lista
+            variablePorNombre[make_tuple(x,W)].vent.registrar(make_tuple(instanteActual,v));
+
+        }else {
+            get<1>(variablePorNombre[make_tuple(x,W)].valorHistorico.back()) = v;
+            int tam = (variablePorNombre[make_tuple(x,W)].vent).tam();
+            get<1>((variablePorNombre[make_tuple(x,W)].vent)[tam-1]) = v;
+        }
+
+
     }
 }
 instante Calculadora::getInstanteActual() const{

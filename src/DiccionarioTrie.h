@@ -42,27 +42,14 @@ public: //ITERADOR
     public:
 
         ItDiccTrie();
-
+        ItDiccTrie(Nodo* );
         T& operator*() const;
-
         string claveActual() const;
 
-        bool operator==(const ItDiccTrie& otro) const;
-
-        void operator++();
-
-        void operator--();
 
     private:
         Nodo* _actual;
-        stack<Nodo*> _recorridos;
-        ItDiccTrie(Nodo*,  stack<Nodo*>);
-
     };
-
-    ItDiccTrie begin();
-
-    ItDiccTrie end();
 
 };
 

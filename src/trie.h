@@ -36,7 +36,7 @@ public:
     * Acceso o definición de pares clave/valor
     **/
 
-    T &operator[](const string &key);
+    T &operator[](const string &);
     T &operator[](const tuple<string, int>& clave_w);
     /**
     COUNT
@@ -76,9 +76,10 @@ public:
 
 private:
 
-    struct Nodo {
+    struct Nodo{
         Nodo** siguientes;
         T* definicion;
+        string clave;
     };
 
     Nodo* raiz;
@@ -88,6 +89,24 @@ private:
     void copiarNivel(Nodo*&,Nodo*);
     void borrarNodos(Nodo*);
     int cantHijosNodoAct(Nodo*);
+
+public:
+    class ItDiccTrie{
+
+        friend class trie<T>;
+
+    public:
+
+        ItDiccTrie();
+        ItDiccTrie(Nodo* );
+        T& operator*() const;
+        string claveActual() const;
+
+
+    private:
+        Nodo* _actual;
+        string clave; //clave del nodo actual
+    };
 
 };
 

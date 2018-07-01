@@ -11,12 +11,13 @@ Programa::~Programa(){
 }
 
 void Programa::agregarInstruccion(rutina r, Instruccion i){
-    if(rutinasPorNombre.count(r) != 0) { //si no existe
-        rutinasPorNombre[r].push_back(i);
+    i.setRutina(r);
+    if(rutinasPorNombre.count(r) != 0) {  //si existe
+        rutinasPorNombre[r].listaInstr.push_back(i);
         rutinas.push_back(r);
-    }else { //si ya existe la rutina
-        rutinasPorNombre[r] = list<Instruccion>();
-        rutinasPorNombre[r].push_back(i);
+    }else { //si no existe
+        rutinasPorNombre[r].listaInstr = list<Instruccion>();
+        rutinasPorNombre[r].listaInstr.push_back(i);
     }
 }
 
@@ -28,7 +29,7 @@ list<rutina>& Programa::getRutinas(){
 }
 //PRE, 0 <= iesima < rutinas.size()
 Instruccion Programa::instruccion(const rutina r, const int iesima){
-    list<Instruccion>::iterator it = (rutinasPorNombre[r]).begin();
+    list<Instruccion>::iterator it = (rutinasPorNombre[r]).listaInstr.begin();
     int rest = iesima;
     while(rest >= 0) {
         it++;
@@ -40,7 +41,7 @@ Instruccion Programa::instruccion(const rutina r, const int iesima){
 
 Operacion Programa::instruccion2(const rutina r, const int iesima){
     cout << "entro a inst2"<<endl;
-    list<Instruccion>::iterator it = (rutinasPorNombre[r]).begin();
+    list<Instruccion>::iterator it = (rutinasPorNombre[r]).listaInstr.begin();
     int rest = iesima;
     while(rest >= 0) {
         it++;
