@@ -20,10 +20,12 @@ void Programa::agregarInstruccion(rutina r, Instruccion i){
     }
 }
 
-list<rutina>& Programa::getRutinas() const{
+const list<rutina>& Programa::getRutinas() const{
     return rutinas;
 }
-
+list<rutina>& Programa::getRutinas(){
+    return rutinas;
+}
 //PRE, 0 <= iesima < rutinas.size()
 Instruccion Programa::instruccion(const rutina r, const int iesima){
     list<Instruccion>::iterator it = (rutinasPorNombre[r]).begin();

@@ -33,7 +33,7 @@ public:
         valor valorActualVariable(variable var);
         const stack<valor>& getPila() const;
         valor primeroPila() const;
-        valor segundoPila() const;
+        valor segundoPila();
         stack<valor> getPilaSinDos() const;
         bool escribiendoVariable(variable &var) const;
         bool haySalto();
@@ -47,10 +47,10 @@ private:
     };
     trie<estructuraDeVariablePorNombre> variablePorNombre;
 
-    vector<superInstruccion>* rutinaActual;
+    tuple<rutina, vector<superInstruccion>* > rutinaActual;
 
 
-    trie<vector<superInstruccion> > rutinasProg;
+    trie<vector<superInstruccion>* > rutinasProg;
 
     stack<int> pila;
     Programa * programa;
