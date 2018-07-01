@@ -8,11 +8,13 @@ TEST(test_driver, primer_test){
     Driver d;
     cout << "Finish"<<endl;
     d.begin("Rutina1");
-    d.push(5);
+    /*d.push(5);
     d.push(2);
     cout <<"operacion 0 de Rutina1: "<< d.prog->instruccion2("Rutina1", 0)<<endl;
+    cout <<"op == oPush? : " << (d.prog->instruccion2("Rutina1",0) == oPush )  <<endl;
     //d.asignarVariable("a",5);
-    d.end("Rutina1");
+
+    d.end("Rutina1");*/
 }
 
 /*

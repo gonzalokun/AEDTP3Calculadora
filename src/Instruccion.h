@@ -14,6 +14,7 @@ class Instruccion
 {
 public:
     Instruccion(rutina r);
+    Instruccion();
     ~Instruccion();
     void push(valor &n); //crea inst push
     void add(); //crea inst add
@@ -24,6 +25,7 @@ public:
     void jump(const rutina& r);
     void jumpz(const rutina& r);
     Operacion getOp();
+    void setRutina(rutina r);
     valor constanteNumerica() const;
     variable nombreVariable() const;
     rutina nombreRutina() const;

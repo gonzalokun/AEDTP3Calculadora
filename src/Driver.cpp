@@ -2,6 +2,7 @@
 
 Driver::Driver() : prog(new Programa), calc(new Calculadora()) {
 	cout << "Se crea nuevo driver"<<endl;
+    comenzoEjecucion = false;
 }
 
 Driver::~Driver() {
@@ -11,61 +12,105 @@ Driver::~Driver() {
 // Operaciones para agregar instrucciones
 
 void Driver::begin(string rutina) {
-	rutinaActual = rutina;
-	instAct = new Instruccion(rutina);
+    if(!comenzoEjecucion)
+    {
+        rutinaActual = rutina;
+        instAct = new Instruccion(rutina);
+    }
+
 }
 
 void Driver::end(string rutina) {
-	rutinaActual = rutina;
-	delete instAct;
-	instAct = nullptr;
+    if(!comenzoEjecucion)
+    {
+        rutinaActual =rutina;
+        delete instAct;
+        instAct = nullptr;
+    }
 }
 
 void Driver::push(int n) {
-	instAct->push(n);
-	prog->agregarInstruccion(rutinaActual, *instAct);
+    if(!comenzoEjecucion)
+    {
+        instAct->push(n);
+        prog->agregarInstruccion(rutinaActual, *instAct);
+    }
+
 }
 
 void Driver::add() {
-	instAct->add();
-	prog->agregarInstruccion(rutinaActual, *instAct);
+    if(!comenzoEjecucion)
+    {
+        instAct->add();
+        prog->agregarInstruccion(rutinaActual, *instAct);
+    }
+
 }
 
 void Driver::sub() {
-	instAct->sub();
-	prog->agregarInstruccion(rutinaActual, *instAct);
+    if(!comenzoEjecucion)
+    {
+        instAct->sub();
+        prog->agregarInstruccion(rutinaActual, *instAct);
+    }
+
 }
 
 void Driver::mul() {
-	instAct->mul();
-	prog->agregarInstruccion(rutinaActual, *instAct);
+    if(!comenzoEjecucion)
+    {
+        instAct->mul();
+        prog->agregarInstruccion(rutinaActual, *instAct);
+    }
+
 }
 
 void Driver::read(string variable) {
-	instAct->read(variable);
-	prog->agregarInstruccion(rutinaActual, *instAct);
+    if(!comenzoEjecucion)
+    {
+        instAct->read(variable);
+        prog->agregarInstruccion(rutinaActual, *instAct);
+    }
+
 }
 
 void Driver::write(string variable) {
-	instAct->write(variable);
-	prog->agregarInstruccion(rutinaActual, *instAct);
+    if(!comenzoEjecucion)
+    {
+        instAct->write(variable);
+        prog->agregarInstruccion(rutinaActual, *instAct);
+    }
+
 }
 
 void Driver::jump(string rutina) {
-	instAct->jump(rutina);
-	prog->agregarInstruccion(rutinaActual, *instAct);
+    if(!comenzoEjecucion)
+    {
+        instAct->jump(rutina);
+        prog->agregarInstruccion(rutinaActual, *instAct);
+    }
+
 }
 
 void Driver::jumpz(string rutina) {
-	instAct->jumpz(rutina);
-	prog->agregarInstruccion(rutinaActual, *instAct);
+    if(!comenzoEjecucion)
+    {
+        instAct->jumpz(rutina);
+        prog->agregarInstruccion(rutinaActual, *instAct);
+    }
+
 
 }
 
 // Operaciones para ejecutar programas
 
 void Driver::comenzarEjecucion(string rutina, int capacidadVentana) {
-	calc->nuevaCalculadora(*prog,rutina, capacidadVentana);
+
+    if(!comenzoEjecucion) {
+        comenzoEjecucion = true;
+        calc->nuevaCalculadora(*prog,rutina, capacidadVentana);
+    }
+
 }
 
 void Driver::asignarVariable(string x, int valor) {

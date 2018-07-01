@@ -7,6 +7,7 @@ template <typename T>
 trie<T>::trie():_size(0){
     cout << "NUEVO TRIE"<<endl;
     raiz = iniciarNodo();
+    raiz->clave = "";
 }
 
 template <typename T>
@@ -83,12 +84,14 @@ void trie<T>::borrarNodos(Nodo *nodo) {
     }
 }
 
+
 template <typename T>
 T& trie<T>::operator[](const string& clave){
     //veo si existe y devuelvo significado, si no la creo
     if(count(clave) == 0) {//no existe
         //Puede pasar que este vacio el trie o no
         Nodo* nodoAct = raiz;
+        Nodo* nodoPadre = raiz;
         for (int i = 0; i < clave.length(); i++)
         {
             //cout << "quiero nodo: "<< clave[i]<<endl;
@@ -100,7 +103,9 @@ T& trie<T>::operator[](const string& clave){
                 Nodo* nuevoNodo = iniciarNodo();
                 nodoAct->siguientes[indexAscii] = nuevoNodo;
             }
+            nodoAct->clave = string(nodoPadre->clave) + string(clave[i] + "");
             nodoAct = nodoAct->siguientes[indexAscii];
+            nodoPadre = nodoAct;
         }
 
         nodoAct->definicion = new T();
@@ -117,6 +122,8 @@ T& trie<T>::operator[](const string& clave){
     }
 }
 
+
+
 template <typename T>
 T& trie<T>::operator[](const tuple<string, int> &clave_w){
     //veo si existe y devuelvo significado, si no la creo
@@ -126,18 +133,19 @@ T& trie<T>::operator[](const tuple<string, int> &clave_w){
     if(count(clave) == 0) {//no existe
         //Puede pasar que este vacio el trie o no
         Nodo* nodoAct = raiz;
+        Nodo* nodoPadre = raiz;
         for (int i = 0; i < clave.length(); i++)
         {
             //cout << "quiero nodo: "<< clave[i]<<endl;
             int indexAscii = int(clave[i]) - int('A');//lo centramos en 0 los index
             if(nodoAct->siguientes[indexAscii] != NULL) { //si existe
-                //cout << "exis nodo"<<endl;
             }else {//si es null => lo creo
-                //cout <<"t]engo q crearlo"<<endl;
                 Nodo* nuevoNodo = iniciarNodo();
                 nodoAct->siguientes[indexAscii] = nuevoNodo;
             }
+            nodoAct->clave = string(nodoPadre->clave) + string(clave[i] + "");
             nodoAct = nodoAct->siguientes[indexAscii];
+            nodoPadre = nodoAct;
         }
 
         nodoAct->definicion = new T(w);
@@ -156,6 +164,7 @@ T& trie<T>::operator[](const tuple<string, int> &clave_w){
 
 
 
+
 template<typename T>
 typename trie<T>::Nodo* trie<T>::iniciarNodo() {
     Nodo* nuevoNodo = new Nodo;
@@ -166,6 +175,7 @@ typename trie<T>::Nodo* trie<T>::iniciarNodo() {
         nuevoNodo->siguientes[i] = nullptr;
     }
     nuevoNodo->definicion = nullptr;
+    nuevoNodo->clave = "";
     return nuevoNodo;
 }
 
@@ -307,4 +317,24 @@ int trie<T>::size() const{
 template <typename T>
 bool trie<T>::empty() const{
     return (_size==0)? true:false;
+}
+
+template<typename T>
+trie<T>::ItDiccTrie::ItDiccTrie() {
+
+}
+
+template<typename T>
+trie<T>::ItDiccTrie::ItDiccTrie(Nodo *nodo) {
+    _actual = nodo;
+    clave = nodo->clave;
+}
+
+template<typename T>
+T& trie<T>::ItDiccTrie::operator*() const{
+    return _actual->definicion;
+}
+template<typename T>
+string trie<T>::ItDiccTrie::claveActual() const{
+    return clave;
 }

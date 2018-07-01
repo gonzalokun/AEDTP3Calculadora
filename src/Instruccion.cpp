@@ -8,6 +8,12 @@ Instruccion::Instruccion(rutina r) {
 }
 
 
+Instruccion::Instruccion() {
+    cout << "Nueva instruccion sin rutina"<<endl;
+    nombreRut = "";
+    nombreVar = "";
+    consNum = -1;
+}
 
 Instruccion::~Instruccion(){
 
@@ -42,6 +48,11 @@ void Instruccion::jump(const rutina& r){
 }
 void Instruccion::jumpz(const rutina& r){
     op = oJumpz;
+    nombreRut = r;
+}
+
+
+void Instruccion::setRutina(rutina r){
     nombreRut = r;
 }
 Operacion Instruccion::getOp(){

@@ -13,14 +13,19 @@ public:
     Programa();
     ~Programa();
     void agregarInstruccion(rutina r, Instruccion i);
-    list<rutina>& getRutinas() const;
+    const list<rutina>& getRutinas() const;
+    list<rutina>& getRutinas();
     Instruccion instruccion(const rutina r, const int iesima);
     Operacion instruccion2(const rutina r, const int iesima);
     int longitud(rutina r) ;
 
 private:
 
-    trie<list<Instruccion>> rutinasPorNombre; //clave rutinas
+    struct estructuraDeRutinasPorNombre{
+        list<Instruccion> listaInstr;
+    };
+
+    trie<estructuraDeRutinasPorNombre> rutinasPorNombre; //clave rutinas
     list<rutina> rutinas;
 
 };
