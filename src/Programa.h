@@ -21,14 +21,12 @@ public:
 
 private:
 
-
     struct estructuraDeRutinasPorNombre{
         list<Instruccion> listaInstr;
     };
 
     trie<estructuraDeRutinasPorNombre> rutinasPorNombre; //clave rutinas
     list<rutina> rutinas;
-
 
 };
 

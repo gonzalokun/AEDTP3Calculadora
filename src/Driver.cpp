@@ -27,7 +27,6 @@ void Driver::end(string rutina) {
         delete instAct;
         instAct = nullptr;
     }
-
 }
 
 void Driver::push(int n) {
@@ -119,7 +118,7 @@ void Driver::asignarVariable(string x, int valor) {
 }
 
 bool Driver::ejecucionFinalizada() const {
-	return calc->getEjecutando();
+	return not (calc->getEjecutando());
 }
 
 void Driver::ejecutarInstruccionActual() {
@@ -139,5 +138,5 @@ int Driver::valorHistoricoVariable(string x, int t) const {
 }
 
 int Driver::instanteActual() const {
-	return calc->getInstanteActual();;
+	return calc->getInstanteActual();
 }

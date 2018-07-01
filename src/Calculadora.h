@@ -34,7 +34,8 @@ public:
         const stack<valor>& getPila() const;
         valor primeroPila() const;
         valor segundoPila();
-        stack<valor> getPilaSinDos() const;
+        stack<valor>& getPilaSinDos();
+  
         bool escribiendoVariable(variable &var) const;
         bool haySalto();
 
@@ -49,7 +50,6 @@ private:
 
     tuple<rutina, vector<superInstruccion>* > rutinaActual;
 
-
     trie<vector<superInstruccion>* > rutinasProg;
 
     stack<int> pila;
@@ -59,6 +59,5 @@ private:
     bool ejecutando;
     int indiceInstruccionActual;
 };
-
 
 #endif
