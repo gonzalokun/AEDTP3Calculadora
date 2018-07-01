@@ -47,22 +47,22 @@ public: //ITERADOR
 
         string claveActual() const;
 
-        bool operator==(const ItDiccTrie& otro) const;
-
-        void operator++();
-
-        void operator--();
+//        bool operator==(const ItDiccTrie& otro) const;
+//
+//        void operator++();
+//
+//        void operator--();
 
     private:
         Nodo* _actual;
         stack<Nodo*> _recorridos;
-        ItDiccTrie(Nodo*,  stack<Nodo*>);
 
+        ItDiccTrie(Nodo*,  stack<Nodo*>);
     };
 
-    ItDiccTrie begin();
-
-    ItDiccTrie end();
+//    ItDiccTrie begin();
+//
+//    ItDiccTrie end();
 
 };
 

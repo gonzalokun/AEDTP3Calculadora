@@ -20,7 +20,7 @@ public:
 
 private:
 
-    trie<list<Instruccion> > rutinasPorNombre; //clave rutinas
+    trie<list<Instruccion>> rutinasPorNombre; //clave rutinas
     list<rutina> rutinas;
 
 };
