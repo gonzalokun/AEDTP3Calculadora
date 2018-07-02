@@ -13,11 +13,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eb7a8091-8aa1-4eaa-adfe-b19b3bec71b1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Calculadora.cpp" afterPath="$PROJECT_DIR$/src/Calculadora.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Calculadora.h" afterPath="$PROJECT_DIR$/src/Calculadora.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/trie.h" afterPath="$PROJECT_DIR$/src/trie.h" />
-    </list>
+    <list default="true" id="eb7a8091-8aa1-4eaa-adfe-b19b3bec71b1" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/CMakeFiles/" />
     <ignored path="$PROJECT_DIR$/tests/google-test/CMakeFiles/" />
@@ -98,8 +94,8 @@
       <file leaf-file-name="Calculadora.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Calculadora.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="658">
-              <caret line="68" column="10" lean-forward="true" selection-start-line="68" selection-start-column="10" selection-end-line="68" selection-end-column="10" />
+            <state relative-caret-position="318">
+              <caret line="48" column="34" lean-forward="true" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -266,12 +262,12 @@
       <workItem from="1530311125896" duration="2573000" />
       <workItem from="1530453099502" duration="12242000" />
       <workItem from="1530505612232" duration="47000" />
-      <workItem from="1530547555218" duration="9703000" />
+      <workItem from="1530547555218" duration="10535000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41747000" />
+    <option name="totallyTimeSpent" value="42579000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -724,8 +720,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Calculadora.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="658">
-          <caret line="68" column="10" lean-forward="true" selection-start-line="68" selection-start-column="10" selection-end-line="68" selection-end-column="10" />
+        <state relative-caret-position="318">
+          <caret line="48" column="34" lean-forward="true" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
