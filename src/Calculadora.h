@@ -69,7 +69,7 @@ private:
     //VERSION DE RUTINA ACTUAL SIN ITER
     //tuple<rutina, vector<superInstruccion>* > rutinaActual;
 
-    typename trie<vector<superInstruccion>>::ItDiccTrie rutinaActual;
+    trie<vector<superInstruccion>>::ItDiccTrie rutinaActual;
 
     stack<int> pila;
     Programa* programa;

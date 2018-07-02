@@ -8,285 +8,285 @@
 		<Option virtualFolders="CMake Files\;CMake Files\tests\;CMake Files\tests\google-test\;CMake Files\tests\google-test\cmake\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Proyectos/AEDTP3Calculadora"/>
+				<Option working_dir="E:/Proyectos/AEDTP3Calculadora"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="install/strip">
-				<Option working_dir="C:/Proyectos/AEDTP3Calculadora"/>
+				<Option working_dir="E:/Proyectos/AEDTP3Calculadora"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 install/strip"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="correrTests">
-				<Option output="C:/Proyectos/AEDTP3Calculadora/correrTests.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Proyectos/AEDTP3Calculadora"/>
+				<Option output="E:/Proyectos/AEDTP3Calculadora/correrTests.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/Proyectos/AEDTP3Calculadora"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Proyectos/AEDTP3Calculadora/tests/google-test/include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/mingw32"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/backward"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include-fixed"/>
+					<Add directory="E:/Proyectos/AEDTP3Calculadora/tests/google-test/include"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/mingw32"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/backward"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/include"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../include"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 correrTests"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 correrTests"/>
+					<CompileFile command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="correrTests/fast">
-				<Option output="C:/Proyectos/AEDTP3Calculadora/correrTests.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Proyectos/AEDTP3Calculadora"/>
+				<Option output="E:/Proyectos/AEDTP3Calculadora/correrTests.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/Proyectos/AEDTP3Calculadora"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Proyectos/AEDTP3Calculadora/tests/google-test/include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/mingw32"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/backward"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include-fixed"/>
+					<Add directory="E:/Proyectos/AEDTP3Calculadora/tests/google-test/include"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/mingw32"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/backward"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/include"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../include"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 correrTests/fast"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 correrTests/fast"/>
+					<CompileFile command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="install/local">
-				<Option working_dir="C:/Proyectos/AEDTP3Calculadora"/>
+				<Option working_dir="E:/Proyectos/AEDTP3Calculadora"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 install/local"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="install">
-				<Option working_dir="C:/Proyectos/AEDTP3Calculadora"/>
+				<Option working_dir="E:/Proyectos/AEDTP3Calculadora"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 install"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Proyectos/AEDTP3Calculadora"/>
+				<Option working_dir="E:/Proyectos/AEDTP3Calculadora"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Proyectos/AEDTP3Calculadora"/>
+				<Option working_dir="E:/Proyectos/AEDTP3Calculadora"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="list_install_components">
-				<Option working_dir="C:/Proyectos/AEDTP3Calculadora"/>
+				<Option working_dir="E:/Proyectos/AEDTP3Calculadora"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 list_install_components"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest">
-				<Option output="C:/Proyectos/AEDTP3Calculadora/tests/google-test/libgtest.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Proyectos/AEDTP3Calculadora/tests/google-test"/>
+				<Option output="E:/Proyectos/AEDTP3Calculadora/tests/google-test/libgtest.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/Proyectos/AEDTP3Calculadora/tests/google-test"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Proyectos/AEDTP3Calculadora/tests/google-test/include"/>
-					<Add directory="C:/Proyectos/AEDTP3Calculadora/tests/google-test"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/mingw32"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/backward"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include-fixed"/>
+					<Add directory="E:/Proyectos/AEDTP3Calculadora/tests/google-test/include"/>
+					<Add directory="E:/Proyectos/AEDTP3Calculadora/tests/google-test"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/mingw32"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/backward"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/include"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../include"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/tests/google-test/Makefile&quot;  VERBOSE=1 gtest"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/tests/google-test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/tests/google-test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/tests/google-test/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/tests/google-test/Makefile&quot;  VERBOSE=1 gtest"/>
+					<CompileFile command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/tests/google-test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/tests/google-test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/tests/google-test/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest/fast">
-				<Option output="C:/Proyectos/AEDTP3Calculadora/tests/google-test/libgtest.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Proyectos/AEDTP3Calculadora/tests/google-test"/>
+				<Option output="E:/Proyectos/AEDTP3Calculadora/tests/google-test/libgtest.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/Proyectos/AEDTP3Calculadora/tests/google-test"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Proyectos/AEDTP3Calculadora/tests/google-test/include"/>
-					<Add directory="C:/Proyectos/AEDTP3Calculadora/tests/google-test"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/mingw32"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/backward"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include-fixed"/>
+					<Add directory="E:/Proyectos/AEDTP3Calculadora/tests/google-test/include"/>
+					<Add directory="E:/Proyectos/AEDTP3Calculadora/tests/google-test"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/mingw32"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/backward"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/include"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../include"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/tests/google-test/Makefile&quot;  VERBOSE=1 gtest/fast"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/tests/google-test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/tests/google-test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/tests/google-test/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/tests/google-test/Makefile&quot;  VERBOSE=1 gtest/fast"/>
+					<CompileFile command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/tests/google-test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/tests/google-test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/tests/google-test/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest_main">
-				<Option output="C:/Proyectos/AEDTP3Calculadora/tests/google-test/libgtest_main.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Proyectos/AEDTP3Calculadora/tests/google-test"/>
+				<Option output="E:/Proyectos/AEDTP3Calculadora/tests/google-test/libgtest_main.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/Proyectos/AEDTP3Calculadora/tests/google-test"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Proyectos/AEDTP3Calculadora/tests/google-test/include"/>
-					<Add directory="C:/Proyectos/AEDTP3Calculadora/tests/google-test"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/mingw32"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/backward"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include-fixed"/>
+					<Add directory="E:/Proyectos/AEDTP3Calculadora/tests/google-test/include"/>
+					<Add directory="E:/Proyectos/AEDTP3Calculadora/tests/google-test"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/mingw32"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/backward"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/include"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../include"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/tests/google-test/Makefile&quot;  VERBOSE=1 gtest_main"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/tests/google-test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/tests/google-test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/tests/google-test/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/tests/google-test/Makefile&quot;  VERBOSE=1 gtest_main"/>
+					<CompileFile command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/tests/google-test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/tests/google-test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/tests/google-test/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest_main/fast">
-				<Option output="C:/Proyectos/AEDTP3Calculadora/tests/google-test/libgtest_main.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Proyectos/AEDTP3Calculadora/tests/google-test"/>
+				<Option output="E:/Proyectos/AEDTP3Calculadora/tests/google-test/libgtest_main.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/Proyectos/AEDTP3Calculadora/tests/google-test"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Proyectos/AEDTP3Calculadora/tests/google-test/include"/>
-					<Add directory="C:/Proyectos/AEDTP3Calculadora/tests/google-test"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/mingw32"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/backward"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include-fixed"/>
+					<Add directory="E:/Proyectos/AEDTP3Calculadora/tests/google-test/include"/>
+					<Add directory="E:/Proyectos/AEDTP3Calculadora/tests/google-test"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/mingw32"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/backward"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/include"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../include"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/tests/google-test/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/tests/google-test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/tests/google-test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Proyectos/AEDTP3Calculadora/tests/google-test/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/tests/google-test/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
+					<CompileFile command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/tests/google-test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/tests/google-test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/bin/mingw32-make.exe -f &quot;E:/Proyectos/AEDTP3Calculadora/tests/google-test/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Proyectos/AEDTP3Calculadora/src/Calculadora.cpp">
+		<Unit filename="E:/Proyectos/AEDTP3Calculadora/src/Calculadora.cpp">
 			<Option target="correrTests"/>
 		</Unit>
-		<Unit filename="C:/Proyectos/AEDTP3Calculadora/src/Calculadora.h">
+		<Unit filename="E:/Proyectos/AEDTP3Calculadora/src/Calculadora.h">
 			<Option target="correrTests"/>
 		</Unit>
-		<Unit filename="C:/Proyectos/AEDTP3Calculadora/src/DiccionarioTrie.h">
+		<Unit filename="E:/Proyectos/AEDTP3Calculadora/src/DiccionarioTrie.h">
 			<Option target="correrTests"/>
 		</Unit>
-		<Unit filename="C:/Proyectos/AEDTP3Calculadora/src/Driver.cpp">
+		<Unit filename="E:/Proyectos/AEDTP3Calculadora/src/Driver.cpp">
 			<Option target="correrTests"/>
 		</Unit>
-		<Unit filename="C:/Proyectos/AEDTP3Calculadora/src/Driver.h">
+		<Unit filename="E:/Proyectos/AEDTP3Calculadora/src/Driver.h">
 			<Option target="correrTests"/>
 		</Unit>
-		<Unit filename="C:/Proyectos/AEDTP3Calculadora/src/Instruccion.cpp">
+		<Unit filename="E:/Proyectos/AEDTP3Calculadora/src/Instruccion.cpp">
 			<Option target="correrTests"/>
 		</Unit>
-		<Unit filename="C:/Proyectos/AEDTP3Calculadora/src/Instruccion.h">
+		<Unit filename="E:/Proyectos/AEDTP3Calculadora/src/Instruccion.h">
 			<Option target="correrTests"/>
 		</Unit>
-		<Unit filename="C:/Proyectos/AEDTP3Calculadora/src/Programa.cpp">
+		<Unit filename="E:/Proyectos/AEDTP3Calculadora/src/Programa.cpp">
 			<Option target="correrTests"/>
 		</Unit>
-		<Unit filename="C:/Proyectos/AEDTP3Calculadora/src/Programa.h">
+		<Unit filename="E:/Proyectos/AEDTP3Calculadora/src/Programa.h">
 			<Option target="correrTests"/>
 		</Unit>
-		<Unit filename="C:/Proyectos/AEDTP3Calculadora/src/Utiles.h">
+		<Unit filename="E:/Proyectos/AEDTP3Calculadora/src/Utiles.h">
 			<Option target="correrTests"/>
 		</Unit>
-		<Unit filename="C:/Proyectos/AEDTP3Calculadora/src/Ventana.h">
+		<Unit filename="E:/Proyectos/AEDTP3Calculadora/src/Ventana.h">
 			<Option target="correrTests"/>
 		</Unit>
-		<Unit filename="C:/Proyectos/AEDTP3Calculadora/src/Ventana.hpp">
+		<Unit filename="E:/Proyectos/AEDTP3Calculadora/src/Ventana.hpp">
 			<Option target="correrTests"/>
 		</Unit>
-		<Unit filename="C:/Proyectos/AEDTP3Calculadora/src/trie.h">
+		<Unit filename="E:/Proyectos/AEDTP3Calculadora/src/trie.h">
 			<Option target="correrTests"/>
 		</Unit>
-		<Unit filename="C:/Proyectos/AEDTP3Calculadora/src/trie.hpp">
+		<Unit filename="E:/Proyectos/AEDTP3Calculadora/src/trie.hpp">
 			<Option target="correrTests"/>
 		</Unit>
-		<Unit filename="C:/Proyectos/AEDTP3Calculadora/src/triee.h">
+		<Unit filename="E:/Proyectos/AEDTP3Calculadora/src/triee.h">
 			<Option target="correrTests"/>
 		</Unit>
-		<Unit filename="C:/Proyectos/AEDTP3Calculadora/src/triee.hpp">
+		<Unit filename="E:/Proyectos/AEDTP3Calculadora/src/triee.hpp">
 			<Option target="correrTests"/>
 		</Unit>
-		<Unit filename="C:/Proyectos/AEDTP3Calculadora/tests/google-test/src/gtest-all.cc">
+		<Unit filename="E:/Proyectos/AEDTP3Calculadora/tests/google-test/src/gtest-all.cc">
 			<Option target="gtest"/>
 		</Unit>
-		<Unit filename="C:/Proyectos/AEDTP3Calculadora/tests/google-test/src/gtest_main.cc">
+		<Unit filename="E:/Proyectos/AEDTP3Calculadora/tests/google-test/src/gtest_main.cc">
 			<Option target="gtest_main"/>
 		</Unit>
-		<Unit filename="C:/Proyectos/AEDTP3Calculadora/tests/test_driver.cpp">
+		<Unit filename="E:/Proyectos/AEDTP3Calculadora/tests/test_driver.cpp">
 			<Option target="correrTests"/>
 		</Unit>
-		<Unit filename="C:/Proyectos/AEDTP3Calculadora/tests/test_ventana.cpp">
+		<Unit filename="E:/Proyectos/AEDTP3Calculadora/tests/test_ventana.cpp">
 			<Option target="correrTests"/>
 		</Unit>
-		<Unit filename="C:/Proyectos/AEDTP3Calculadora/CMakeLists.txt">
+		<Unit filename="E:/Proyectos/AEDTP3Calculadora/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="C:/Proyectos/AEDTP3Calculadora/tests/google-test/CMakeLists.txt">
+		<Unit filename="E:/Proyectos/AEDTP3Calculadora/tests/google-test/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\tests\google-test\"/>
 		</Unit>
-		<Unit filename="C:/Proyectos/AEDTP3Calculadora/tests/google-test/CMakeLists.txt">
+		<Unit filename="E:/Proyectos/AEDTP3Calculadora/tests/google-test/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\tests\google-test\"/>
 		</Unit>
-		<Unit filename="C:/Proyectos/AEDTP3Calculadora/tests/google-test/cmake/internal_utils.cmake">
+		<Unit filename="E:/Proyectos/AEDTP3Calculadora/tests/google-test/cmake/internal_utils.cmake">
 			<Option virtualFolder="CMake Files\tests\google-test\cmake\"/>
 		</Unit>
-		<Unit filename="C:/Proyectos/AEDTP3Calculadora/tests/google-test/cmake/internal_utils.cmake">
+		<Unit filename="E:/Proyectos/AEDTP3Calculadora/tests/google-test/cmake/internal_utils.cmake">
 			<Option virtualFolder="CMake Files\tests\google-test\cmake\"/>
 		</Unit>
 	</Project>

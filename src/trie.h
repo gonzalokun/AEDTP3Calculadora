@@ -36,8 +36,10 @@ public:
     * Acceso o definición de pares clave/valor
     **/
 
+
     T &operator[](const string &);
     T &operator[](const tuple<string, int>& clave_w);
+    T &operator[](const tuple<string,string>& c);
     /**
     COUNT
     * Devuelve la cantidad de apariciones de la clave (0 o 1).
@@ -74,6 +76,8 @@ public:
      * devuelve true si no hay ningún elemento en el diccionario */
     bool empty() const;
 
+
+
 private:
 
     struct Nodo{
@@ -84,21 +88,21 @@ private:
 
     Nodo* raiz;
     int _size;
-
     Nodo* iniciarNodo();
     void copiarNivel(Nodo*&,Nodo*);
     void borrarNodos(Nodo*);
     int cantHijosNodoAct(Nodo*);
 
+
 public:
+    Nodo* nodoSignificado(const string&);
     class ItDiccTrie{
 
         friend class trie<T>;
 
     public:
-
         ItDiccTrie();
-        ItDiccTrie(Nodo* );
+        ItDiccTrie(Nodo*);
         T& operator*() const;
         string claveActual() const;
 
@@ -106,10 +110,8 @@ public:
     private:
         Nodo* _actual;
         string clave; //clave del nodo actual
-    };
 
-    //Crea un iterador colocado en el nodo apuntado por el puntero pasado
-    ItDiccTrie iteradorEn(Nodo*);
+    };
 
 };
 

@@ -1,9 +1,10 @@
 #include "Calculadora.h"
+#include <tuple>
 
 Calculadora::Calculadora() {
     cout << "Se inicializa la calculadora"<<endl;
-    get<0>(rutinaActual) = "";
-    get<1>(rutinaActual) = nullptr;
+    //get<0>(rutinaActual) = "";
+    //get<1>(rutinaActual) = nullptr;
 }
 
 Calculadora::~Calculadora() {
@@ -238,7 +239,8 @@ instante Calculadora::getInstanteActual() const{
 }
 
 rutina Calculadora::getRutinaActual() const{
-    return get<0>(rutinaActual);
+    //return get<0>(rutinaActual);
+    return rutinaActual.claveActual();
 }
 
 int Calculadora::getIndiceInstruccionActual() const{
@@ -295,14 +297,22 @@ stack<valor>& Calculadora::getPilaSinDos() {
 }
 
 bool Calculadora::escribiendoVariable(variable &var) const{
-//    Operacion opActual = get<0>((*(get<1>(rutinaActual)))[indiceInstruccionActual]);
+    //Operacion opActual = get<0>((*(get<1>(rutinaActual)))[indiceInstruccionActual]);
 
-    Operacion opActual = get<0>((*(*rutinaActual))[indiceInstruccionActual]);
+    //Operacion opActual = get<0>((*(*rutinaActual))[indiceInstruccionActual]);
+
+    Operacion  opActual = (*rutinaActual)[indiceInstruccionActual].op;
 
     if(opActual == oWrite){
         //Tengo que ver si la variable que esta en la instrucción actual es la que ingrese
-        variable varDeInstActual = get<2>((*(*rutinaActual))[indiceInstruccionActual]);
+        variable varDeInstActual = (*rutinaActual)[indiceInstruccionActual].itVarNombre.claveActual();
 
+        if(var == varDeInstActual){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
     return false;
@@ -313,7 +323,7 @@ bool Calculadora::haySalto() {
     //superInstruccion instActual = (*(get<1>(rutinaActual)))[indiceInstruccionActual];
     //Operacion opActual = get<0>((*(get<1>(rutinaActual)))[indiceInstruccionActual]);
 
-    Operacion opActual = get<0>((*(*rutinaActual))[indiceInstruccionActual]);
+    Operacion  opActual = (*rutinaActual)[indiceInstruccionActual].op;
 
     return (opActual == oJump || opActual == oJumpz);
 }

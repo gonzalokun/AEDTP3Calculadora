@@ -1,4 +1,4 @@
-set(CMAKE_C_COMPILER "C:/MinGW/bin/gcc.exe")
+set(CMAKE_C_COMPILER "D:/MinGW/bin/gcc.exe")
 set(CMAKE_C_COMPILER_ARG1 "")
 set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_C_COMPILER_VERSION "5.3.0")
@@ -13,9 +13,9 @@ set(CMAKE_C_PLATFORM_ID "MinGW")
 set(CMAKE_C_SIMULATE_ID "")
 set(CMAKE_C_SIMULATE_VERSION "")
 
-set(CMAKE_AR "C:/MinGW/bin/ar.exe")
-set(CMAKE_RANLIB "C:/MinGW/bin/ranlib.exe")
-set(CMAKE_LINKER "C:/MinGW/bin/ld.exe")
+set(CMAKE_AR "D:/MinGW/bin/ar.exe")
+set(CMAKE_RANLIB "D:/MinGW/bin/ranlib.exe")
+set(CMAKE_LINKER "D:/MinGW/bin/ld.exe")
 set(CMAKE_COMPILER_IS_GNUCC 1)
 set(CMAKE_C_COMPILER_LOADED 1)
 set(CMAKE_C_COMPILER_WORKS TRUE)
@@ -63,6 +63,6 @@ endif()
 
 
 
-set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "mingw32;moldname;mingwex;msvcrt;advapi32;shell32;user32;kernel32;mingw32;moldname;mingwex;msvcrt")
-set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "C:/MinGW/lib/gcc/mingw32/5.3.0;C:/MinGW/lib/gcc;C:/MinGW/mingw32/lib;C:/MinGW/lib")
+set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "mingw32;moldname;mingwex;msvcrt;pthread;advapi32;shell32;user32;kernel32;mingw32;moldname;mingwex;msvcrt")
+set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "D:/MinGW/lib/gcc/mingw32/5.3.0;D:/MinGW/lib/gcc;D:/MinGW/mingw32/lib;D:/MinGW/lib")
 set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")
