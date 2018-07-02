@@ -6,17 +6,17 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Calculadora.cpp
+C:/Proyectos/AEDTP3Calculadora/src/Calculadora.cpp
 Calculadora.h
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Calculadora.h
+C:/Proyectos/AEDTP3Calculadora/src/Calculadora.h
 
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Calculadora.h
+C:/Proyectos/AEDTP3Calculadora/src/Calculadora.h
 Instruccion.h
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Instruccion.h
+C:/Proyectos/AEDTP3Calculadora/src/Instruccion.h
 Programa.h
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Programa.h
+C:/Proyectos/AEDTP3Calculadora/src/Programa.h
 Ventana.h
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Ventana.h
+C:/Proyectos/AEDTP3Calculadora/src/Ventana.h
 queue
 -
 map
@@ -26,59 +26,59 @@ stack
 tuple
 -
 
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Driver.cpp
+C:/Proyectos/AEDTP3Calculadora/src/Driver.cpp
 Driver.h
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Driver.h
+C:/Proyectos/AEDTP3Calculadora/src/Driver.h
 
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Driver.h
+C:/Proyectos/AEDTP3Calculadora/src/Driver.h
 iostream
 -
 Calculadora.h
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Calculadora.h
+C:/Proyectos/AEDTP3Calculadora/src/Calculadora.h
 
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Instruccion.cpp
+C:/Proyectos/AEDTP3Calculadora/src/Instruccion.cpp
 Instruccion.h
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Instruccion.h
+C:/Proyectos/AEDTP3Calculadora/src/Instruccion.h
 
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Instruccion.h
+C:/Proyectos/AEDTP3Calculadora/src/Instruccion.h
 string
 -
 iostream
 -
 
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Programa.cpp
+C:/Proyectos/AEDTP3Calculadora/src/Programa.cpp
 Programa.h
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Programa.h
+C:/Proyectos/AEDTP3Calculadora/src/Programa.h
 iostream
 -
 
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Programa.h
+C:/Proyectos/AEDTP3Calculadora/src/Programa.h
 Instruccion.h
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Instruccion.h
+C:/Proyectos/AEDTP3Calculadora/src/Instruccion.h
 vector
 -
 trie.h
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/trie.h
+C:/Proyectos/AEDTP3Calculadora/src/trie.h
 list
 -
 set
 -
 
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Ventana.h
+C:/Proyectos/AEDTP3Calculadora/src/Ventana.h
 Ventana.hpp
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Ventana.hpp
+C:/Proyectos/AEDTP3Calculadora/src/Ventana.hpp
 
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Ventana.hpp
+C:/Proyectos/AEDTP3Calculadora/src/Ventana.hpp
 
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/trie.h
+C:/Proyectos/AEDTP3Calculadora/src/trie.h
 string
 -
 vector
 -
 trie.hpp
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/trie.hpp
+C:/Proyectos/AEDTP3Calculadora/src/trie.hpp
 
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/trie.hpp
+C:/Proyectos/AEDTP3Calculadora/src/trie.hpp
 stdio.h
 -
 iostream
@@ -86,17 +86,17 @@ iostream
 tuple
 -
 
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/tests/test_driver.cpp
+C:/Proyectos/AEDTP3Calculadora/tests/test_driver.cpp
 gtest/gtest.h
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/tests/gtest/gtest.h
+C:/Proyectos/AEDTP3Calculadora/tests/gtest/gtest.h
 ../src/Driver.h
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Driver.h
+C:/Proyectos/AEDTP3Calculadora/src/Driver.h
 iostream
 -
 
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/tests/test_ventana.cpp
+C:/Proyectos/AEDTP3Calculadora/tests/test_ventana.cpp
 ../src/Ventana.h
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Ventana.h
+C:/Proyectos/AEDTP3Calculadora/src/Ventana.h
 
 tests/google-test/include/gtest/gtest-death-test.h
 gtest/internal/gtest-death-test-internal.h

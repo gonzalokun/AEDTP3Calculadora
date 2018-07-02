@@ -148,22 +148,25 @@ stack<valor>& Calculadora::getPilaSinDos() {
 }
 
 bool Calculadora::escribiendoVariable(variable &var) const{
-    Operacion opActual = get<0>((*(get<1>(rutinaActual)))[indiceInstruccionActual]);
+//    Operacion opActual = get<0>((*(get<1>(rutinaActual)))[indiceInstruccionActual]);
+
+    Operacion opActual = get<0>((*(*rutinaActual))[indiceInstruccionActual]);
 
     if(opActual == oWrite){
-        //
-        return true;
+        //Tengo que ver si la variable que esta en la instrucción actual es la que ingrese
+        variable varDeInstActual = get<2>((*(*rutinaActual))[indiceInstruccionActual]);
+
     }
-    else{
-        return false;
-    }
+
+    return false;
 }
 
 bool Calculadora::haySalto() {
-
+    //VERSION COMENTADA SIN EL ITER
     //superInstruccion instActual = (*(get<1>(rutinaActual)))[indiceInstruccionActual];
+    //Operacion opActual = get<0>((*(get<1>(rutinaActual)))[indiceInstruccionActual]);
 
-    Operacion opActual = get<0>((*(get<1>(rutinaActual)))[indiceInstruccionActual]);
+    Operacion opActual = get<0>((*(*rutinaActual))[indiceInstruccionActual]);
 
     return (opActual == oJump || opActual == oJumpz);
 }

@@ -12,10 +12,18 @@ using namespace std;
 
 typedef int instante;
 typedef list<tuple<instante,valor> > valorHistorico;
-typedef tuple<Ventana<tuple<instante, valor> >, valorHistorico>* itVarNombre;
-typedef vector<Instruccion>* itRut;
-typedef tuple<Operacion, int, itVarNombre, itRut> superInstruccion;
 
+//typedef tuple<Ventana<tuple<instante, valor> >, valorHistorico>* itVarNombre;
+
+//struct estructuraDeVariablePorNombre;
+
+//typedef trie<estructuraDeVariablePorNombre>::ItDiccTrie itVarNombre;
+
+//typedef vector<Instruccion>* itRut;
+
+//typedef trie<vector<Instruccion>>::ItDiccTrie itRut;
+
+//typedef tuple<Operacion, int, itVarNombre, itRut> superInstruccion;
 
 class Calculadora {
 
@@ -46,14 +54,25 @@ private:
         list<tuple<instante,valor> > valorHistorico;
         estructuraDeVariablePorNombre(int w) : vent(Ventana<tuple<instante,valor> >(w)), valorHistorico(list<tuple<instante, valor> >()){        };
     };
+
     trie<estructuraDeVariablePorNombre> variablePorNombre;
 
-    tuple<rutina, vector<superInstruccion>* > rutinaActual;
+    struct superInstruccion{
+        Operacion op;
+        int constanteNumerica;
+        trie<estructuraDeVariablePorNombre>::ItDiccTrie itVarNombre;
+        trie<vector<superInstruccion>>::ItDiccTrie* itRut;
+    };
 
-    trie<vector<superInstruccion>* > rutinasProg;
+    trie<vector<superInstruccion>> rutinasProg;
+
+    //VERSION DE RUTINA ACTUAL SIN ITER
+    //tuple<rutina, vector<superInstruccion>* > rutinaActual;
+
+    typename trie<vector<superInstruccion>>::ItDiccTrie rutinaActual;
 
     stack<int> pila;
-    Programa * programa;
+    Programa* programa;
     int W;
     int instanteActual;
     bool ejecutando;

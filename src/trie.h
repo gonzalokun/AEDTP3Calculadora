@@ -108,6 +108,9 @@ public:
         string clave; //clave del nodo actual
     };
 
+    //Crea un iterador colocado en el nodo apuntado por el puntero pasado
+    ItDiccTrie iteradorEn(Nodo*);
+
 };
 
 #include "trie.hpp"
