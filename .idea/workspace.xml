@@ -14,64 +14,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eb7a8091-8aa1-4eaa-adfe-b19b3bec71b1" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CMakeFiles/Progress/1" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CMakeFiles/Progress/10" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CMakeFiles/Progress/11" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CMakeFiles/Progress/2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CMakeFiles/Progress/3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CMakeFiles/Progress/8" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CMakeFiles/Progress/9" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CMakeFiles/Progress/count.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/CXX.includecache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/depend.internal" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/tests/test_driver.cpp.obj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/tests/test_ventana.cpp.obj" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/3.8.2/CMakeDetermineCompilerABI_C.bin" afterPath="$PROJECT_DIR$/CMakeFiles/3.8.2/CMakeDetermineCompilerABI_C.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/3.8.2/CMakeDetermineCompilerABI_CXX.bin" afterPath="$PROJECT_DIR$/CMakeFiles/3.8.2/CMakeDetermineCompilerABI_CXX.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/3.8.2/CompilerIdC/a.exe" afterPath="$PROJECT_DIR$/CMakeFiles/3.8.2/CompilerIdC/a.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/3.8.2/CompilerIdCXX/a.exe" afterPath="$PROJECT_DIR$/CMakeFiles/3.8.2/CompilerIdCXX/a.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/feature_tests.bin" afterPath="$PROJECT_DIR$/CMakeFiles/feature_tests.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeCache.txt" afterPath="$PROJECT_DIR$/CMakeCache.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/3.8.2/CMakeCCompiler.cmake" afterPath="$PROJECT_DIR$/CMakeFiles/3.8.2/CMakeCCompiler.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/3.8.2/CMakeCXXCompiler.cmake" afterPath="$PROJECT_DIR$/CMakeFiles/3.8.2/CMakeCXXCompiler.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/3.8.2/CMakeRCCompiler.cmake" afterPath="$PROJECT_DIR$/CMakeFiles/3.8.2/CMakeRCCompiler.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/CMakeDirectoryInformation.cmake" afterPath="$PROJECT_DIR$/CMakeFiles/CMakeDirectoryInformation.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/CMakeOutput.log" afterPath="$PROJECT_DIR$/CMakeFiles/CMakeOutput.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/Makefile.cmake" afterPath="$PROJECT_DIR$/CMakeFiles/Makefile.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/CMakeFiles/Makefile2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/CMakeFiles/TargetDirectories.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/DependInfo.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/build.make" afterPath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/build.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/depend.make" afterPath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/depend.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/flags.make" afterPath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/flags.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/includes_CXX.rsp" afterPath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/includes_CXX.rsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/link.txt" afterPath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/link.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Makefile" afterPath="$PROJECT_DIR$/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake_install.cmake" afterPath="$PROJECT_DIR$/cmake_install.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solucion.cbp" afterPath="$PROJECT_DIR$/solucion.cbp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Calculadora.cpp" afterPath="$PROJECT_DIR$/src/Calculadora.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Calculadora.h" afterPath="$PROJECT_DIR$/src/Calculadora.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/trie.h" afterPath="$PROJECT_DIR$/src/trie.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/trie.hpp" afterPath="$PROJECT_DIR$/src/trie.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/google-test/CMakeFiles/CMakeDirectoryInformation.cmake" afterPath="$PROJECT_DIR$/tests/google-test/CMakeFiles/CMakeDirectoryInformation.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/google-test/CMakeFiles/gtest.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/tests/google-test/CMakeFiles/gtest.dir/DependInfo.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/google-test/CMakeFiles/gtest.dir/build.make" afterPath="$PROJECT_DIR$/tests/google-test/CMakeFiles/gtest.dir/build.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/google-test/CMakeFiles/gtest.dir/cmake_clean_target.cmake" afterPath="$PROJECT_DIR$/tests/google-test/CMakeFiles/gtest.dir/cmake_clean_target.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/google-test/CMakeFiles/gtest.dir/flags.make" afterPath="$PROJECT_DIR$/tests/google-test/CMakeFiles/gtest.dir/flags.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/google-test/CMakeFiles/gtest.dir/includes_CXX.rsp" afterPath="$PROJECT_DIR$/tests/google-test/CMakeFiles/gtest.dir/includes_CXX.rsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/google-test/CMakeFiles/gtest.dir/link.txt" afterPath="$PROJECT_DIR$/tests/google-test/CMakeFiles/gtest.dir/link.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/google-test/CMakeFiles/gtest_main.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/tests/google-test/CMakeFiles/gtest_main.dir/DependInfo.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/google-test/CMakeFiles/gtest_main.dir/build.make" afterPath="$PROJECT_DIR$/tests/google-test/CMakeFiles/gtest_main.dir/build.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/google-test/CMakeFiles/gtest_main.dir/cmake_clean_target.cmake" afterPath="$PROJECT_DIR$/tests/google-test/CMakeFiles/gtest_main.dir/cmake_clean_target.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/google-test/CMakeFiles/gtest_main.dir/flags.make" afterPath="$PROJECT_DIR$/tests/google-test/CMakeFiles/gtest_main.dir/flags.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/google-test/CMakeFiles/gtest_main.dir/includes_CXX.rsp" afterPath="$PROJECT_DIR$/tests/google-test/CMakeFiles/gtest_main.dir/includes_CXX.rsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/google-test/CMakeFiles/gtest_main.dir/link.txt" afterPath="$PROJECT_DIR$/tests/google-test/CMakeFiles/gtest_main.dir/link.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/google-test/CMakeFiles/progress.marks" afterPath="$PROJECT_DIR$/tests/google-test/CMakeFiles/progress.marks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/google-test/Makefile" afterPath="$PROJECT_DIR$/tests/google-test/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/google-test/cmake_install.cmake" afterPath="$PROJECT_DIR$/tests/google-test/cmake_install.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/google-test/gtest.cbp" afterPath="$PROJECT_DIR$/tests/google-test/gtest.cbp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/CMakeFiles/" />
@@ -98,8 +43,8 @@
       <file leaf-file-name="trie.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/trie.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
-              <caret line="119" column="17" lean-forward="false" selection-start-line="119" selection-start-column="17" selection-end-line="119" selection-end-column="17" />
+            <state relative-caret-position="148">
+              <caret line="96" column="41" lean-forward="true" selection-start-line="96" selection-start-column="41" selection-end-line="96" selection-end-column="41" />
               <folding>
                 <element signature="e#33#50#0" expanded="true" />
                 <element signature="e#100#112#0" expanded="true" />
@@ -108,11 +53,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="trie.hpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="trie.hpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/trie.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+            <state relative-caret-position="413">
+              <caret line="371" column="1" lean-forward="true" selection-start-line="371" selection-start-column="1" selection-end-line="371" selection-end-column="1" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
                 <element signature="e#1540#1552#0" expanded="true" />
@@ -141,8 +86,8 @@
       <file leaf-file-name="Calculadora.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Calculadora.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+            <state relative-caret-position="318">
+              <caret line="68" column="60" lean-forward="true" selection-start-line="68" selection-start-column="60" selection-end-line="68" selection-end-column="60" />
               <folding>
                 <element signature="e#66#90#0" expanded="true" />
               </folding>
@@ -150,14 +95,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Calculadora.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Calculadora.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Calculadora.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="37" lean-forward="false" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+            <state relative-caret-position="658">
+              <caret line="68" column="10" lean-forward="true" selection-start-line="68" selection-start-column="10" selection-end-line="68" selection-end-column="10" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Ventana.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Ventana.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -205,10 +160,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/tests/google-test/include/gtest/internal/gtest-port.h" />
-        <option value="$PROJECT_DIR$/src/Calculadora.h" />
-        <option value="$PROJECT_DIR$/src/Calculadora.cpp" />
-        <option value="$PROJECT_DIR$/src/trie.h" />
         <option value="$PROJECT_DIR$/src/trie.hpp" />
+        <option value="$PROJECT_DIR$/src/Calculadora.h" />
+        <option value="$PROJECT_DIR$/src/trie.h" />
+        <option value="$PROJECT_DIR$/src/Calculadora.cpp" />
       </list>
     </option>
   </component>
@@ -311,12 +266,12 @@
       <workItem from="1530311125896" duration="2573000" />
       <workItem from="1530453099502" duration="12242000" />
       <workItem from="1530505612232" duration="47000" />
-      <workItem from="1530547555218" duration="3709000" />
+      <workItem from="1530547555218" duration="9703000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35753000" />
+    <option name="totallyTimeSpent" value="41747000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -645,13 +600,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ventana.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Utiles.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -707,26 +655,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Calculadora.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-          <folding>
-            <element signature="e#66#90#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Calculadora.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="37" lean-forward="false" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Instruccion.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -737,10 +665,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ventana.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/trie.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="119" column="17" lean-forward="false" selection-start-line="119" selection-start-column="17" selection-end-line="119" selection-end-column="17" />
+        <state relative-caret-position="148">
+          <caret line="96" column="41" lean-forward="true" selection-start-line="96" selection-start-column="41" selection-end-line="96" selection-end-column="41" />
           <folding>
             <element signature="e#33#50#0" expanded="true" />
             <element signature="e#100#112#0" expanded="true" />
@@ -750,8 +686,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/trie.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+        <state relative-caret-position="413">
+          <caret line="371" column="1" lean-forward="true" selection-start-line="371" selection-start-column="1" selection-end-line="371" selection-end-column="1" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
             <element signature="e#1540#1552#0" expanded="true" />
@@ -772,6 +708,26 @@
             <element signature="e#12452#12464#0" expanded="true" />
             <element signature="e#12654#12666#0" expanded="true" />
             <element signature="e#12791#12803#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Calculadora.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="68" column="60" lean-forward="true" selection-start-line="68" selection-start-column="60" selection-end-line="68" selection-end-column="60" />
+          <folding>
+            <element signature="e#66#90#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Calculadora.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="658">
+          <caret line="68" column="10" lean-forward="true" selection-start-line="68" selection-start-column="10" selection-end-line="68" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -66,9 +66,6 @@ private:
 
     trie<vector<superInstruccion>> rutinasProg;
 
-    //VERSION DE RUTINA ACTUAL SIN ITER
-    //tuple<rutina, vector<superInstruccion>* > rutinaActual;
-
     trie<vector<superInstruccion>>::ItDiccTrie rutinaActual;
 
     stack<int> pila;

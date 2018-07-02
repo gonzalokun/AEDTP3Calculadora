@@ -93,9 +93,9 @@ private:
     void borrarNodos(Nodo*);
     int cantHijosNodoAct(Nodo*);
 
-
 public:
     Nodo* nodoSignificado(const string&);
+
     class ItDiccTrie{
 
         friend class trie<T>;
@@ -110,7 +110,6 @@ public:
     private:
         Nodo* _actual;
         string clave; //clave del nodo actual
-
     };
 
 };
