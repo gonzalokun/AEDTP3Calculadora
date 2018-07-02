@@ -76,6 +76,8 @@ public:
      * devuelve true si no hay ningún elemento en el diccionario */
     bool empty() const;
 
+
+
 private:
 
     struct Nodo{
@@ -86,21 +88,21 @@ private:
 
     Nodo* raiz;
     int _size;
-
     Nodo* iniciarNodo();
     void copiarNivel(Nodo*&,Nodo*);
     void borrarNodos(Nodo*);
     int cantHijosNodoAct(Nodo*);
 
+
 public:
+    Nodo* nodoSignificado(const string&);
     class ItDiccTrie{
 
         friend class trie<T>;
 
     public:
-
         ItDiccTrie();
-        ItDiccTrie(Nodo* );
+        ItDiccTrie(Nodo*);
         T& operator*() const;
         string claveActual() const;
 
@@ -108,6 +110,7 @@ public:
     private:
         Nodo* _actual;
         string clave; //clave del nodo actual
+
     };
 
 };

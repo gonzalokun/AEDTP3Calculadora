@@ -8,7 +8,7 @@ using namespace std;
 typedef string rutina;
 typedef int valor;
 typedef string variable;
-enum Operacion {oAdd, oSub, oMul, oPush, oRead, oWrite, oJump, oJumpz, nada};
+enum Operacion {oAdd, oSub, oMul, oPush, oRead, oWrite, oJump, oJumpz, oNada};
 
 class Instruccion
 {
@@ -16,7 +16,7 @@ public:
     Instruccion(rutina r);
     Instruccion();
     ~Instruccion();
-    void push(valor &n); //crea inst push
+    void push(valor n); //crea inst push
     void add(); //crea inst add
     void sub();
     void mul();

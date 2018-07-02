@@ -4,8 +4,8 @@ Instruccion::Instruccion(rutina r) {
     cout << "Nueva instruccion perteneciente a rutina: " << r<<endl;
     nombreRut = r;
     nombreVar = "";
-    consNum = -1;
-    op = nada;
+    consNum = 0;
+    op = oNada;
 }
 
 
@@ -13,14 +13,15 @@ Instruccion::Instruccion() {
     cout << "Nueva instruccion sin rutina"<<endl;
     nombreRut = "";
     nombreVar = "";
-    consNum = -1;
+    consNum = 0;
+    op=oNada;
 }
 
 Instruccion::~Instruccion(){
 
 }
 
-void Instruccion::push(valor &n){
+void Instruccion::push(valor n){
     op = oPush;
     consNum = n;
 }

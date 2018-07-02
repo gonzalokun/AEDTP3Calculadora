@@ -13,23 +13,19 @@ public:
     * Construye un diccionario vacio.
     **/
     triee();
-
     /**
     CONSTRUCTOR POR COPIA
     * Construye un diccionario por copia.
     **/
     triee(const triee<T>& aCopiar);
-
     /**
     OPERADOR ASIGNACION
      */
     triee& operator=(const triee& d);
-
     /**
     DESTRUCTOR
     **/
     ~triee();
-
     /**
     operator[]
     * Acceso o definición de pares clave/valor
