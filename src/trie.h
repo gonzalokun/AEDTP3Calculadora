@@ -36,8 +36,10 @@ public:
     * Acceso o definición de pares clave/valor
     **/
 
+
     T &operator[](const string &);
     T &operator[](const tuple<string, int>& clave_w);
+    T &operator[](const tuple<string,string>& c);
     /**
     COUNT
     * Devuelve la cantidad de apariciones de la clave (0 o 1).

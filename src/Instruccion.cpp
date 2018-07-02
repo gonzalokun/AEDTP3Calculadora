@@ -5,6 +5,7 @@ Instruccion::Instruccion(rutina r) {
     nombreRut = r;
     nombreVar = "";
     consNum = -1;
+    op = nada;
 }
 
 
@@ -18,7 +19,6 @@ Instruccion::Instruccion() {
 Instruccion::~Instruccion(){
 
 }
-
 
 void Instruccion::push(valor &n){
     op = oPush;

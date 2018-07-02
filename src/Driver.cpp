@@ -12,8 +12,9 @@ Driver::~Driver() {
 // Operaciones para agregar instrucciones
 
 void Driver::begin(string rutina) {
-    if(!comenzoEjecucion)
+    if(!comenzoEjecucion && rutina != rutinaActual)
     {
+        prog->nuevaRutina(rutina);
         rutinaActual = rutina;
         instAct = new Instruccion(rutina);
     }

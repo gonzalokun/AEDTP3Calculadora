@@ -50,10 +50,10 @@ private:
 
     tuple<rutina, vector<superInstruccion>* > rutinaActual;
 
-    trie<vector<superInstruccion>* > rutinasProg;
+    trie<vector<superInstruccion> > rutinasProg;
 
     stack<int> pila;
-    Programa * programa;
+    Programa programa;
     int W;
     int instanteActual;
     bool ejecutando;

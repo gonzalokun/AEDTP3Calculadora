@@ -7,18 +7,26 @@ Programa::Programa(){
 
 
 Programa::~Programa(){
+}
 
+void Programa::nuevaRutina(const rutina r) {
+    rutinas.push_back(r);
+    list<Instruccion> aux = list<Instruccion>();
+    aux.push_back(Instruccion());
+    cout << "A"<<endl;
+    rutinasPorNombre[r] = aux;
+    cout << "s"<<endl;
 }
 
 void Programa::agregarInstruccion(rutina r, Instruccion i){
     i.setRutina(r);
-    if(rutinasPorNombre.count(r) != 0) {  //si existe
-        rutinasPorNombre[r].listaInstr.push_back(i);
-        rutinas.push_back(r);
-    }else { //si no existe
-        rutinasPorNombre[r].listaInstr = list<Instruccion>();
-        rutinasPorNombre[r].listaInstr.push_back(i);
+    cout << "d"<<endl;
+    if(rutinasPorNombre[r].back().nombreRutina() == "") {
+        rutinasPorNombre[r].back() = i;
+    }else {
+        rutinasPorNombre[r].push_back(i);
     }
+    cout << "w"<<endl;
 }
 
 const list<rutina>& Programa::getRutinas() const{
@@ -29,9 +37,9 @@ list<rutina>& Programa::getRutinas(){
 }
 //PRE, 0 <= iesima < rutinas.size()
 Instruccion Programa::instruccion(const rutina r, const int iesima){
-    list<Instruccion>::iterator it = (rutinasPorNombre[r]).listaInstr.begin();
+    list<Instruccion>::const_iterator it = (rutinasPorNombre[r]).begin();
     int rest = iesima;
-    while(rest >= 0) {
+    while(rest >= 0 && it != (rutinasPorNombre[r]).end()) {
         it++;
         rest--;
     }
@@ -41,14 +49,14 @@ Instruccion Programa::instruccion(const rutina r, const int iesima){
 
 Operacion Programa::instruccion2(const rutina r, const int iesima){
     cout << "entro a inst2"<<endl;
-    list<Instruccion>::iterator it = (rutinasPorNombre[r]).listaInstr.begin();
+    list<Instruccion>::iterator it = (rutinasPorNombre[r]).begin();
     int rest = iesima;
-    while(rest >= 0) {
+    while(rest >= 0 && it != (rutinasPorNombre[r]).end()) {
         it++;
         rest--;
     }
     return (*it).getOp();
 }
 int Programa::longitud(rutina r) {
-    //return (rutinasPorNombre[r]).size();
+    return (rutinasPorNombre[r]).size();
 }
