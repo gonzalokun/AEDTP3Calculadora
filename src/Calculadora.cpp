@@ -64,6 +64,153 @@ bool Calculadora::getEjecutando() const{
     return ejecutando;
 }
 void Calculadora::ejecutarUnPaso(){
+
+    superInstruccion superIns = (*(get<1>(rutinaActual)))[indiceInstruccionActual];
+    Operacion op = get<0>(superIns);
+
+    bool huboJump = false;
+
+
+    if(op == oPush){ // Utiliza valor
+        int valor = get<1>(superIns);
+        pila.push(valor);
+    }
+    else if(op == oAdd){ // Sin parametros
+
+        if(pila.size() >= 2){
+            int v1 = pila.top();
+            pila.pop();
+            int v2 = pila.top();
+            pila.pop();
+
+            pila.push(v1+v2);
+        }
+        else if(pila.size() == 1){
+            int v1 = pila.top();
+            pila.pop();
+
+            pila.push(v1);
+        }
+        else{
+            pila.push(0);
+        }
+
+    }
+    else if(op == oSub){ // Idem
+        if(pila.size() >= 2){
+            int v1 = pila.top();
+            pila.pop();
+            int v2 = pila.top();
+            pila.pop();
+
+            pila.push(v2-v1);
+        }
+        else if(pila.size() == 1){
+            int v1 = pila.top();
+            pila.pop();
+
+            pila.push(v1);
+        }
+        else{
+            pila.push(0);
+        }
+    }
+    else if(op == oMul){ // Idem
+        if(pila.size() >= 2){
+            int v1 = pila.top(); // USAR PRIMEROPILA Y SEGUNDOPILA ?
+            pila.pop();
+            int v2 = pila.top();
+            pila.pop();
+
+            pila.push(v2*v1);
+        }
+        else if(pila.size() == 1){
+            int v1 = pila.top();
+            pila.pop();
+
+            pila.push(v1*0);
+        }
+        else{
+            pila.push(0);
+        }
+    }
+    else if(op == oRead){ // Utiliza nombre de variable
+        itVarNombre it = get<2>(superIns);
+
+        // Podria cambiar segun como implementemos el diccTrie.
+
+        if(it != NULL){ // Verificar que esto se puede hacer.
+            int v = get<0>((get<0>(*it))[get<0>(*it).tam()]);
+            pila.push(v);
+        }else{
+            pila.push(0);
+        }
+
+
+    }
+    else if(op == oWrite){ // Idem
+        int v = pila.top();
+        pila.pop();
+
+        tuple<instante, valor> t;
+        get<0>(t) = instanteActual;
+        get<1>(t) = v;
+
+        // Podria cambiar segun como implementemos el diccTrie.
+        itVarNombre it = get<2>(superIns);
+
+
+        if(it != NULL){ // El iterador existe
+            (get<0>(*it)).registrar(t);
+            (get<1>(*it)).push_back(t);
+        }
+        else{ // Si no existe, creo un nuevo iterador y le agrego los valores correspondientes.
+            itVarNombre* newIt = new itVarNombre;
+            get<2>(superIns) = *newIt;
+            it = get<2>(superIns);
+
+            (get<0>(*it)).registrar(t);
+            (get<1>(*it)).push_back(t);
+        }
+
+
+    }
+    else if(op == oJump){ // Utiliza nombre de rutina
+        itRut it = get<3>(superIns);
+
+        if(it != NULL){ // El iterador existe
+            // Nombre de la rutina?? Wait for iterator.
+
+
+            huboJump = true;
+        }
+        else{ // Si no existe, termino el programa.
+
+        }
+    }
+    else if(op == oJumpz){ // Idem
+
+    }
+
+    if(op == oPush || op == oAdd || op == oSub || op == oMul){
+        indiceInstruccionActual++;
+        instanteActual++;
+    }
+    else if(op == oRead || op == oWrite){
+        indiceInstruccionActual++;
+        instanteActual++;
+    }
+    else{
+        if(huboJump){
+            indiceInstruccionActual = 0;
+        }
+        else{ // No saltó por algun motivo. (Z o normal?)
+            indiceInstruccionActual++;
+        }
+        instanteActual++;
+
+    }
+
 }
 
 void Calculadora::asignarVariable(variable x, valor v){
