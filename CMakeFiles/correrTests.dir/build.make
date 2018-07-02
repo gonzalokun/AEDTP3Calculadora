@@ -57,18 +57,18 @@ include CMakeFiles/correrTests.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/correrTests.dir/flags.make
 
-CMakeFiles/correrTests.dir/tests/test_trie.cpp.o: CMakeFiles/correrTests.dir/flags.make
-CMakeFiles/correrTests.dir/tests/test_trie.cpp.o: tests/test_trie.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/correrTests.dir/tests/test_trie.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/correrTests.dir/tests/test_trie.cpp.o -c /home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/tests/test_trie.cpp
+CMakeFiles/correrTests.dir/tests/test_programa.cpp.o: CMakeFiles/correrTests.dir/flags.make
+CMakeFiles/correrTests.dir/tests/test_programa.cpp.o: tests/test_programa.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/correrTests.dir/tests/test_programa.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/correrTests.dir/tests/test_programa.cpp.o -c /home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/tests/test_programa.cpp
 
-CMakeFiles/correrTests.dir/tests/test_trie.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/correrTests.dir/tests/test_trie.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/tests/test_trie.cpp > CMakeFiles/correrTests.dir/tests/test_trie.cpp.i
+CMakeFiles/correrTests.dir/tests/test_programa.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/correrTests.dir/tests/test_programa.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/tests/test_programa.cpp > CMakeFiles/correrTests.dir/tests/test_programa.cpp.i
 
-CMakeFiles/correrTests.dir/tests/test_trie.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/correrTests.dir/tests/test_trie.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/tests/test_trie.cpp -o CMakeFiles/correrTests.dir/tests/test_trie.cpp.s
+CMakeFiles/correrTests.dir/tests/test_programa.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/correrTests.dir/tests/test_programa.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/tests/test_programa.cpp -o CMakeFiles/correrTests.dir/tests/test_programa.cpp.s
 
 CMakeFiles/correrTests.dir/src/Instruccion.cpp.o: CMakeFiles/correrTests.dir/flags.make
 CMakeFiles/correrTests.dir/src/Instruccion.cpp.o: src/Instruccion.cpp
@@ -83,22 +83,37 @@ CMakeFiles/correrTests.dir/src/Instruccion.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/correrTests.dir/src/Instruccion.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/Instruccion.cpp -o CMakeFiles/correrTests.dir/src/Instruccion.cpp.s
 
+CMakeFiles/correrTests.dir/src/Programa.cpp.o: CMakeFiles/correrTests.dir/flags.make
+CMakeFiles/correrTests.dir/src/Programa.cpp.o: src/Programa.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/correrTests.dir/src/Programa.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/correrTests.dir/src/Programa.cpp.o -c /home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/Programa.cpp
+
+CMakeFiles/correrTests.dir/src/Programa.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/correrTests.dir/src/Programa.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/Programa.cpp > CMakeFiles/correrTests.dir/src/Programa.cpp.i
+
+CMakeFiles/correrTests.dir/src/Programa.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/correrTests.dir/src/Programa.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/Programa.cpp -o CMakeFiles/correrTests.dir/src/Programa.cpp.s
+
 # Object files for target correrTests
 correrTests_OBJECTS = \
-"CMakeFiles/correrTests.dir/tests/test_trie.cpp.o" \
-"CMakeFiles/correrTests.dir/src/Instruccion.cpp.o"
+"CMakeFiles/correrTests.dir/tests/test_programa.cpp.o" \
+"CMakeFiles/correrTests.dir/src/Instruccion.cpp.o" \
+"CMakeFiles/correrTests.dir/src/Programa.cpp.o"
 
 # External object files for target correrTests
 correrTests_EXTERNAL_OBJECTS =
 
-correrTests: CMakeFiles/correrTests.dir/tests/test_trie.cpp.o
+correrTests: CMakeFiles/correrTests.dir/tests/test_programa.cpp.o
 correrTests: CMakeFiles/correrTests.dir/src/Instruccion.cpp.o
+correrTests: CMakeFiles/correrTests.dir/src/Programa.cpp.o
 correrTests: CMakeFiles/correrTests.dir/build.make
 correrTests: tests/google-test/libgtest.a
 correrTests: tests/google-test/libgtest_main.a
 correrTests: tests/google-test/libgtest.a
 correrTests: CMakeFiles/correrTests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable correrTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable correrTests"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/correrTests.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

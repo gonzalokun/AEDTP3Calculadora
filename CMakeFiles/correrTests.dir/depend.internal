@@ -4,10 +4,18 @@
 CMakeFiles/correrTests.dir/src/Instruccion.cpp.o
  /home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/Instruccion.cpp
  /home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/Instruccion.h
-CMakeFiles/correrTests.dir/tests/test_trie.cpp.o
+CMakeFiles/correrTests.dir/src/Programa.cpp.o
+ /home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/Instruccion.h
+ /home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/Programa.cpp
+ /home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/Programa.h
  /home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/trie.h
  /home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/trie.hpp
- /home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/tests/test_trie.cpp
+CMakeFiles/correrTests.dir/tests/test_programa.cpp.o
+ /home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/Instruccion.h
+ /home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/Programa.h
+ /home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/trie.h
+ /home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/trie.hpp
+ /home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/tests/test_programa.cpp
  tests/google-test/include/gtest/gtest-death-test.h
  tests/google-test/include/gtest/gtest-message.h
  tests/google-test/include/gtest/gtest-param-test.h

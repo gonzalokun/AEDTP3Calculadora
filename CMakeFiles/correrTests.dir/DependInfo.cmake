@@ -5,7 +5,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/Instruccion.cpp" "/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/CMakeFiles/correrTests.dir/src/Instruccion.cpp.o"
-  "/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/tests/test_trie.cpp" "/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/CMakeFiles/correrTests.dir/tests/test_trie.cpp.o"
+  "/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/Programa.cpp" "/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/CMakeFiles/correrTests.dir/src/Programa.cpp.o"
+  "/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/tests/test_programa.cpp" "/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/CMakeFiles/correrTests.dir/tests/test_programa.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

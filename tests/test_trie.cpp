@@ -304,7 +304,6 @@ TEST(trie_test, testAdicional_it3) {
     EXPECT_EQ(*it2, make_tuple(n2,l4));
     EXPECT_EQ(it2.claveActual(),"casito");
 
-
 }
 
 int main(int argc, char* argv[]) {

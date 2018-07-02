@@ -1,1 +1,1 @@
-/usr/bin/c++     CMakeFiles/correrTests.dir/tests/test_trie.cpp.o CMakeFiles/correrTests.dir/src/Instruccion.cpp.o  -o correrTests tests/google-test/libgtest.a tests/google-test/libgtest_main.a tests/google-test/libgtest.a -lpthread 
+/usr/bin/c++     CMakeFiles/correrTests.dir/tests/test_programa.cpp.o CMakeFiles/correrTests.dir/src/Instruccion.cpp.o CMakeFiles/correrTests.dir/src/Programa.cpp.o  -o correrTests tests/google-test/libgtest.a tests/google-test/libgtest_main.a tests/google-test/libgtest.a -lpthread 

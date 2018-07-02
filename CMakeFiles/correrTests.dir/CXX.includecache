@@ -16,6 +16,24 @@ string
 iostream
 -
 
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/Programa.cpp
+Programa.h
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/Programa.h
+iostream
+-
+
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/Programa.h
+Instruccion.h
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/Instruccion.h
+vector
+-
+trie.h
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/trie.h
+list
+-
+set
+-
+
 /home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/trie.h
 string
 -
@@ -34,13 +52,13 @@ tuple
 trie.h
 /home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/trie.h
 
-/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/tests/test_trie.cpp
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/tests/test_programa.cpp
 gtest/gtest.h
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/tests/gtest/gtest.h
+iostream
 -
-../src/trie.h
-/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/trie.h
-list
--
+../src/Programa.h
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/Programa.h
 
 tests/google-test/include/gtest/gtest-death-test.h
 gtest/internal/gtest-death-test-internal.h

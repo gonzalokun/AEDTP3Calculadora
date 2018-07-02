@@ -222,32 +222,59 @@ src/Instruccion.cpp.s:
 	$(MAKE) -f CMakeFiles/correrTests.dir/build.make CMakeFiles/correrTests.dir/src/Instruccion.cpp.s
 .PHONY : src/Instruccion.cpp.s
 
-tests/test_trie.o: tests/test_trie.cpp.o
+src/Programa.o: src/Programa.cpp.o
 
-.PHONY : tests/test_trie.o
+.PHONY : src/Programa.o
 
 # target to build an object file
-tests/test_trie.cpp.o:
-	$(MAKE) -f CMakeFiles/correrTests.dir/build.make CMakeFiles/correrTests.dir/tests/test_trie.cpp.o
-.PHONY : tests/test_trie.cpp.o
+src/Programa.cpp.o:
+	$(MAKE) -f CMakeFiles/correrTests.dir/build.make CMakeFiles/correrTests.dir/src/Programa.cpp.o
+.PHONY : src/Programa.cpp.o
 
-tests/test_trie.i: tests/test_trie.cpp.i
+src/Programa.i: src/Programa.cpp.i
 
-.PHONY : tests/test_trie.i
+.PHONY : src/Programa.i
 
 # target to preprocess a source file
-tests/test_trie.cpp.i:
-	$(MAKE) -f CMakeFiles/correrTests.dir/build.make CMakeFiles/correrTests.dir/tests/test_trie.cpp.i
-.PHONY : tests/test_trie.cpp.i
+src/Programa.cpp.i:
+	$(MAKE) -f CMakeFiles/correrTests.dir/build.make CMakeFiles/correrTests.dir/src/Programa.cpp.i
+.PHONY : src/Programa.cpp.i
 
-tests/test_trie.s: tests/test_trie.cpp.s
+src/Programa.s: src/Programa.cpp.s
 
-.PHONY : tests/test_trie.s
+.PHONY : src/Programa.s
 
 # target to generate assembly for a file
-tests/test_trie.cpp.s:
-	$(MAKE) -f CMakeFiles/correrTests.dir/build.make CMakeFiles/correrTests.dir/tests/test_trie.cpp.s
-.PHONY : tests/test_trie.cpp.s
+src/Programa.cpp.s:
+	$(MAKE) -f CMakeFiles/correrTests.dir/build.make CMakeFiles/correrTests.dir/src/Programa.cpp.s
+.PHONY : src/Programa.cpp.s
+
+tests/test_programa.o: tests/test_programa.cpp.o
+
+.PHONY : tests/test_programa.o
+
+# target to build an object file
+tests/test_programa.cpp.o:
+	$(MAKE) -f CMakeFiles/correrTests.dir/build.make CMakeFiles/correrTests.dir/tests/test_programa.cpp.o
+.PHONY : tests/test_programa.cpp.o
+
+tests/test_programa.i: tests/test_programa.cpp.i
+
+.PHONY : tests/test_programa.i
+
+# target to preprocess a source file
+tests/test_programa.cpp.i:
+	$(MAKE) -f CMakeFiles/correrTests.dir/build.make CMakeFiles/correrTests.dir/tests/test_programa.cpp.i
+.PHONY : tests/test_programa.cpp.i
+
+tests/test_programa.s: tests/test_programa.cpp.s
+
+.PHONY : tests/test_programa.s
+
+# target to generate assembly for a file
+tests/test_programa.cpp.s:
+	$(MAKE) -f CMakeFiles/correrTests.dir/build.make CMakeFiles/correrTests.dir/tests/test_programa.cpp.s
+.PHONY : tests/test_programa.cpp.s
 
 # Help Target
 help:
@@ -267,9 +294,12 @@ help:
 	@echo "... src/Instruccion.o"
 	@echo "... src/Instruccion.i"
 	@echo "... src/Instruccion.s"
-	@echo "... tests/test_trie.o"
-	@echo "... tests/test_trie.i"
-	@echo "... tests/test_trie.s"
+	@echo "... src/Programa.o"
+	@echo "... src/Programa.i"
+	@echo "... src/Programa.s"
+	@echo "... tests/test_programa.o"
+	@echo "... tests/test_programa.i"
+	@echo "... tests/test_programa.s"
 .PHONY : help
 
 
