@@ -95,7 +95,8 @@ private:
 
 
 public:
-    Nodo* nodoSignificado(const string&);
+    //PRE clave pertenece al trie, es decir, count(clave)> 0
+    Nodo* nodoSignificado(const string& clave);
     class ItDiccTrie{
 
         friend class trie<T>;

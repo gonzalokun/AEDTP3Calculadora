@@ -31,12 +31,16 @@ iostream
 -
 tuple
 -
+trie.h
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/trie.h
 
 /home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/tests/test_trie.cpp
 gtest/gtest.h
 -
 ../src/trie.h
 /home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/trie.h
+list
+-
 
 tests/google-test/include/gtest/gtest-death-test.h
 gtest/internal/gtest-death-test-internal.h

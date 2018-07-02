@@ -1,5 +1,6 @@
 #include <gtest/gtest.h>
 #include "../src/trie.h"
+#include <list>
 /*
 
 TEST(trie, probandoBorrar){
@@ -245,12 +246,66 @@ TEST(trie_test, nuevoTest) {
 
 TEST(trie_test, testAdicional_it){
     trie<int> t;
-
     t["cas"] = 25;
     trie<int>::ItDiccTrie it(t.nodoSignificado("cas"));
-    t["caso"] = 30;
+    EXPECT_EQ(it.claveActual(),"cas");
+    EXPECT_EQ(*it,25);
+    t["cas"] = 30;
+    EXPECT_EQ(it.claveActual(),"cas");
+    EXPECT_EQ(*it,30);
+    t["cas"] = 302;
+    EXPECT_EQ(*it,302);
+    EXPECT_EQ(it.claveActual(),"cas");
+
 }
 
+TEST(trie_test, testAdicional_it2) {
+    trie<list<int> > t;
+    list<int> l1;
+    l1.push_back(3);
+    l1.push_back(32);
+    t["l2"] = l1;
+    list<int> l2;
+    l2.push_back(120);
+    l2.push_back(343);
+    l2.push_back(232);
+    l2.push_back(23);
+    t["lu"] = l2;
+    trie<list<int> >::ItDiccTrie it(t.nodoSignificado("lu"));
+    list<int> aux;
+    aux.push_back(120);
+    aux.push_back(343);
+    aux.push_back(232);
+    aux.push_back(23);
+    EXPECT_EQ(it.claveActual(),"lu");
+    EXPECT_EQ(*it,aux);
+}
+
+
+TEST(trie_test, testAdicional_it3) {
+    trie<tuple<int,list<int> > > t;
+    list<int> l2;
+    l2.push_back(120);
+    l2.push_back(343);
+    l2.push_back(232);
+    l2.push_back(23);
+    int n = 12;
+    list<int> l1;
+    l1.push_back(1);
+    list<int> l4 = {4,7,2,5,9,6,3,1,66,3,7};
+    int n2 = n+6;
+    t["casa"] = make_tuple(n,l1);
+    trie<tuple<int,list<int> > >::ItDiccTrie it(t.nodoSignificado("casa"));
+    t["casita"] = make_tuple(n,l2);
+    t["casito"] = make_tuple(n2,l4);
+    EXPECT_EQ(*it, make_tuple(n,l1));
+    EXPECT_EQ(it.claveActual(),"casa");
+    trie<tuple<int,list<int> > >::ItDiccTrie it2(t.nodoSignificado("casito"));
+    EXPECT_EQ(*it2, make_tuple(n2,l4));
+    EXPECT_EQ(it2.claveActual(),"casito");
+
+
+}
 
 int main(int argc, char* argv[]) {
 	testing::InitGoogleTest(&argc, argv);
