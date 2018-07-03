@@ -2,7 +2,7 @@
 #include "../src/Driver.h"
 #include <iostream>
 using namespace std;
-
+/*
 TEST(test_driver, primer_test){
     cout << "hello world";
     Driver d;
@@ -48,7 +48,6 @@ TEST(test_driver, push) {
 	ASSERT_TRUE(d.ejecucionFinalizada());
 }
 
-/*
 
 TEST(test_driver, push2) {
 	Driver d;
@@ -306,7 +305,7 @@ TEST(test_driver, read_variable_indefinida) {
 	ASSERT_EQ(d.instanteActual(), 3);
 	ASSERT_EQ(d.topePila(), 1);
 	ASSERT_TRUE(d.ejecucionFinalizada());
-}
+}*/
 
 TEST(test_driver, read) {
 	for (int tam_ventana = 1; tam_ventana < 10; tam_ventana++) {
@@ -325,6 +324,7 @@ TEST(test_driver, read) {
 		ASSERT_EQ(d.valorHistoricoVariable("foo", 0), 0);
 
 		d.ejecutarInstruccionActual();
+        //a partir de aca instante actual = 1
 		ASSERT_EQ(d.valorVariable("foo"), 0);
 		ASSERT_EQ(d.instanteActual(), 1);
 		ASSERT_EQ(d.topePila(), 0);
@@ -371,7 +371,7 @@ TEST(test_driver, read) {
 		ASSERT_EQ(d.valorHistoricoVariable("foo", 4), 21901650);
 	}
 }
-
+/*
 TEST(test_driver, read_write) {
 	for (int tam_ventana = 1; tam_ventana < 10; tam_ventana++) {
 		Driver d;

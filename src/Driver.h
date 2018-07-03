@@ -30,7 +30,7 @@ public:
 	void ejecutarInstruccionActual();
 	int topePila() const; // Si la pila está vacía, devuelve 0.
 	const int valorVariable(string idVariable)  ;
-	int valorHistoricoVariable(string idVariable, int t) const;
+	const int valorHistoricoVariable(string idVariable, int t);
 	int instanteActual() const;
     Programa prog;
 private:

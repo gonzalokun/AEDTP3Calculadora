@@ -135,8 +135,8 @@ const int Driver::valorVariable(string x){
 	//return calc.valorEnInstante(x,calc.getInstanteActual());
 }
 
-int Driver::valorHistoricoVariable(string x, int t) const {
-	// COMPLETAR
+const int Driver::valorHistoricoVariable(string x, int t) {
+	return calc.valorEnInstante(x,t);
 }
 
 int Driver::instanteActual() const {

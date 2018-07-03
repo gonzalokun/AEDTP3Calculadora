@@ -160,7 +160,7 @@ cout << "2"<<endl;
             int v1 = pila.top();
             pila.pop();
 
-            pila.push(v1);
+            pila.push(-v1);
         }
         else{
             pila.push(0);
@@ -335,17 +335,28 @@ cout << "2"<<endl;
 void Calculadora::asignarVariable(variable x, valor v){
     //si el ultimo instante de la variable x es el instante actual, modificamos el valor
     //si el ultimo instante es menor al isntante actual, creamos un nuevo nodo en la lista
-    cout <<"---------------------------------"<<endl;
+    cout <<"-------------ASIGNAR VAR "<< x << " "<<v<<"------------------"<<endl;
     if(variablePorNombre.count(x) > 0 ){ //si existe
-        int tam = variablePorNombre[make_tuple(x,W)].vent.tam()-1;
-        int ultInst = get<0>(variablePorNombre[make_tuple(x,W)].vent[tam]);
-        if(ultInst == instanteActual) {
-            get<1>(variablePorNombre[make_tuple(x,W)].vent[tam]) = v;
-            get<1>(variablePorNombre[make_tuple(x,W)].valorHistorico.back()) = v;
-        }else {
+        cout << "Existe la variable a asignar"<<endl;
+        int tam = variablePorNombre[make_tuple(x,W)].vent.tam();
+
+        if(tam == 0) {
+            cout << "como no tiene ventana registrada, entro aca"<<endl;
             variablePorNombre[make_tuple(x,W)].vent.registrar(make_tuple(instanteActual,v));
             variablePorNombre[make_tuple(x,W)].valorHistorico.push_back(make_tuple(instanteActual,v));
+        }else {
+            int ultInst = get<0>(variablePorNombre[make_tuple(x,W)].vent[tam-1]);
+            cout << "instante actual: "<< instanteActual<< " ultimo inst regist: "<<ultInst<<endl;
+
+            if(ultInst == instanteActual) {
+                get<1>(variablePorNombre[make_tuple(x,W)].vent[tam-1]) = v;
+                get<1>(variablePorNombre[make_tuple(x,W)].valorHistorico.back()) = v;
+            }else {
+                variablePorNombre[make_tuple(x,W)].vent.registrar(make_tuple(instanteActual,v));
+                variablePorNombre[make_tuple(x,W)].valorHistorico.push_back(make_tuple(instanteActual,v));
+            }
         }
+
     }else { //si no existe todavia la variable
     cout << "como la var no existe"<<endl;
         estructuraDeVariablePorNombre est(W);
@@ -370,9 +381,22 @@ int Calculadora::getIndiceInstruccionActual() const{
 }
 
 valor Calculadora::valorEnInstante(variable var, instante inst){
-    if(instanteActual - inst <= W) {
+    cout << "CONSULTANDO VALOR EN INSTANTE, VAR: "<<var<< " inst: "<< inst<< " inst act:"<<instanteActual<<endl;
+    cout << "W:" <<W<<endl;
+    if(instanteActual - inst < W) {
         if(variablePorNombre.count(var) > 0){
-            return get<1>((variablePorNombre[make_tuple(var,W)].vent)[inst]);
+            cout << "LA VAR QEU BUSCO EXISTE"<<endl;
+            int cantInstantesVar = (variablePorNombre[make_tuple(var,W)].vent).tam();
+            if(cantInstantesVar>instanteActual-inst){
+                return get<1>((variablePorNombre[make_tuple(var,W)].vent)[instanteActual-inst]);
+            }else {
+                variablePorNombre[make_tuple(var,W)].vent.registrar(make_tuple(instanteActual,0));
+                variablePorNombre[make_tuple(var,W)].valorHistorico.push_back(make_tuple(instanteActual,0));
+                return 0;
+            }
+
+        }else {
+            cout << "la var que busco NO Exisgte"<<endl;
         }
     } else {
         valorHistorico::const_iterator it = (variablePorNombre[make_tuple(var,W)].valorHistorico).end();
@@ -387,9 +411,13 @@ valor Calculadora::valorEnInstante(variable var, instante inst){
 
 valor Calculadora::valorActualVariable(variable var){
     if(variablePorNombre.count(var) > 0) {
-        cout << "existe la var"<<endl;
         int tam = variablePorNombre[make_tuple(var,W)].vent.tam();
-        return get<1>(variablePorNombre[make_tuple(var,W)].vent[tam-1]);
+        if(tam == 0) {
+            return 0;
+        }else{
+            return get<1>((variablePorNombre[make_tuple(var,W)].vent)[tam-1]);
+
+        }
     }
 //QUE PASA SI PREGUNTAMOS POR UNA VAR QUE NO EXISTE??
 //SEGUN EL TP1 HAY QUE CREARLA CON VALOR 0
@@ -400,7 +428,9 @@ const stack<valor>& Calculadora::getPila() const{
 }
 
 valor Calculadora::primeroPila() const{
-    return (pila.empty()) ? 0 : (pila.top());
+    cout << "estoy consultando getPila: "<< pila.empty()<<endl;
+    //cout << "pila top: "<< pila.top()<<endl;
+    return (pila.empty())? 0 : (pila.top());
 }
 
 valor Calculadora::segundoPila() {
