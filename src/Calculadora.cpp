@@ -71,6 +71,7 @@ void Calculadora::nuevaCalculadora(Programa p, rutina r, int capVent){
 bool Calculadora::getEjecutando() const{
     return ejecutando;
 }
+
 void Calculadora::ejecutarUnPaso(){
 
     //superInstruccion superIns = (*(get<1>(rutinaActual)))[indiceInstruccionActual];
