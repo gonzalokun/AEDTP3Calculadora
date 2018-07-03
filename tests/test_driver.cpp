@@ -143,10 +143,18 @@ using namespace std;
 
 TEST(test_driver, sub0) {
 	Driver d;
+
+	cout << "HASTA ACA LLEGAMOS 1" << endl;
+
 	d.begin("sosst");
 	d.sub();
 	d.end("sosst");
+
+	cout << "HASTA ACA LLEGAMOS 1.5" << endl;
+
 	d.comenzarEjecucion("sosst", 1024);
+
+	cout << "HASTA ACA LLEGAMOS 2" << endl;
 
 	ASSERT_EQ(d.instanteActual(), 0);
 	ASSERT_EQ(d.topePila(), 0);
