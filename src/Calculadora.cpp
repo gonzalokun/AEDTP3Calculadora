@@ -11,6 +11,7 @@ Calculadora::~Calculadora() {
 }
 
 void Calculadora::nuevaCalculadora(Programa p, rutina r, int capVent){
+    cout << "SE CONSTRUYE NUEVA CALCULADORA"<<endl;
     W = capVent;
     ejecutando = true;
     instanteActual = 0;
@@ -26,7 +27,9 @@ void Calculadora::nuevaCalculadora(Programa p, rutina r, int capVent){
             //entonces definimos un puntero hacia la rutina
             //get<0>(rutinaActual) = (*it);
             //get<1>(rutinaActual) = rutinasProg[r];
+            cout << "def rutinaActual"<<endl;
             rutinaActual = trie<vector<superInstruccion>>::ItDiccTrie(rutinasProg.nodoSignificado(r));
+            cout << "clave def: "<<rutinaActual.claveActual()<<endl;
         }
         it++;
     }
@@ -47,23 +50,34 @@ void Calculadora::nuevaCalculadora(Programa p, rutina r, int capVent){
 
     //pasada 3: lista de instrucciones a cada rutinas.
     it = (p.getRutinas()).begin();
+    cout << "cnatidad de rutinas: "<<p.getRutinas().size()<<endl;
     while(it!= (p.getRutinas()).end()) {
-
+        cout << "ANALIZANDO RUTINA: "<<(*it)<<endl;
         vector<superInstruccion> vec;
-
-
+        if(p.longitud(*it) == 0) {
+            cout << "se define el vec vacio en rutinasProg"<<endl;
+            rutinasProg[*it] = vec;
+        }
+        //si tiene instrucciones
         for (int i = 0; i < p.longitud(*it); ++i) {
+            cout << "i: "<<i<<endl;
             Operacion op;
             int cNum;
             op = p.instruccion(*it,i).getOp();
             cNum = p.instruccion(*it,i).constanteNumerica();
             trie<estructuraDeVariablePorNombre>::ItDiccTrie auxItVar;
+            auxItVar = trie<estructuraDeVariablePorNombre>::ItDiccTrie(variablePorNombre.nodoSignificado(""));
+            cout <<"sigue1"<<endl;
             if(op == oRead || op == oWrite) {
-                 auxItVar = trie<estructuraDeVariablePorNombre>::ItDiccTrie(variablePorNombre.nodoSignificado(p.instruccion(*it,i).nombreVariable()));
+                auxItVar = trie<estructuraDeVariablePorNombre>::ItDiccTrie(variablePorNombre.nodoSignificado(p.instruccion(*it,i).nombreVariable()));
             }else{
-                auxItVar =  trie<estructuraDeVariablePorNombre>::ItDiccTrie(variablePorNombre.nodoSignificado(""));
+                //auxItVar =  trie<estructuraDeVariablePorNombre>::ItDiccTrie(variablePorNombre.nodoSignificado(""));
             }
+            cout <<"sigue2"<<endl;
+
             trie<vector<superInstruccion>>::ItDiccTrie* auxItRut;
+            cout <<"sigue3"<<endl;
+
             if(oJump == op || op == oJumpz) {
                 auxItRut = new trie<vector<superInstruccion>>::ItDiccTrie(rutinasProg.nodoSignificado(p.instruccion(*it,i).nombreRutina()));
             }else {
@@ -75,11 +89,17 @@ void Calculadora::nuevaCalculadora(Programa p, rutina r, int capVent){
             sp.itVarNombre = auxItVar;
             sp.itRut = auxItRut;
             vec.push_back(sp);
+            cout <<"p1"<<endl;
             rutinasProg[*it] = vec;
+            cout << "p2"<<endl;
         }
 
-
-
+    }
+    cout << "size rutinas prog: "<<rutinasProg.size()<<endl;
+    if(rutinasProg.size() == 0){
+        ejecutando = false;
+    } else {
+        //if(rutinasProg.count(rutinaActual.claveActual()) == 0) ejecutando = false;
     }
 
 
@@ -91,8 +111,12 @@ void Calculadora::ejecutarUnPaso(){
 
     //superInstruccion superIns = (*(get<1>(rutinaActual)))[indiceInstruccionActual];
 
+cout << "1"<<endl;
+cout << "clave de rutinasact: "<< rutinaActual.claveActual()<<endl;
+cout << "indice rut act: "<<indiceInstruccionActual<<endl;
+cout << "tam vec sup: "<<(*rutinaActual).size()<<endl;
     superInstruccion superIns = (*rutinaActual)[indiceInstruccionActual];
-
+cout << "2"<<endl;
     Operacion op = superIns.op;
 
     bool jumpValido;
@@ -313,7 +337,7 @@ void Calculadora::asignarVariable(variable x, valor v){
     //si el ultimo instante es menor al isntante actual, creamos un nuevo nodo en la lista
     cout <<"---------------------------------"<<endl;
     if(variablePorNombre.count(x) > 0 ){ //si existe
-        int tam = variablePorNombre[make_tuple(x,W)].vent.capacidad()-1;
+        int tam = variablePorNombre[make_tuple(x,W)].vent.tam()-1;
         int ultInst = get<0>(variablePorNombre[make_tuple(x,W)].vent[tam]);
         if(ultInst == instanteActual) {
             get<1>(variablePorNombre[make_tuple(x,W)].vent[tam]) = v;
@@ -323,12 +347,14 @@ void Calculadora::asignarVariable(variable x, valor v){
             variablePorNombre[make_tuple(x,W)].valorHistorico.push_back(make_tuple(instanteActual,v));
         }
     }else { //si no existe todavia la variable
+    cout << "como la var no existe"<<endl;
         estructuraDeVariablePorNombre est(W);
         est.vent.registrar(make_tuple(instanteActual,v));
         est.valorHistorico.push_back(make_tuple(instanteActual,v));
         variablePorNombre[make_tuple(x,W)] = est;
+        cout << "ahora el count de var es: "<< variablePorNombre.count(x)<<endl;
     }
-
+    cout << "fin"<<endl;
 }
 instante Calculadora::getInstanteActual() const{
     return instanteActual;
@@ -351,16 +377,22 @@ valor Calculadora::valorEnInstante(variable var, instante inst){
     } else {
         valorHistorico::const_iterator it = (variablePorNombre[make_tuple(var,W)].valorHistorico).end();
         int i = instanteActual;
-        while(i >=inst && it != (variablePorNombre[make_tuple(var,W)].valorHistorico).begin()) {
+        while(i >= inst && it != (variablePorNombre[make_tuple(var,W)].valorHistorico).begin()) {
             i--;
             --it;
         }
-        return get<0>(*it);
+        return get<1>(*it);
     }
 }
 
 valor Calculadora::valorActualVariable(variable var){
-    return get<0>(variablePorNombre[make_tuple(var,W)].vent[W-1]);
+    if(variablePorNombre.count(var) > 0) {
+        cout << "existe la var"<<endl;
+        int tam = variablePorNombre[make_tuple(var,W)].vent.tam();
+        return get<1>(variablePorNombre[make_tuple(var,W)].vent[tam-1]);
+    }
+//QUE PASA SI PREGUNTAMOS POR UNA VAR QUE NO EXISTE??
+//SEGUN EL TP1 HAY QUE CREARLA CON VALOR 0
 }
 
 const stack<valor>& Calculadora::getPila() const{

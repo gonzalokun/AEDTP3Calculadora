@@ -85,7 +85,7 @@ private:
         T* definicion;
         string clave;
     };
-    int cv;
+    int cv; //capcidad ventana
     Nodo* raiz;
     int _size;
     Nodo* iniciarNodo();

@@ -7,21 +7,20 @@ TEST(test_driver, primer_test){
     cout << "hello world";
     Driver d;
     cout << "Finish"<<endl;
-    d.begin("Rutina1");
+    d.begin("r");
     d.push(5);
-    EXPECT_EQ(d.prog.longitud("Rutina1"),1);
+    EXPECT_EQ(d.prog.longitud("r"),1);
     d.push(2);
-    EXPECT_EQ(d.prog.longitud("Rutina1"),2);
+    EXPECT_EQ(d.prog.longitud("r"),2);
     d.add();
-    cout <<"operacion 0 de Rutina1: "<< d.prog.instruccion2("Rutina1", 0)<<endl;
-    cout <<"op == oPush? : " << (d.prog.instruccion2("Rutina1",0) == oPush )  <<endl;
+    cout <<"operacion 0 de Rutina1: "<< d.prog.instruccion2("r", 0)<<endl;
+    cout <<"op == oPush? : " << (d.prog.instruccion2("r",0) == oPush )  <<endl;
     d.asignarVariable("a",5);
     EXPECT_EQ(d.valorVariable("a"),5);
-    d.end("Rutina1");
+    cout << "fin2"<<endl;
+    d.end("r");
 
 }
-
-/*
 
 TEST(test_driver, programa_vacio) {
 	Driver d;
@@ -30,6 +29,7 @@ TEST(test_driver, programa_vacio) {
 	ASSERT_EQ(d.instanteActual(), 0);
 	ASSERT_TRUE(d.ejecucionFinalizada());
 }
+
 
 TEST(test_driver, push) {
 	Driver d;
@@ -47,6 +47,8 @@ TEST(test_driver, push) {
 	ASSERT_EQ(d.topePila(), 6073366);
 	ASSERT_TRUE(d.ejecucionFinalizada());
 }
+
+/*
 
 TEST(test_driver, push2) {
 	Driver d;

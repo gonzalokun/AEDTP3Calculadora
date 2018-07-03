@@ -123,7 +123,7 @@ bool Driver::ejecucionFinalizada() const {
 }
 
 void Driver::ejecutarInstruccionActual() {
-	// COMPLETAR
+	calc.ejecutarUnPaso();
 }
 
 int Driver::topePila() const {
@@ -131,7 +131,8 @@ int Driver::topePila() const {
 }
 
 const int Driver::valorVariable(string x){
-	return calc.valorEnInstante(x,calc.getInstanteActual());
+	return calc.valorActualVariable(x);
+	//return calc.valorEnInstante(x,calc.getInstanteActual());
 }
 
 int Driver::valorHistoricoVariable(string x, int t) const {

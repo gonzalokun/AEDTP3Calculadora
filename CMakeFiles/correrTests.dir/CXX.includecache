@@ -6,19 +6,19 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Calculadora.cpp
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/Calculadora.cpp
 Calculadora.h
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Calculadora.h
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/Calculadora.h
 tuple
 -
 
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Calculadora.h
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/Calculadora.h
 Instruccion.h
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Instruccion.h
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/Instruccion.h
 Programa.h
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Programa.h
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/Programa.h
 Ventana.h
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Ventana.h
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/Ventana.h
 queue
 -
 map
@@ -28,59 +28,59 @@ stack
 tuple
 -
 
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Driver.cpp
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/Driver.cpp
 Driver.h
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Driver.h
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/Driver.h
 
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Driver.h
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/Driver.h
 iostream
 -
 Calculadora.h
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Calculadora.h
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/Calculadora.h
 
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Instruccion.cpp
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/Instruccion.cpp
 Instruccion.h
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Instruccion.h
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/Instruccion.h
 
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Instruccion.h
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/Instruccion.h
 string
 -
 iostream
 -
 
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Programa.cpp
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/Programa.cpp
 Programa.h
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Programa.h
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/Programa.h
 iostream
 -
 
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Programa.h
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/Programa.h
 Instruccion.h
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Instruccion.h
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/Instruccion.h
 vector
 -
 trie.h
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/trie.h
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/trie.h
 list
 -
 set
 -
 
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Ventana.h
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/Ventana.h
 Ventana.hpp
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Ventana.hpp
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/Ventana.hpp
 
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Ventana.hpp
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/Ventana.hpp
 
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/trie.h
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/trie.h
 string
 -
 vector
 -
 trie.hpp
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/trie.hpp
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/trie.hpp
 
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/trie.hpp
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/trie.hpp
 stdio.h
 -
 iostream
@@ -88,45 +88,45 @@ iostream
 tuple
 -
 trie.h
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/trie.h
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/trie.h
 
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/tests/test_driver.cpp
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/tests/test_driver.cpp
 gtest/gtest.h
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/tests/gtest/gtest.h
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/tests/gtest/gtest.h
 ../src/Driver.h
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Driver.h
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/Driver.h
 iostream
 -
 
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/tests/test_instruccion.cpp
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/tests/test_instruccion.cpp
 gtest/gtest.h
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/tests/gtest/gtest.h
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/tests/gtest/gtest.h
 iostream
 -
 ../src/Instruccion.h
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Instruccion.h
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/Instruccion.h
 
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/tests/test_programa.cpp
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/tests/test_programa.cpp
 gtest/gtest.h
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/tests/gtest/gtest.h
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/tests/gtest/gtest.h
 iostream
 -
 ../src/Programa.h
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Programa.h
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/Programa.h
 
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/tests/test_trie.cpp
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/tests/test_trie.cpp
 gtest/gtest.h
 -
 ../src/trie.h
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/trie.h
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/trie.h
 list
 -
 
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/tests/test_ventana.cpp
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/tests/test_ventana.cpp
 gtest/gtest.h
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/tests/gtest/gtest.h
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/tests/gtest/gtest.h
 ../src/Ventana.h
-C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Ventana.h
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/Ventana.h
 
 tests/google-test/include/gtest/gtest-death-test.h
 gtest/internal/gtest-death-test-internal.h
