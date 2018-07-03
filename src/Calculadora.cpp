@@ -11,6 +11,7 @@ Calculadora::~Calculadora() {
 }
 
 void Calculadora::nuevaCalculadora(Programa p, rutina r, int capVent){
+    cout << "SE CONSTRUYE NUEVA CALCULADORA"<<endl;
     W = capVent;
     ejecutando = true;
     instanteActual = 0;
@@ -26,7 +27,9 @@ void Calculadora::nuevaCalculadora(Programa p, rutina r, int capVent){
             //entonces definimos un puntero hacia la rutina
             //get<0>(rutinaActual) = (*it);
             //get<1>(rutinaActual) = rutinasProg[r];
+            cout << "def rutinaActual"<<endl;
             rutinaActual = trie<vector<superInstruccion>>::ItDiccTrie(rutinasProg.nodoSignificado(r));
+            cout << "clave def: "<<rutinaActual.claveActual()<<endl;
         }
         it++;
     }
@@ -44,43 +47,37 @@ void Calculadora::nuevaCalculadora(Programa p, rutina r, int capVent){
         it++;
     }
 
+
     //pasada 3: lista de instrucciones a cada rutinas.
     it = (p.getRutinas()).begin();
-
-//    while(it!= (p.getRutinas()).end()) {
-//        itRut punteroRut;
-//        int i = 0;
-//
-//        Operacion op = p.instruccion(*it,i).getOp();
-//        int constNum = p.instruccion(*it,i).constanteNumerica();
-//        rutinasProg[*it]->resize(p.longitud(*it));
-//
-//        itVarNombre punteroVar = (new tuple<Ventana<tuple<instante, valor> >, valorHistorico>((variablePorNombre[make_tuple(*it,capVent)]).vent,(variablePorNombre[make_tuple(*it,capVent)]).valorHistorico));
-//
-//        for (i = 0; i < p.longitud(*it); ++i) {
-//            punteroRut->push_back(p.instruccion(*it,i));
-//            //armo mi vector de instruccions, pasando de la lista de instruccion de programa
-//        }
-//        rutinasProg[*it]->push_back(make_tuple(op, constNum, punteroVar, punteroRut));
-//    }
-
+    cout << "cnatidad de rutinas: "<<p.getRutinas().size()<<endl;
     while(it!= (p.getRutinas()).end()) {
-
+        cout << "ANALIZANDO RUTINA: "<<(*it)<<endl;
         vector<superInstruccion> vec;
-
-
+        if(p.longitud(*it) == 0) {
+            cout << "se define el vec vacio en rutinasProg"<<endl;
+            rutinasProg[*it] = vec;
+        }
+        //si tiene instrucciones
         for (int i = 0; i < p.longitud(*it); ++i) {
+            cout << "i: "<<i<<endl;
             Operacion op;
             int cNum;
             op = p.instruccion(*it,i).getOp();
             cNum = p.instruccion(*it,i).constanteNumerica();
             trie<estructuraDeVariablePorNombre>::ItDiccTrie auxItVar;
+            auxItVar = trie<estructuraDeVariablePorNombre>::ItDiccTrie(variablePorNombre.nodoSignificado(""));
+            cout <<"sigue1"<<endl;
             if(op == oRead || op == oWrite) {
-                 auxItVar = trie<estructuraDeVariablePorNombre>::ItDiccTrie(variablePorNombre.nodoSignificado(p.instruccion(*it,i).nombreVariable()));
+                auxItVar = trie<estructuraDeVariablePorNombre>::ItDiccTrie(variablePorNombre.nodoSignificado(p.instruccion(*it,i).nombreVariable()));
             }else{
-                auxItVar =  trie<estructuraDeVariablePorNombre>::ItDiccTrie(variablePorNombre.nodoSignificado(""));
+                //auxItVar =  trie<estructuraDeVariablePorNombre>::ItDiccTrie(variablePorNombre.nodoSignificado(""));
             }
+            cout <<"sigue2"<<endl;
+
             trie<vector<superInstruccion>>::ItDiccTrie* auxItRut;
+            cout <<"sigue3"<<endl;
+
             if(oJump == op || op == oJumpz) {
                 auxItRut = new trie<vector<superInstruccion>>::ItDiccTrie(rutinasProg.nodoSignificado(p.instruccion(*it,i).nombreRutina()));
             }else {
@@ -92,22 +89,34 @@ void Calculadora::nuevaCalculadora(Programa p, rutina r, int capVent){
             sp.itVarNombre = auxItVar;
             sp.itRut = auxItRut;
             vec.push_back(sp);
+            cout <<"p1"<<endl;
             rutinasProg[*it] = vec;
+            cout << "p2"<<endl;
         }
-
+        it++;
     }
+    cout << "size rutinas prog: "<<rutinasProg.size()<<endl;
+    if(rutinasProg.size() == 0){
+        ejecutando = false;
+    } else {
+        //if(rutinasProg.count(rutinaActual.claveActual()) == 0) ejecutando = false;
+    }
+
 
 }
 bool Calculadora::getEjecutando() const{
     return ejecutando;
 }
-
 void Calculadora::ejecutarUnPaso(){
 
     //superInstruccion superIns = (*(get<1>(rutinaActual)))[indiceInstruccionActual];
 
+cout << "1"<<endl;
+cout << "clave de rutinasact: "<< rutinaActual.claveActual()<<endl;
+cout << "indice rut act: "<<indiceInstruccionActual<<endl;
+cout << "tam vec sup: "<<(*rutinaActual).size()<<endl;
     superInstruccion superIns = (*rutinaActual)[indiceInstruccionActual];
-
+cout << "2"<<endl;
     Operacion op = superIns.op;
 
     bool jumpValido;
@@ -151,7 +160,7 @@ void Calculadora::ejecutarUnPaso(){
             int v1 = pila.top();
             pila.pop();
 
-            pila.push(v1);
+            pila.push(-v1);
         }
         else{
             pila.push(0);
@@ -326,24 +335,37 @@ void Calculadora::ejecutarUnPaso(){
 void Calculadora::asignarVariable(variable x, valor v){
     //si el ultimo instante de la variable x es el instante actual, modificamos el valor
     //si el ultimo instante es menor al isntante actual, creamos un nuevo nodo en la lista
-    cout <<"---------------------------------"<<endl;
+    cout <<"-------------ASIGNAR VAR "<< x << " "<<v<<"------------------"<<endl;
     if(variablePorNombre.count(x) > 0 ){ //si existe
-        int tam = variablePorNombre[make_tuple(x,W)].vent.capacidad()-1;
-        int ultInst = get<0>(variablePorNombre[make_tuple(x,W)].vent[tam]);
-        if(ultInst == instanteActual) {
-            get<1>(variablePorNombre[make_tuple(x,W)].vent[tam]) = v;
-            get<1>(variablePorNombre[make_tuple(x,W)].valorHistorico.back()) = v;
-        }else {
+        cout << "Existe la variable a asignar"<<endl;
+        int tam = variablePorNombre[make_tuple(x,W)].vent.tam();
+
+        if(tam == 0) {
+            cout << "como no tiene ventana registrada, entro aca"<<endl;
             variablePorNombre[make_tuple(x,W)].vent.registrar(make_tuple(instanteActual,v));
             variablePorNombre[make_tuple(x,W)].valorHistorico.push_back(make_tuple(instanteActual,v));
+        }else {
+            int ultInst = get<0>(variablePorNombre[make_tuple(x,W)].vent[tam-1]);
+            cout << "instante actual: "<< instanteActual<< " ultimo inst regist: "<<ultInst<<endl;
+
+            if(ultInst == instanteActual) {
+                get<1>(variablePorNombre[make_tuple(x,W)].vent[tam-1]) = v;
+                get<1>(variablePorNombre[make_tuple(x,W)].valorHistorico.back()) = v;
+            }else {
+                variablePorNombre[make_tuple(x,W)].vent.registrar(make_tuple(instanteActual,v));
+                variablePorNombre[make_tuple(x,W)].valorHistorico.push_back(make_tuple(instanteActual,v));
+            }
         }
+
     }else { //si no existe todavia la variable
+    cout << "como la var no existe"<<endl;
         estructuraDeVariablePorNombre est(W);
         est.vent.registrar(make_tuple(instanteActual,v));
         est.valorHistorico.push_back(make_tuple(instanteActual,v));
         variablePorNombre[make_tuple(x,W)] = est;
+        cout << "ahora el count de var es: "<< variablePorNombre.count(x)<<endl;
     }
-
+    cout << "fin"<<endl;
 }
 instante Calculadora::getInstanteActual() const{
     return instanteActual;
@@ -359,23 +381,46 @@ int Calculadora::getIndiceInstruccionActual() const{
 }
 
 valor Calculadora::valorEnInstante(variable var, instante inst){
-    if(instanteActual - inst <= W) {
+    cout << "CONSULTANDO VALOR EN INSTANTE, VAR: "<<var<< " inst: "<< inst<< " inst act:"<<instanteActual<<endl;
+    cout << "W:" <<W<<endl;
+    if(instanteActual - inst < W) {
         if(variablePorNombre.count(var) > 0){
-            return get<1>((variablePorNombre[make_tuple(var,W)].vent)[inst]);
+            cout << "LA VAR QEU BUSCO EXISTE"<<endl;
+            int cantInstantesVar = (variablePorNombre[make_tuple(var,W)].vent).tam();
+            if(cantInstantesVar>instanteActual-inst){
+                return get<1>((variablePorNombre[make_tuple(var,W)].vent)[instanteActual-inst]);
+            }else {
+                variablePorNombre[make_tuple(var,W)].vent.registrar(make_tuple(instanteActual,0));
+                variablePorNombre[make_tuple(var,W)].valorHistorico.push_back(make_tuple(instanteActual,0));
+                return 0;
+            }
+
+        }else {
+            cout << "la var que busco NO Exisgte"<<endl;
         }
     } else {
         valorHistorico::const_iterator it = (variablePorNombre[make_tuple(var,W)].valorHistorico).end();
         int i = instanteActual;
-        while(i >=inst && it != (variablePorNombre[make_tuple(var,W)].valorHistorico).begin()) {
+        while(i >= inst && it != (variablePorNombre[make_tuple(var,W)].valorHistorico).begin()) {
             i--;
             --it;
         }
-        return get<0>(*it);
+        return get<1>(*it);
     }
 }
 
 valor Calculadora::valorActualVariable(variable var){
-    return get<0>(variablePorNombre[make_tuple(var,W)].vent[W-1]);
+    if(variablePorNombre.count(var) > 0) {
+        int tam = variablePorNombre[make_tuple(var,W)].vent.tam();
+        if(tam == 0) {
+            return 0;
+        }else{
+            return get<1>((variablePorNombre[make_tuple(var,W)].vent)[tam-1]);
+
+        }
+    }
+//QUE PASA SI PREGUNTAMOS POR UNA VAR QUE NO EXISTE??
+//SEGUN EL TP1 HAY QUE CREARLA CON VALOR 0
 }
 
 const stack<valor>& Calculadora::getPila() const{
@@ -383,7 +428,9 @@ const stack<valor>& Calculadora::getPila() const{
 }
 
 valor Calculadora::primeroPila() const{
-    return (pila.empty()) ? 0 : (pila.top());
+    cout << "estoy consultando getPila: "<< pila.empty()<<endl;
+    //cout << "pila top: "<< pila.top()<<endl;
+    return (pila.empty())? 0 : (pila.top());
 }
 
 valor Calculadora::segundoPila() {

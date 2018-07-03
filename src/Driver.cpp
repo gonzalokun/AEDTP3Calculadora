@@ -109,28 +109,21 @@ void Driver::comenzarEjecucion(string rutina, int capacidadVentana) {
 
     if(!comenzoEjecucion) {
         comenzoEjecucion = true;
-<<<<<<< HEAD
         calc.nuevaCalculadora(prog,rutina, capacidadVentana);
-=======
-        //calc->nuevaCalculadora(*prog,rutina, capacidadVentana);
-        calc.nuevaCalculadora(*prog,rutina, capacidadVentana);
->>>>>>> master
     }
 
 }
 
 void Driver::asignarVariable(string x, int valor) {
-	//calc->asignarVariable(x,valor);
     calc.asignarVariable(x,valor);
 }
 
 bool Driver::ejecucionFinalizada() const {
-	//return not (calc->getEjecutando());
-    return not (calc.getEjecutando());
+	return not (calc.getEjecutando());
 }
 
 void Driver::ejecutarInstruccionActual() {
-	// COMPLETAR
+	calc.ejecutarUnPaso();
 }
 
 int Driver::topePila() const {
@@ -138,14 +131,14 @@ int Driver::topePila() const {
 }
 
 const int Driver::valorVariable(string x){
-	return calc.valorEnInstante(x,calc.getInstanteActual());
+	return calc.valorActualVariable(x);
+	//return calc.valorEnInstante(x,calc.getInstanteActual());
 }
 
-int Driver::valorHistoricoVariable(string x, int t) const {
-	// COMPLETAR
+const int Driver::valorHistoricoVariable(string x, int t) {
+	return calc.valorEnInstante(x,t);
 }
 
 int Driver::instanteActual() const {
-	//return calc->getInstanteActual();
-    return calc.getInstanteActual();
+	return calc.getInstanteActual();
 }
