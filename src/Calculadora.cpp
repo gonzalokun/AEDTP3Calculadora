@@ -42,7 +42,6 @@ void Calculadora::nuevaCalculadora(Programa p, rutina r, int capVent){
         }
     }
 
-
     //pasada 3: lista de instrucciones a cada rutinas.
 
     it = (p.getRutinas()).begin();
@@ -296,22 +295,24 @@ void Calculadora::ejecutarUnPaso(){
 void Calculadora::asignarVariable(variable x, valor v){
     //si el ultimo instante de la variable x es el instante actual, modificamos el valor
     //si el ultimo instante es menor al isntante actual, creamos un nuevo nodo en la lista
-    if(variablePorNombre.count(x) > 0){ //si existe
-        int actual = get<0>(variablePorNombre[make_tuple(x,W)].valorHistorico.back());
-        if(actual < instanteActual) {
-            //trie
-            variablePorNombre[make_tuple(x,W)].valorHistorico.push_back(make_tuple(instanteActual,v));
-            //lista
-            variablePorNombre[make_tuple(x,W)].vent.registrar(make_tuple(instanteActual,v));
-
-        }else {
+    cout <<"---------------------------------"<<endl;
+    if(variablePorNombre.count(x) > 0 ){ //si existe
+        int tam = variablePorNombre[make_tuple(x,W)].vent.capacidad()-1;
+        int ultInst = get<0>(variablePorNombre[make_tuple(x,W)].vent[tam]);
+        if(ultInst == instanteActual) {
+            get<1>(variablePorNombre[make_tuple(x,W)].vent[tam]) = v;
             get<1>(variablePorNombre[make_tuple(x,W)].valorHistorico.back()) = v;
-            int tam = (variablePorNombre[make_tuple(x,W)].vent).tam();
-            get<1>((variablePorNombre[make_tuple(x,W)].vent)[tam-1]) = v;
+        }else {
+            variablePorNombre[make_tuple(x,W)].vent.registrar(make_tuple(instanteActual,v));
+            variablePorNombre[make_tuple(x,W)].valorHistorico.push_back(make_tuple(instanteActual,v));
         }
-
-
+    }else { //si no existe todavia la variable
+        estructuraDeVariablePorNombre est(W);
+        est.vent.registrar(make_tuple(instanteActual,v));
+        est.valorHistorico.push_back(make_tuple(instanteActual,v));
+        variablePorNombre[make_tuple(x,W)] = est;
     }
+
 }
 instante Calculadora::getInstanteActual() const{
     return instanteActual;
