@@ -309,6 +309,7 @@ TEST(test_driver, read_variable_indefinida) {
 
 TEST(test_driver, read) {
 	for (int tam_ventana = 1; tam_ventana < 10; tam_ventana++) {
+        cout << "NUEVO FOR: CAP VENTANA: "<< tam_ventana<<"------------------------------------"<<endl;
 		Driver d;
 		d.begin("avwsno");
 		d.read("foo");

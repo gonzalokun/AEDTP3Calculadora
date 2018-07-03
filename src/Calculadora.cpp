@@ -111,12 +111,8 @@ void Calculadora::ejecutarUnPaso(){
 
     //superInstruccion superIns = (*(get<1>(rutinaActual)))[indiceInstruccionActual];
 
-cout << "1"<<endl;
-cout << "clave de rutinasact: "<< rutinaActual.claveActual()<<endl;
-cout << "indice rut act: "<<indiceInstruccionActual<<endl;
-cout << "tam vec sup: "<<(*rutinaActual).size()<<endl;
     superInstruccion superIns = (*rutinaActual)[indiceInstruccionActual];
-cout << "2"<<endl;
+
     Operacion op = superIns.op;
 
     bool jumpValido;
@@ -201,9 +197,13 @@ cout << "2"<<endl;
         //Si la variable tiene cosas en la ventana se usa, sino es 0
         if((*it).vent.tam() > 0){
             valor valorAPushear = get<1>((*it).vent[tamVent - 1]);
+            (*it).vent.registrar(make_tuple(instanteActual,valorAPushear));
+            (*it).valorHistorico.push_back(make_tuple(instanteActual,valorAPushear));
             pila.push(valorAPushear);
         }
         else{
+            (*it).vent.registrar(make_tuple(instanteActual,0));
+            (*it).valorHistorico.push_back(make_tuple(instanteActual,0));
             pila.push(0);
         }
 
@@ -329,13 +329,13 @@ cout << "2"<<endl;
 //        instanteActual++;
 //
 //    }
-
+    cout << "TERMINADA instante actual " <<instanteActual-1<<endl;
 }
 
 void Calculadora::asignarVariable(variable x, valor v){
     //si el ultimo instante de la variable x es el instante actual, modificamos el valor
     //si el ultimo instante es menor al isntante actual, creamos un nuevo nodo en la lista
-    cout <<"-------------ASIGNAR VAR "<< x << " "<<v<<"------------------"<<endl;
+    cout <<"-------------ASIGNAR VAR "<< x << " "<<v<<" en instante "<<instanteActual<<"------------------"<<endl;
     if(variablePorNombre.count(x) > 0 ){ //si existe
         cout << "Existe la variable a asignar"<<endl;
         int tam = variablePorNombre[make_tuple(x,W)].vent.tam();
@@ -354,6 +354,8 @@ void Calculadora::asignarVariable(variable x, valor v){
             }else {
                 variablePorNombre[make_tuple(x,W)].vent.registrar(make_tuple(instanteActual,v));
                 variablePorNombre[make_tuple(x,W)].valorHistorico.push_back(make_tuple(instanteActual,v));
+                cout << "tam inicial: "<<tam<<endl;
+                cout << "ahora la capacidad queda: "<<variablePorNombre[make_tuple(x,W)].vent.tam()<<endl;
             }
         }
 
@@ -365,7 +367,8 @@ void Calculadora::asignarVariable(variable x, valor v){
         variablePorNombre[make_tuple(x,W)] = est;
         cout << "ahora el count de var es: "<< variablePorNombre.count(x)<<endl;
     }
-    cout << "fin"<<endl;
+    int tam = variablePorNombre[make_tuple(x,W)].vent.tam();
+    cout << "despues de asigna, vale: "<< get<1>(variablePorNombre[make_tuple(x,W)].vent[tam-1])<<endl;
 }
 instante Calculadora::getInstanteActual() const{
     return instanteActual;
@@ -385,10 +388,14 @@ valor Calculadora::valorEnInstante(variable var, instante inst){
     cout << "W:" <<W<<endl;
     if(instanteActual - inst < W) {
         if(variablePorNombre.count(var) > 0){
-            cout << "LA VAR QEU BUSCO EXISTE"<<endl;
+            cout << "LA VAR QUE BUSCO EXISTE"<<endl;
             int cantInstantesVar = (variablePorNombre[make_tuple(var,W)].vent).tam();
+            cout << "sigo"<<endl;
             if(cantInstantesVar>instanteActual-inst){
-                return get<1>((variablePorNombre[make_tuple(var,W)].vent)[instanteActual-inst]);
+                cout << "?"<<endl;
+                cout << "instante a index: "<< cantInstantesVar-1-(instanteActual-inst)<<endl;
+                cout << "devuelve: "<<get<1>((variablePorNombre[make_tuple(var,W)].vent)[cantInstantesVar-1-(instanteActual-inst)])<<endl;
+                return get<1>((variablePorNombre[make_tuple(var,W)].vent)[cantInstantesVar-1-(instanteActual-inst)]);
             }else {
                 variablePorNombre[make_tuple(var,W)].vent.registrar(make_tuple(instanteActual,0));
                 variablePorNombre[make_tuple(var,W)].valorHistorico.push_back(make_tuple(instanteActual,0));
@@ -399,12 +406,19 @@ valor Calculadora::valorEnInstante(variable var, instante inst){
             cout << "la var que busco NO Exisgte"<<endl;
         }
     } else {
-        valorHistorico::const_iterator it = (variablePorNombre[make_tuple(var,W)].valorHistorico).end();
+        cout << "busco valor en historico"<<endl;
+        //valorHistorico::const_iterator it = (variablePorNombre[make_tuple(var,W)].valorHistorico).end();
         int i = instanteActual;
-        while(i >= inst && it != (variablePorNombre[make_tuple(var,W)].valorHistorico).begin()) {
-            i--;
-            --it;
+        valorHistorico::const_iterator itend = (variablePorNombre[make_tuple(var,W)].valorHistorico).end();
+        valorHistorico::const_iterator it = (variablePorNombre[make_tuple(var,W)].valorHistorico).begin();
+        while(get<0>(*it) != inst && it !=itend ){
+            cout << "comparando inst: "<<get<0>(*it)<<endl;
+            it++;
         }
+        /*while(i >= inst && it != (variablePorNombre[make_tuple(var,W)].valorHistorico).begin()) {
+            i--;
+            it--;
+        }*/
         return get<1>(*it);
     }
 }
