@@ -18,13 +18,37 @@ template <typename T>
 trie<T>& trie<T>::operator=(const trie<T>& d) {
     Nodo* nodoRecOrig = d.raiz;
     //cout << (raiz->siguientes==nullptr)<<endl<<(nodoRecOrig->siguientes==nullptr)<<endl;
-    copiarNivel(raiz, nodoRecOrig);
+    copiarNivel(raiz, nodoRecOrig,d.cv);
     _size = d._size;
     return *this;
 }
 
 template<typename T>
 void trie<T>::copiarNivel(Nodo *&a,Nodo *b){
+    //cout << "COPIANDO NIVELES:"<<endl;
+        for (int i = 0; i < 256; i++)
+        {
+            if(b->siguientes[i] != nullptr) {
+
+                if(a == nullptr) {
+                    //cout <<"--------------ENTRO------------------------ i : "<<char(97+i)<<endl;
+                    a = iniciarNodo();
+                }
+                if((b->siguientes[i])->definicion != nullptr) {
+                    //cout << "copio definicion: "<< *(b->siguientes[i]->definicion)<<"------------";
+                    a->siguientes[i] = iniciarNodo();
+                    //cout << ((a->siguientes[i] == nullptr)? "es nul" : "no es nul")<<endl;
+                    a->siguientes[i]->definicion = new T();
+                    *(a->siguientes[i]->definicion) = *(b->siguientes[i]->definicion);
+                }
+                copiarNivel(a->siguientes[i], b->siguientes[i]);
+
+            }
+        }
+}
+
+template<typename T>
+void trie<T>::copiarNivel(Nodo *&a,Nodo *b,int param){
     //cout << "COPIANDO NIVELES:"<<endl;
     for (int i = 0; i < 256; i++)
     {
@@ -38,10 +62,10 @@ void trie<T>::copiarNivel(Nodo *&a,Nodo *b){
                 //cout << "copio definicion: "<< *(b->siguientes[i]->definicion)<<"------------";
                 a->siguientes[i] = iniciarNodo();
                 //cout << ((a->siguientes[i] == nullptr)? "es nul" : "no es nul")<<endl;
-                a->siguientes[i]->definicion = new T();
+                a->siguientes[i]->definicion = new T(param);
                 *(a->siguientes[i]->definicion) = *(b->siguientes[i]->definicion);
             }
-            copiarNivel(a->siguientes[i], b->siguientes[i]);
+            copiarNivel(a->siguientes[i], b->siguientes[i],param);
 
         }
     }
@@ -155,6 +179,7 @@ T& trie<T>::operator[](const tuple<string,string>& c){
             nodoPadre = nodoAct;
             nodoAct = nodoAct->siguientes[indexAscii];
         }
+
         nodoAct->definicion = new T(clave);
         _size++;
         return *(nodoAct->definicion);
@@ -174,7 +199,7 @@ T& trie<T>::operator[](const tuple<string, int> &clave_w){
     //veo si existe y devuelvo significado, si no la creo
     string clave = get<0>(clave_w);
     int w = get<1>(clave_w);
-
+    cv = w;
     if(count(clave) == 0) {//no existe
         //Puede pasar que este vacio el trie o no
         Nodo* nodoAct = raiz;
@@ -382,9 +407,9 @@ bool trie<T>::empty() const{
 }
 
 
-//template<typename T>
-//trie<T>::ItDiccTrie::ItDiccTrie() : _actual(raiz){
-//}
+template<typename T>
+trie<T>::ItDiccTrie::ItDiccTrie(){
+}
 
 template<typename T>
 trie<T>::ItDiccTrie::ItDiccTrie(Nodo *nodo){
@@ -405,10 +430,11 @@ template<typename T>
 T& trie<T>::ItDiccTrie::operator*() const{
     if(_actual->clave != ""){
         return *(_actual->definicion);
-    }else {
+    }
+    /*else {
         T* aux = new T;
         return *aux;
-    }
+    }*/
 }
 template<typename T>
 string trie<T>::ItDiccTrie::claveActual() const{

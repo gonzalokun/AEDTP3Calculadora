@@ -8,7 +8,6 @@ Calculadora::Calculadora() {
 }
 
 Calculadora::~Calculadora() {
-
 }
 
 void Calculadora::nuevaCalculadora(Programa p, rutina r, int capVent){

@@ -256,12 +256,6 @@
 		<Unit filename="C:/Proyectos/AEDTP3Calculadora/src/trie.hpp">
 			<Option target="correrTests"/>
 		</Unit>
-		<Unit filename="C:/Proyectos/AEDTP3Calculadora/src/triee.h">
-			<Option target="correrTests"/>
-		</Unit>
-		<Unit filename="C:/Proyectos/AEDTP3Calculadora/src/triee.hpp">
-			<Option target="correrTests"/>
-		</Unit>
 		<Unit filename="C:/Proyectos/AEDTP3Calculadora/tests/google-test/src/gtest-all.cc">
 			<Option target="gtest"/>
 		</Unit>
@@ -269,6 +263,15 @@
 			<Option target="gtest_main"/>
 		</Unit>
 		<Unit filename="C:/Proyectos/AEDTP3Calculadora/tests/test_driver.cpp">
+			<Option target="correrTests"/>
+		</Unit>
+		<Unit filename="C:/Proyectos/AEDTP3Calculadora/tests/test_instruccion.cpp">
+			<Option target="correrTests"/>
+		</Unit>
+		<Unit filename="C:/Proyectos/AEDTP3Calculadora/tests/test_programa.cpp">
+			<Option target="correrTests"/>
+		</Unit>
+		<Unit filename="C:/Proyectos/AEDTP3Calculadora/tests/test_trie.cpp">
 			<Option target="correrTests"/>
 		</Unit>
 		<Unit filename="C:/Proyectos/AEDTP3Calculadora/tests/test_ventana.cpp">

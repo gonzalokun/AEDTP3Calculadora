@@ -85,11 +85,12 @@ private:
         T* definicion;
         string clave;
     };
-
+    int cv;
     Nodo* raiz;
     int _size;
     Nodo* iniciarNodo();
     void copiarNivel(Nodo*&,Nodo*);
+    void copiarNivel(Nodo*&,Nodo*,int);
     void borrarNodos(Nodo*);
     int cantHijosNodoAct(Nodo*);
 

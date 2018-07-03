@@ -1,6 +1,6 @@
 #include "Driver.h"
 
-Driver::Driver() : prog(new Programa), calc(new Calculadora()) {
+Driver::Driver() : prog(new Programa), calc(Calculadora()) {
 	cout << "Se crea nuevo driver"<<endl;
     comenzoEjecucion = false;
 }
@@ -108,17 +108,20 @@ void Driver::comenzarEjecucion(string rutina, int capacidadVentana) {
 
     if(!comenzoEjecucion) {
         comenzoEjecucion = true;
-        calc->nuevaCalculadora(*prog,rutina, capacidadVentana);
+        //calc->nuevaCalculadora(*prog,rutina, capacidadVentana);
+        calc.nuevaCalculadora(*prog,rutina, capacidadVentana);
     }
 
 }
 
 void Driver::asignarVariable(string x, int valor) {
-    calc->asignarVariable(x,valor);
+//    calc->asignarVariable(x,valor);
+    calc.asignarVariable(x,valor);
 }
 
 bool Driver::ejecucionFinalizada() const {
-	return not (calc->getEjecutando());
+//	return not (calc->getEjecutando());
+    return not (calc.getEjecutando());
 }
 
 void Driver::ejecutarInstruccionActual() {
@@ -126,11 +129,14 @@ void Driver::ejecutarInstruccionActual() {
 }
 
 int Driver::topePila() const {
-	return calc->primeroPila();
+//	return calc->primeroPila();
+    return calc.primeroPila();
 }
 
-int Driver::valorVariable(string x) const {
-	// COMPLETAR
+const int Driver::valorVariable(string x){
+//    int valor = calc->valorEnInstante(x, calc->getInstanteActual());
+    int valor = calc.valorEnInstante(x, calc.getInstanteActual());
+    return valor;
 }
 
 int Driver::valorHistoricoVariable(string x, int t) const {
@@ -138,5 +144,6 @@ int Driver::valorHistoricoVariable(string x, int t) const {
 }
 
 int Driver::instanteActual() const {
-	return calc->getInstanteActual();
+//	return calc->getInstanteActual();
+    return calc.getInstanteActual();
 }

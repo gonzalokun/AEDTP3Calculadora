@@ -29,7 +29,7 @@ public:
 	bool ejecucionFinalizada() const;
 	void ejecutarInstruccionActual();
 	int topePila() const; // Si la pila está vacía, devuelve 0.
-	int valorVariable(string idVariable) const;
+	const int valorVariable(string idVariable);
 	int valorHistoricoVariable(string idVariable, int t) const;
 	int instanteActual() const;
 
@@ -38,7 +38,8 @@ private:
 	bool comenzoEjecucion;
 	rutina rutinaActual;
 	Instruccion* instAct;
-	Calculadora* calc;
+	//Calculadora* calc;
+	Calculadora calc;
 	Programa* prog;
 
 };
