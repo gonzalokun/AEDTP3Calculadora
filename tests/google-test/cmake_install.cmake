@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/tests/google-test
+# Install script for directory: C:/Proyectos/AEDTP3Calculadora/tests/google-test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -28,14 +28,14 @@ if(NOT CMAKE_INSTALL_COMPONENT)
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/tests/google-test/libgtest.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/Proyectos/AEDTP3Calculadora/tests/google-test/libgtest.a")
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/tests/google-test/libgtest_main.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/Proyectos/AEDTP3Calculadora/tests/google-test/libgtest_main.a")
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/tests/google-test/include/gtest")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "C:/Proyectos/AEDTP3Calculadora/tests/google-test/include/gtest")
 endif()
 

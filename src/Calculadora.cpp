@@ -44,9 +44,26 @@ void Calculadora::nuevaCalculadora(Programa p, rutina r, int capVent){
         it++;
     }
 
-
     //pasada 3: lista de instrucciones a cada rutinas.
     it = (p.getRutinas()).begin();
+
+//    while(it!= (p.getRutinas()).end()) {
+//        itRut punteroRut;
+//        int i = 0;
+//
+//        Operacion op = p.instruccion(*it,i).getOp();
+//        int constNum = p.instruccion(*it,i).constanteNumerica();
+//        rutinasProg[*it]->resize(p.longitud(*it));
+//
+//        itVarNombre punteroVar = (new tuple<Ventana<tuple<instante, valor> >, valorHistorico>((variablePorNombre[make_tuple(*it,capVent)]).vent,(variablePorNombre[make_tuple(*it,capVent)]).valorHistorico));
+//
+//        for (i = 0; i < p.longitud(*it); ++i) {
+//            punteroRut->push_back(p.instruccion(*it,i));
+//            //armo mi vector de instruccions, pasando de la lista de instruccion de programa
+//        }
+//        rutinasProg[*it]->push_back(make_tuple(op, constNum, punteroVar, punteroRut));
+//    }
+
     while(it!= (p.getRutinas()).end()) {
 
         vector<superInstruccion> vec;
@@ -78,15 +95,13 @@ void Calculadora::nuevaCalculadora(Programa p, rutina r, int capVent){
             rutinasProg[*it] = vec;
         }
 
-
-
     }
-
 
 }
 bool Calculadora::getEjecutando() const{
     return ejecutando;
 }
+
 void Calculadora::ejecutarUnPaso(){
 
     //superInstruccion superIns = (*(get<1>(rutinaActual)))[indiceInstruccionActual];

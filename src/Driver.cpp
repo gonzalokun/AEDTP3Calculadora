@@ -109,17 +109,24 @@ void Driver::comenzarEjecucion(string rutina, int capacidadVentana) {
 
     if(!comenzoEjecucion) {
         comenzoEjecucion = true;
+<<<<<<< HEAD
         calc.nuevaCalculadora(prog,rutina, capacidadVentana);
+=======
+        //calc->nuevaCalculadora(*prog,rutina, capacidadVentana);
+        calc.nuevaCalculadora(*prog,rutina, capacidadVentana);
+>>>>>>> master
     }
 
 }
 
 void Driver::asignarVariable(string x, int valor) {
+	//calc->asignarVariable(x,valor);
     calc.asignarVariable(x,valor);
 }
 
 bool Driver::ejecucionFinalizada() const {
-	return not (calc.getEjecutando());
+	//return not (calc->getEjecutando());
+    return not (calc.getEjecutando());
 }
 
 void Driver::ejecutarInstruccionActual() {
@@ -139,5 +146,6 @@ int Driver::valorHistoricoVariable(string x, int t) const {
 }
 
 int Driver::instanteActual() const {
-	return calc.getInstanteActual();
+	//return calc->getInstanteActual();
+    return calc.getInstanteActual();
 }

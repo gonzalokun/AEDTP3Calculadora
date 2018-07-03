@@ -2,7 +2,6 @@
 #include "../src/trie.h"
 #include <list>
 
-
 TEST(trie, probandoBorrar){
     trie<int> prueba;
     prueba["hola"] = 1;

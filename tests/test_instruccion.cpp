@@ -3,7 +3,6 @@
 #include "../src/Instruccion.h"
 using namespace std;
 
-
 TEST(test_instruccion, instrConstSinParam) {
     Instruccion i;
     ASSERT_TRUE(i.getOp() == oNada);
