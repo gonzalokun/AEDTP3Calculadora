@@ -10,7 +10,7 @@ file(GLOB SOURCE_FILES src/*.cpp src/*.h src/*.hpp)
 file(GLOB TEST_SOURCES tests/*.cpp)
 
 #file(GLOB SOURCE_FILES src/Instruccion.h src/Instruccion.cpp src/Programa.h src/Programa.cpp)
-#file(GLOB TEST_SOURCES tests/test_programa.cpp)
+#file(GLOB TEST_SOURCES tests/test_trie.cpp)
 
 
 add_subdirectory(tests/google-test)

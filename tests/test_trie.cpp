@@ -305,6 +305,20 @@ TEST(trie_test, testAdicional_it3) {
 
 }
 
+TEST(trie_test, testadicional_it4) {
+    trie<list<int> > t;
+    list<int> l1,l2;
+    l2.push_back(120);
+    l2.push_back(343);
+    l1.push_back(0);
+    l2.push_back(232);
+    l2.push_back(23);
+    t["hola"] = l1;
+    t["holat"] = l2;
+    trie<list<int> >::ItDiccTrie it(t.nodoSignificado(""));
+    EXPECT_EQ(it.claveActual(),"");
+}
+
 int main(int argc, char* argv[]) {
 	testing::InitGoogleTest(&argc, argv);
 	return RUN_ALL_TESTS();

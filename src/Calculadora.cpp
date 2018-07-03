@@ -93,7 +93,7 @@ void Calculadora::nuevaCalculadora(Programa p, rutina r, int capVent){
             rutinasProg[*it] = vec;
             cout << "p2"<<endl;
         }
-
+        it++;
     }
     cout << "size rutinas prog: "<<rutinasProg.size()<<endl;
     if(rutinasProg.size() == 0){
