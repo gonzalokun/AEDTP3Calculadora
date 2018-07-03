@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="false">
-    <generated />
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
+    <generated>
+      <config projectName="solucion" targetName="gtest" />
+      <config projectName="solucion" targetName="gtest_main" />
+      <config projectName="solucion" targetName="correrTests" />
+    </generated>
   </component>
   <component name="CMakeSettings">
     <configurations>
@@ -11,21 +15,67 @@
   <component name="ChangeListManager">
     <list default="true" id="3d043d01-3b4b-4374-861a-28de08fc9ba8" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/objects.a" afterPath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/objects.a" />
+      <change beforePath="$PROJECT_DIR$/CMakeCache.txt" afterPath="$PROJECT_DIR$/CMakeCache.txt" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.11.4/CMakeCCompiler.cmake" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.11.4/CMakeCXXCompiler.cmake" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.11.4/CMakeDetermineCompilerABI_C.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.11.4/CMakeDetermineCompilerABI_CXX.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.11.4/CMakeSystem.cmake" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.11.4/CompilerIdC/CMakeCCompilerId.c" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.11.4/CompilerIdC/a.out" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.11.4/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.11.4/CompilerIdCXX/a.out" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.9.6/CMakeDetermineCompilerABI_C.bin" afterPath="$PROJECT_DIR$/CMakeFiles/3.9.6/CMakeDetermineCompilerABI_C.bin" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.9.6/CMakeDetermineCompilerABI_CXX.bin" afterPath="$PROJECT_DIR$/CMakeFiles/3.9.6/CMakeDetermineCompilerABI_CXX.bin" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.9.6/CompilerIdC/a.exe" afterPath="$PROJECT_DIR$/CMakeFiles/3.9.6/CompilerIdC/a.exe" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.9.6/CompilerIdCXX/a.exe" afterPath="$PROJECT_DIR$/CMakeFiles/3.9.6/CompilerIdCXX/a.exe" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/CMakeDirectoryInformation.cmake" afterPath="$PROJECT_DIR$/CMakeFiles/CMakeDirectoryInformation.cmake" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/CMakeError.log" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/CMakeOutput.log" afterPath="$PROJECT_DIR$/CMakeFiles/CMakeOutput.log" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/Makefile.cmake" afterPath="$PROJECT_DIR$/CMakeFiles/Makefile.cmake" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/CMakeFiles/Makefile2" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/CMakeFiles/TargetDirectories.txt" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/clion-environment.txt" afterPath="$PROJECT_DIR$/CMakeFiles/clion-environment.txt" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/CXX.includecache" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/DependInfo.cmake" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/build.make" afterPath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/build.make" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/cmake_clean.cmake" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/depend.internal" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/depend.make" afterPath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/depend.make" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/flags.make" afterPath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/flags.make" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/link.txt" afterPath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/link.txt" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/objects.a" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/objects1.rsp" afterPath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/objects1.rsp" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/src/Calculadora.cpp.o" afterPath="" />
       <change beforePath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/src/Calculadora.cpp.obj" afterPath="" />
       <change beforePath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/src/Driver.cpp.obj" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/src/Instruccion.cpp.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/src/Instruccion.cpp.obj" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/src/Programa.cpp.o" afterPath="" />
       <change beforePath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/src/Programa.cpp.obj" afterPath="" />
       <change beforePath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/tests/test_driver.cpp.obj" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/correrTests.exe" afterPath="$PROJECT_DIR$/correrTests.exe" />
-      <change beforePath="$PROJECT_DIR$/src/Calculadora.h" afterPath="$PROJECT_DIR$/src/Calculadora.h" />
-      <change beforePath="$PROJECT_DIR$/src/Driver.cpp" afterPath="$PROJECT_DIR$/src/Driver.cpp" />
-      <change beforePath="$PROJECT_DIR$/src/Instruccion.cpp" afterPath="$PROJECT_DIR$/src/Instruccion.cpp" />
-      <change beforePath="$PROJECT_DIR$/src/Instruccion.h" afterPath="$PROJECT_DIR$/src/Instruccion.h" />
-      <change beforePath="$PROJECT_DIR$/src/Programa.cpp" afterPath="$PROJECT_DIR$/src/Programa.cpp" />
-      <change beforePath="$PROJECT_DIR$/src/Programa.h" afterPath="$PROJECT_DIR$/src/Programa.h" />
-      <change beforePath="$PROJECT_DIR$/src/trie.h" afterPath="$PROJECT_DIR$/src/trie.h" />
-      <change beforePath="$PROJECT_DIR$/src/trie.hpp" afterPath="$PROJECT_DIR$/src/trie.hpp" />
-      <change beforePath="$PROJECT_DIR$/tests/test_driver.cpp" afterPath="$PROJECT_DIR$/tests/test_driver.cpp" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/tests/test_instruccion.cpp.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/tests/test_programa.cpp.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/tests/test_ventana.cpp.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/correrTests.dir/tests/test_ventana.cpp.obj" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/feature_tests.bin" afterPath="$PROJECT_DIR$/CMakeFiles/feature_tests.bin" />
+      <change beforePath="$PROJECT_DIR$/Makefile" afterPath="$PROJECT_DIR$/Makefile" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" />
+      <change beforePath="$PROJECT_DIR$/cmake_install.cmake" afterPath="$PROJECT_DIR$/cmake_install.cmake" />
+      <change beforePath="$PROJECT_DIR$/solucion.cbp" afterPath="$PROJECT_DIR$/solucion.cbp" />
+      <change beforePath="$PROJECT_DIR$/tests/google-test/CMakeFiles/CMakeDirectoryInformation.cmake" afterPath="$PROJECT_DIR$/tests/google-test/CMakeFiles/CMakeDirectoryInformation.cmake" />
+      <change beforePath="$PROJECT_DIR$/tests/google-test/CMakeFiles/gtest.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/tests/google-test/CMakeFiles/gtest.dir/DependInfo.cmake" />
+      <change beforePath="$PROJECT_DIR$/tests/google-test/CMakeFiles/gtest.dir/build.make" afterPath="$PROJECT_DIR$/tests/google-test/CMakeFiles/gtest.dir/build.make" />
+      <change beforePath="$PROJECT_DIR$/tests/google-test/CMakeFiles/gtest.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/tests/google-test/CMakeFiles/gtest.dir/cmake_clean.cmake" />
+      <change beforePath="$PROJECT_DIR$/tests/google-test/CMakeFiles/gtest.dir/flags.make" afterPath="$PROJECT_DIR$/tests/google-test/CMakeFiles/gtest.dir/flags.make" />
+      <change beforePath="$PROJECT_DIR$/tests/google-test/CMakeFiles/gtest.dir/link.txt" afterPath="$PROJECT_DIR$/tests/google-test/CMakeFiles/gtest.dir/link.txt" />
+      <change beforePath="$PROJECT_DIR$/tests/google-test/CMakeFiles/gtest_main.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/tests/google-test/CMakeFiles/gtest_main.dir/DependInfo.cmake" />
+      <change beforePath="$PROJECT_DIR$/tests/google-test/CMakeFiles/gtest_main.dir/build.make" afterPath="$PROJECT_DIR$/tests/google-test/CMakeFiles/gtest_main.dir/build.make" />
+      <change beforePath="$PROJECT_DIR$/tests/google-test/CMakeFiles/gtest_main.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/tests/google-test/CMakeFiles/gtest_main.dir/cmake_clean.cmake" />
+      <change beforePath="$PROJECT_DIR$/tests/google-test/CMakeFiles/gtest_main.dir/flags.make" afterPath="$PROJECT_DIR$/tests/google-test/CMakeFiles/gtest_main.dir/flags.make" />
+      <change beforePath="$PROJECT_DIR$/tests/google-test/CMakeFiles/gtest_main.dir/link.txt" afterPath="$PROJECT_DIR$/tests/google-test/CMakeFiles/gtest_main.dir/link.txt" />
+      <change beforePath="$PROJECT_DIR$/tests/google-test/Makefile" afterPath="$PROJECT_DIR$/tests/google-test/Makefile" />
+      <change beforePath="$PROJECT_DIR$/tests/google-test/cmake_install.cmake" afterPath="$PROJECT_DIR$/tests/google-test/cmake_install.cmake" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/CMakeFiles/" />
@@ -41,48 +91,34 @@
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.6558333">
       <split-first>
-        <splitter split-orientation="horizontal" split-proportion="0.7736264">
+        <splitter split-orientation="horizontal" split-proportion="0.56201977">
           <split-first>
-            <leaf>
-              <file leaf-file-name="Instruccion.cpp" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/src/Instruccion.cpp">
+            <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+              <file leaf-file-name="Calculadora.h" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/Calculadora.h">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="340">
-                      <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+                    <state relative-caret-position="918">
+                      <caret line="54" column="52" lean-forward="false" selection-start-line="54" selection-start-column="52" selection-end-line="54" selection-end-column="52" />
                       <folding />
                     </state>
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="Programa.cpp" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/src/Programa.cpp">
+              <file leaf-file-name="test_programa.cpp" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/tests/test_programa.cpp">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="952">
-                      <caret line="56" column="5" lean-forward="false" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
-                      <folding>
-                        <element signature="e#0#21#0" expanded="true" />
-                      </folding>
+                    <state relative-caret-position="391">
+                      <caret line="23" column="14" lean-forward="false" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+                      <folding />
                     </state>
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="test_driver.cpp" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/tests/test_driver.cpp">
+              <file leaf-file-name="test_instruccion.cpp" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/tests/test_instruccion.cpp">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="596">
-                      <caret line="670" column="46" lean-forward="true" selection-start-line="670" selection-start-column="46" selection-end-line="670" selection-end-column="47" />
-                      <folding>
-                        <element signature="e#0#24#0" expanded="true" />
-                      </folding>
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="Calculadora.h" pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/src/Calculadora.h">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="102">
-                      <caret line="36" column="37" lean-forward="false" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
+                    <state relative-caret-position="289">
+                      <caret line="19" column="31" lean-forward="false" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
                       <folding />
                     </state>
                   </provider>
@@ -91,8 +127,18 @@
               <file leaf-file-name="Calculadora.cpp" pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/src/Calculadora.cpp">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="272">
-                      <caret line="49" column="52" lean-forward="true" selection-start-line="49" selection-start-column="52" selection-end-line="49" selection-end-column="52" />
+                    <state relative-caret-position="-1904">
+                      <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="Ventana.hpp" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/Ventana.hpp">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="0">
+                      <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                       <folding />
                     </state>
                   </provider>
@@ -101,12 +147,29 @@
               <file leaf-file-name="trie.hpp" pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/src/trie.hpp">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="328">
-                      <caret line="112" column="0" lean-forward="false" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
-                      <folding>
-                        <element signature="e#3030#3042#0" expanded="true" />
-                        <element signature="e#4482#4494#0" expanded="true" />
-                      </folding>
+                    <state relative-caret-position="705">
+                      <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="triee.h" pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/src/triee.h">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="0">
+                      <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="Ventana.h" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/Ventana.h">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="0">
+                      <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                      <folding />
                     </state>
                   </provider>
                 </entry>
@@ -114,7 +177,7 @@
               <file leaf-file-name="trie.h" pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/src/trie.h">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="68">
+                    <state relative-caret-position="705">
                       <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
                       <folding />
                     </state>
@@ -124,7 +187,7 @@
               <file leaf-file-name="Driver.cpp" pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/src/Driver.cpp">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="217">
+                    <state relative-caret-position="272">
                       <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
                       <folding />
                     </state>
@@ -134,12 +197,12 @@
             </leaf>
           </split-first>
           <split-second>
-            <leaf>
+            <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
               <file leaf-file-name="Programa.h" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/src/Programa.h">
                   <provider selected="true" editor-type-id="text-editor">
                     <state relative-caret-position="323">
-                      <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+                      <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
                       <folding />
                     </state>
                   </provider>
@@ -150,12 +213,12 @@
         </splitter>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="Driver.cpp" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Driver.cpp">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="255">
-                  <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+                  <caret line="25" column="5" lean-forward="false" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
                   <folding />
                 </state>
               </provider>
@@ -248,10 +311,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.test">
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
+      <envs />
+    </configuration>
+    <configuration name="gtest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="solucion" TARGET_NAME="gtest" CONFIG_NAME="Debug">
+      <envs />
+    </configuration>
+    <configuration name="gtest_main" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="solucion" TARGET_NAME="gtest_main" CONFIG_NAME="Debug">
+      <envs />
+    </configuration>
     <configuration name="test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="solucion" TARGET_NAME="correrTests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="solucion" RUN_TARGET_NAME="correrTests">
       <envs />
     </configuration>
+    <list size="4">
+      <item index="0" class="java.lang.String" itemvalue="Application.Build All" />
+      <item index="1" class="java.lang.String" itemvalue="Application.test" />
+      <item index="2" class="java.lang.String" itemvalue="Application.gtest" />
+      <item index="3" class="java.lang.String" itemvalue="Application.gtest_main" />
+    </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -267,19 +345,20 @@
       <option name="presentableId" value="Default" />
       <updated>1530489427613</updated>
       <workItem from="1530489433891" duration="8877000" />
+      <workItem from="1530581938979" duration="48000" />
+      <workItem from="1530583467127" duration="57000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8877000" />
+    <option name="totallyTimeSpent" value="8982000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13125" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34554973" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -287,13 +366,14 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28010473" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28010473" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34554973" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -310,11 +390,178 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Instruccion.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Programa.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_driver.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11390">
+          <caret line="670" column="46" lean-forward="false" selection-start-line="670" selection-start-column="46" selection-end-line="670" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Calculadora.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="54" column="52" lean-forward="false" selection-start-line="54" selection-start-column="52" selection-end-line="54" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_programa.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="14" lean-forward="false" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Calculadora.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/trie.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1904">
+          <caret line="112" column="0" lean-forward="false" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/trie.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1360">
+          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_instruccion.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Programa.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Driver.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Instruccion.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_driver.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11390">
+          <caret line="670" column="46" lean-forward="true" selection-start-line="670" selection-start-column="46" selection-end-line="670" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Programa.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Calculadora.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="49" column="52" lean-forward="true" selection-start-line="49" selection-start-column="52" selection-end-line="49" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/trie.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1904">
+          <caret line="112" column="0" lean-forward="false" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/trie.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1360">
+          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Calculadora.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="37" lean-forward="false" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Programa.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Driver.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Utiles.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -322,7 +569,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
           <caret line="887" column="0" lean-forward="false" selection-start-line="887" selection-start-column="0" selection-end-line="887" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -330,7 +576,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
           <caret line="148" column="0" lean-forward="false" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -338,7 +583,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
           <caret line="919" column="0" lean-forward="false" selection-start-line="919" selection-start-column="0" selection-end-line="919" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -354,7 +598,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="1122" column="0" lean-forward="false" selection-start-line="1122" selection-start-column="0" selection-end-line="1122" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -366,19 +609,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/trie.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Program Files (x86)/mingw-w64/i686-7.3.0-posix-dwarf-rt_v5-rev0/mingw32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/bits/basic_string.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="464">
           <caret line="5972" column="0" lean-forward="false" selection-start-line="5972" selection-start-column="0" selection-end-line="5972" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -386,25 +620,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/trie.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="112" column="0" lean-forward="false" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
-          <folding>
-            <element signature="e#3030#3042#0" expanded="true" />
-            <element signature="e#4482#4494#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Programa.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="56" column="5" lean-forward="false" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
+        <state relative-caret-position="918">
+          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
@@ -413,33 +635,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/test_driver.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="596">
-          <caret line="670" column="46" lean-forward="true" selection-start-line="670" selection-start-column="46" selection-end-line="670" selection-end-column="47" />
+        <state relative-caret-position="11390">
+          <caret line="670" column="46" lean-forward="false" selection-start-line="670" selection-start-column="46" selection-end-line="670" selection-end-column="47" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Calculadora.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="49" column="52" lean-forward="true" selection-start-line="49" selection-start-column="52" selection-end-line="49" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Calculadora.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="36" column="37" lean-forward="false" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Driver.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
+        <state relative-caret-position="272">
           <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
@@ -448,7 +654,79 @@
     <entry file="file://$PROJECT_DIR$/src/Programa.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Calculadora.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="54" column="52" lean-forward="false" selection-start-line="54" selection-start-column="52" selection-end-line="54" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_programa.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="14" lean-forward="false" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_instruccion.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="19" column="31" lean-forward="false" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Calculadora.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1904">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ventana.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ventana.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/trie.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/trie.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/triee.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
