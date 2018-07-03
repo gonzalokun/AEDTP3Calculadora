@@ -4,9 +4,15 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Calculadora.cpp" "C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/CMakeFiles/correrTests.dir/src/Calculadora.cpp.obj"
+  "C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Driver.cpp" "C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/CMakeFiles/correrTests.dir/src/Driver.cpp.obj"
   "C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Instruccion.cpp" "C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/CMakeFiles/correrTests.dir/src/Instruccion.cpp.obj"
   "C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Programa.cpp" "C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/CMakeFiles/correrTests.dir/src/Programa.cpp.obj"
+  "C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/tests/test_driver.cpp" "C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/CMakeFiles/correrTests.dir/tests/test_driver.cpp.obj"
+  "C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/tests/test_instruccion.cpp" "C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/CMakeFiles/correrTests.dir/tests/test_instruccion.cpp.obj"
   "C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/tests/test_programa.cpp" "C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/CMakeFiles/correrTests.dir/tests/test_programa.cpp.obj"
+  "C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/tests/test_trie.cpp" "C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/CMakeFiles/correrTests.dir/tests/test_trie.cpp.obj"
+  "C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/tests/test_ventana.cpp" "C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/CMakeFiles/correrTests.dir/tests/test_ventana.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -1,6 +1,6 @@
 #ifndef H_CALCULADORA
 #define H_CALCULADORA
-/*
+
 using namespace std;
 #include "Instruccion.h"
 #include "Programa.h"
@@ -28,24 +28,24 @@ typedef list<tuple<instante,valor> > valorHistorico;
 class Calculadora {
 
 public:
-        Calculadora();
-        ~Calculadora();
-        void nuevaCalculadora(Programa p, rutina r, int capVent);
-        bool getEjecutando() const;
-        void ejecutarUnPaso();
-        void asignarVariable(variable x, valor v);
-        instante getInstanteActual() const;
-        rutina getRutinaActual() const;
-        int getIndiceInstruccionActual() const;
-        valor valorEnInstante(variable var, instante inst);
-        valor valorActualVariable(variable var);
-        const stack<valor>& getPila() const;
-        valor primeroPila() const;
-        valor segundoPila();
-        stack<valor>& getPilaSinDos();
+    Calculadora();
+    ~Calculadora();
+    void nuevaCalculadora(Programa p, rutina r, int capVent);
+    bool getEjecutando() const;
+    void ejecutarUnPaso();
+    void asignarVariable(variable x, valor v);
+    instante getInstanteActual() const;
+    rutina getRutinaActual() const;
+    int getIndiceInstruccionActual() const;
+    valor valorEnInstante(variable var, instante inst);
+    valor valorActualVariable(variable var);
+    const stack<valor>& getPila() const;
+    valor primeroPila() const;
+    valor segundoPila();
+    stack<valor>& getPilaSinDos();
 
-        bool escribiendoVariable(variable &var) const;
-        bool haySalto();
+    bool escribiendoVariable(variable &var) const;
+    bool haySalto();
 
 private:
     struct estructuraDeVariablePorNombre{
@@ -66,17 +66,14 @@ private:
 
     trie<vector<superInstruccion>> rutinasProg;
 
-    //VERSION DE RUTINA ACTUAL SIN ITER
-    //tuple<rutina, vector<superInstruccion>* > rutinaActual;
-
-    typename trie<vector<superInstruccion>>::ItDiccTrie rutinaActual;
+    trie<vector<superInstruccion>>::ItDiccTrie rutinaActual;
 
     stack<int> pila;
-    Programa programa;
+    Programa* programa;
     int W;
     int instanteActual;
     bool ejecutando;
     int indiceInstruccionActual;
 };
-*/
+
 #endif

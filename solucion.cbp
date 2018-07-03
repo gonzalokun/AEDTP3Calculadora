@@ -214,6 +214,21 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Calculadora.cpp">
+			<Option target="correrTests"/>
+		</Unit>
+		<Unit filename="C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Calculadora.h">
+			<Option target="correrTests"/>
+		</Unit>
+		<Unit filename="C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/DiccionarioTrie.h">
+			<Option target="correrTests"/>
+		</Unit>
+		<Unit filename="C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Driver.cpp">
+			<Option target="correrTests"/>
+		</Unit>
+		<Unit filename="C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Driver.h">
+			<Option target="correrTests"/>
+		</Unit>
 		<Unit filename="C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Instruccion.cpp">
 			<Option target="correrTests"/>
 		</Unit>
@@ -226,13 +241,40 @@
 		<Unit filename="C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Programa.h">
 			<Option target="correrTests"/>
 		</Unit>
+		<Unit filename="C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Utiles.h">
+			<Option target="correrTests"/>
+		</Unit>
+		<Unit filename="C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Ventana.h">
+			<Option target="correrTests"/>
+		</Unit>
+		<Unit filename="C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Ventana.hpp">
+			<Option target="correrTests"/>
+		</Unit>
+		<Unit filename="C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/trie.h">
+			<Option target="correrTests"/>
+		</Unit>
+		<Unit filename="C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/trie.hpp">
+			<Option target="correrTests"/>
+		</Unit>
 		<Unit filename="C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/tests/google-test/src/gtest-all.cc">
 			<Option target="gtest"/>
 		</Unit>
 		<Unit filename="C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/tests/google-test/src/gtest_main.cc">
 			<Option target="gtest_main"/>
 		</Unit>
+		<Unit filename="C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/tests/test_driver.cpp">
+			<Option target="correrTests"/>
+		</Unit>
+		<Unit filename="C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/tests/test_instruccion.cpp">
+			<Option target="correrTests"/>
+		</Unit>
 		<Unit filename="C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/tests/test_programa.cpp">
+			<Option target="correrTests"/>
+		</Unit>
+		<Unit filename="C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/tests/test_trie.cpp">
+			<Option target="correrTests"/>
+		</Unit>
+		<Unit filename="C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/tests/test_ventana.cpp">
 			<Option target="correrTests"/>
 		</Unit>
 		<Unit filename="C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/CMakeLists.txt">
