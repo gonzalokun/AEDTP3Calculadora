@@ -7,8 +7,10 @@ template <typename T>
 
 trie<T>::trie():_size(0){
     cout << "NUEVO TRIE"<<endl;
+    cv = 0;
     raiz = iniciarNodo();
     raiz->clave = "";
+    cout<<"termina de iniciar trie"<<endl;
 }
 
 template <typename T>

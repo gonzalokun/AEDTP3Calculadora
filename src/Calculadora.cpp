@@ -3,6 +3,7 @@
 
 Calculadora::Calculadora() {
     cout << "Se inicializa la calculadora"<<endl;
+
     //get<0>(rutinaActual) = "";
     //get<1>(rutinaActual) = nullptr;
 }
@@ -16,7 +17,8 @@ void Calculadora::nuevaCalculadora(Programa p, rutina r, int capVent){
     ejecutando = true;
     instanteActual = 0;
     indiceInstruccionActual = 0;
-
+    variablePorNombre.cv = W;
+    rutinasProg.cv = W;
     //pasada 1: recorremos rutinas de p y las guardamos
     list<rutina>::const_iterator it = (p.getRutinas()).begin();
     while (it != (p.getRutinas()).end()) {

@@ -2,4 +2,4 @@
 -- Could NOT find PythonInterp (missing: PYTHON_EXECUTABLE) 
 -- Configuring done
 -- Generating done
--- Build files have been written to: C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora
+-- Build files have been written to: C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/cmake-build-debug
