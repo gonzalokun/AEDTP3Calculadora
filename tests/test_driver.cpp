@@ -376,9 +376,10 @@ TEST(test_driver, read) {
 		ASSERT_EQ(d.valorHistoricoVariable("foo", 4), 21901650);
 	}
 }
-/*
+
 TEST(test_driver, read_write) {
 	for (int tam_ventana = 1; tam_ventana < 10; tam_ventana++) {
+		cout << "CAP VENTANA: "<<tam_ventana<<endl;
 		Driver d;
 		d.begin("klb");
 		d.push(70435714);
@@ -402,22 +403,22 @@ TEST(test_driver, read_write) {
 		ASSERT_EQ(d.valorHistoricoVariable("bar", 0), 0);
 		ASSERT_EQ(d.valorHistoricoVariable("bar", 1), 0);
 
-		d.ejecutarInstruccionActual();
+		d.ejecutarInstruccionActual(); //INST WRITE
 		ASSERT_EQ(d.valorVariable("bar"), 70435714);
 		ASSERT_EQ(d.instanteActual(), 2);
 		ASSERT_EQ(d.topePila(), 0);
 		ASSERT_FALSE(d.ejecucionFinalizada());
 
 		ASSERT_EQ(d.valorHistoricoVariable("bar", 0), 0);
-		ASSERT_EQ(d.valorHistoricoVariable("bar", 1), 70435714);
+		ASSERT_EQ(d.valorHistoricoVariable("bar", 1), 70435714);//DDEBE SER 70435714
 		ASSERT_EQ(d.valorHistoricoVariable("bar", 2), 70435714);
-
-		d.ejecutarInstruccionActual();
+/*
+		d.ejecutarInstruccionActual();//INSTR READ
+        //A PARTIR DE ACA INSTANTE ACTUAL = 3
 		ASSERT_EQ(d.valorVariable("bar"), 70435714);
 		ASSERT_EQ(d.instanteActual(), 3);
 		ASSERT_EQ(d.topePila(), 70435714);
 		ASSERT_FALSE(d.ejecucionFinalizada());
-
 		ASSERT_EQ(d.valorHistoricoVariable("bar", 0), 0);
 		ASSERT_EQ(d.valorHistoricoVariable("bar", 1), 70435714);
 		ASSERT_EQ(d.valorHistoricoVariable("bar", 2), 70435714);
@@ -440,10 +441,10 @@ TEST(test_driver, read_write) {
 		ASSERT_EQ(d.valorHistoricoVariable("bar", 1), 70435714);
 		ASSERT_EQ(d.valorHistoricoVariable("bar", 2), 70435714);
 		ASSERT_EQ(d.valorHistoricoVariable("bar", 3), 60157375);
-		ASSERT_EQ(d.valorHistoricoVariable("bar", 4), 60157375);
+		ASSERT_EQ(d.valorHistoricoVariable("bar", 4), 60157375);*/
 	}
 }
-
+/*
 TEST(test_driver, jump_rutina_inexistente) {
 	Driver d;
 	d.begin("mjixfob");

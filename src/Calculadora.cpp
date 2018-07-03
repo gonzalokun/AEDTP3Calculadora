@@ -119,6 +119,12 @@ void Calculadora::ejecutarUnPaso(){
 
     bool jumpValido;
 
+    if((op != oJump || op != oJumpz) && (instanteActual!=0)){
+
+        //Operaciones Push, Add, Sub, Mul, Read, Write
+        /*indiceInstruccionActual++;
+        instanteActual++;*/
+    }
 
     if(op == oPush){ // Utiliza valor
         int valor = superIns.constanteNumerica;
@@ -199,21 +205,27 @@ void Calculadora::ejecutarUnPaso(){
         //Si la variable tiene cosas en la ventana se usa, sino es 0
         if((*it).vent.tam() > 0){
             valor valorAPushear = get<1>((*it).vent[tamVent - 1]);
-            (*it).vent.registrar(make_tuple(instanteActual+1,valorAPushear));
-            (*it).valorHistorico.push_back(make_tuple(instanteActual+1,valorAPushear));
+            (*it).vent.registrar(make_tuple(instanteActual,valorAPushear));
+            (*it).valorHistorico.push_back(make_tuple(instanteActual,valorAPushear));
             pila.push(valorAPushear);
         }
         else{
-            (*it).vent.registrar(make_tuple(instanteActual+1,0));
-            (*it).valorHistorico.push_back(make_tuple(instanteActual+1,0));
+            (*it).vent.registrar(make_tuple(instanteActual,0));
+            (*it).valorHistorico.push_back(make_tuple(instanteActual,0));
             pila.push(0);
         }
 
     }
     else if(op == oWrite){ // Idem
-        int v = pila.top();
-        pila.pop();
+        int v;
+        if(pila.empty()){
+            v = 0;
+        }else {
+            v = pila.top();
+            pila.pop();
+        }
 
+        cout <<"ESTOY EN WRITE Y MI INSTANTE ACTUAL DONDE VOY A CREAR ES "<< instanteActual<<endl;
         tuple<instante, valor> t;
         get<0>(t) = instanteActual;
         get<1>(t) = v;
@@ -303,9 +315,10 @@ void Calculadora::ejecutarUnPaso(){
         }
     }
     else{
-        //Operaciones Push, Add, Sub, Mul, Read, Write
+
         indiceInstruccionActual++;
         instanteActual++;
+
     }
 
     if(indiceInstruccionActual >= (*rutinaActual).size()){
@@ -392,7 +405,7 @@ valor Calculadora::valorEnInstante(variable var, instante inst){
         if(variablePorNombre.count(var) > 0){
             cout << "LA VAR QUE BUSCO EXISTE"<<endl;
             int cantInstantesVar = (variablePorNombre[make_tuple(var,W)].vent).tam();
-            cout << "sigo"<<endl;
+            cout << "cant de instruc de la var: "<< cantInstantesVar<<endl;
             if(cantInstantesVar>instanteActual-inst){
                 cout << "?"<<endl;
                 cout << "instante a index: "<< cantInstantesVar-1-(instanteActual-inst)<<endl;
@@ -411,7 +424,7 @@ valor Calculadora::valorEnInstante(variable var, instante inst){
     } else {
         cout << "busco valor en historico"<<endl;
         //valorHistorico::const_iterator it = (variablePorNombre[make_tuple(var,W)].valorHistorico).end();
-        int i = instanteActual;
+
         valorHistorico::const_iterator itend = (variablePorNombre[make_tuple(var,W)].valorHistorico).end();
         valorHistorico::const_iterator it = (variablePorNombre[make_tuple(var,W)].valorHistorico).begin();
         while(get<0>(*it) != inst && it !=itend ){
