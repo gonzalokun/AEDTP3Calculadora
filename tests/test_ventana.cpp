@@ -1,4 +1,4 @@
-/*#include "gtest/gtest.h"
+#include "gtest/gtest.h"
 
 #include "../src/Ventana.h"
 
@@ -96,4 +96,4 @@ TEST(test_ventana, registrar) {
 	ASSERT_EQ(v[2], 10);
 	ASSERT_EQ(v[3], 11);
 	ASSERT_EQ(v[4], 12);
-}*/
+}
