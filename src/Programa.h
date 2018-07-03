@@ -18,14 +18,11 @@ public:
     Instruccion instruccion(const rutina r, const int iesima);
     Operacion instruccion2(const rutina r, const int iesima);
     int longitud(rutina r) ;
+    void nuevaRutina(const rutina r);
 
 private:
 
-    struct estructuraDeRutinasPorNombre{
-        list<Instruccion> listaInstr;
-    };
-
-    trie<estructuraDeRutinasPorNombre> rutinasPorNombre; //clave rutinas
+    trie<list<Instruccion> > rutinasPorNombre; //clave rutinas
     list<rutina> rutinas;
 
 };

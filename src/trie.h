@@ -93,9 +93,10 @@ private:
     void borrarNodos(Nodo*);
     int cantHijosNodoAct(Nodo*);
 
-public:
-    Nodo* nodoSignificado(const string&);
 
+public:
+    //PRE clave pertenece al trie, es decir, count(clave)> 0
+    Nodo* nodoSignificado(const string& clave);
     class ItDiccTrie{
 
         friend class trie<T>;
@@ -110,6 +111,7 @@ public:
     private:
         Nodo* _actual;
         string clave; //clave del nodo actual
+
     };
 
 };
