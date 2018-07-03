@@ -49,8 +49,6 @@ Operacion Programa::instruccion2(const rutina r, const int iesima){
     }
     return (*it).getOp();
 }
-
 int Programa::longitud(rutina r) {
     return (rutinasPorNombre[r]).size();
 }
-

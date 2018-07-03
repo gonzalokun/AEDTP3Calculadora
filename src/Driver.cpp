@@ -1,12 +1,11 @@
 #include "Driver.h"
 
-Driver::Driver() : prog(Programa()), calc(Calculadora()) {
+Driver::Driver() {
 	cout << "Se crea nuevo driver"<<endl;
     comenzoEjecucion = false;
 }
 
 Driver::~Driver() {
-	// COMPLETAR
 }
 
 // Operaciones para agregar instrucciones
@@ -109,7 +108,9 @@ void Driver::comenzarEjecucion(string rutina, int capacidadVentana) {
 
     if(!comenzoEjecucion) {
         comenzoEjecucion = true;
+        cout << "entra aca"<<endl;
         calc.nuevaCalculadora(prog,rutina, capacidadVentana);
+        cout << "termina "<<endl;
     }
 
 }

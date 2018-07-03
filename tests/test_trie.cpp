@@ -2,6 +2,7 @@
 #include "../src/trie.h"
 #include <list>
 
+
 TEST(trie, probandoBorrar){
     trie<int> prueba;
     prueba["hola"] = 1;
@@ -302,6 +303,20 @@ TEST(trie_test, testAdicional_it3) {
     EXPECT_EQ(*it2, make_tuple(n2,l4));
     EXPECT_EQ(it2.claveActual(),"casito");
 
+}
+
+TEST(trie_test, testadicional_it4) {
+    trie<list<int> > t;
+    list<int> l1,l2;
+    l2.push_back(120);
+    l2.push_back(343);
+    l1.push_back(0);
+    l2.push_back(232);
+    l2.push_back(23);
+    t["hola"] = l1;
+    t["holat"] = l2;
+    trie<list<int> >::ItDiccTrie it(t.nodoSignificado(""));
+    EXPECT_EQ(it.claveActual(),"");
 }
 
 int main(int argc, char* argv[]) {

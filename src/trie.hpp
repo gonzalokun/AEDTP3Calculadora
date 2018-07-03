@@ -7,8 +7,10 @@ template <typename T>
 
 trie<T>::trie():_size(0){
     cout << "NUEVO TRIE"<<endl;
+    cv = 0;
     raiz = iniciarNodo();
     raiz->clave = "";
+    cout<<"termina de iniciar trie"<<endl;
 }
 
 template <typename T>
@@ -413,6 +415,7 @@ trie<T>::ItDiccTrie::ItDiccTrie(){
 
 template<typename T>
 trie<T>::ItDiccTrie::ItDiccTrie(Nodo *nodo){
+    cout << "INICIO DIC CON NODO DE CLAVE: "<< nodo->clave<<endl;
     if(nodo->clave!="") {
         _actual = nodo;
         _actual->definicion = nodo->definicion;
@@ -420,6 +423,7 @@ trie<T>::ItDiccTrie::ItDiccTrie(Nodo *nodo){
         _actual->clave = nodo->clave;
         clave = nodo->clave;
     }else {
+        _actual = nodo;
         _actual->clave = "";
         clave = "";
     }

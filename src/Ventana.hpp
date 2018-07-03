@@ -22,6 +22,7 @@ Ventana<T>::~Ventana() {
 
 template<class T>
 void Ventana<T>::registrar(const T& elem) {
+	cout << "REGISTRANDO NUEVA VENTANA"<<endl;
 	if (_tam < _capacidad) {
 		_elems[_tam] = new T(elem);
 		_tam++;

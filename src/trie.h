@@ -77,7 +77,7 @@ public:
     bool empty() const;
 
 
-
+    int cv; //capcidad ventana
 private:
 
     struct Nodo{
@@ -85,7 +85,7 @@ private:
         T* definicion;
         string clave;
     };
-    int cv;
+
     Nodo* raiz;
     int _size;
     Nodo* iniciarNodo();
