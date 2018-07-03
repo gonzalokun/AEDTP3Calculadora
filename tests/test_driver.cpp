@@ -310,7 +310,7 @@ TEST(test_driver, read_variable_indefinida) {
 
 
 
-/*
+
 TEST(test_driver, read) {
 	for (int tam_ventana = 1; tam_ventana < 10; tam_ventana++) {
         cout << "NUEVO FOR: CAP VENTANA: "<< tam_ventana<<"------------------------------------"<<endl;
@@ -355,7 +355,7 @@ TEST(test_driver, read) {
 		ASSERT_EQ(d.instanteActual(), 3);
 		ASSERT_EQ(d.topePila(), 94984087);
 		ASSERT_FALSE(d.ejecucionFinalizada());
-
+        ASSERT_EQ(d.valorHistoricoVariable("foo", 0), 0);
 		d.asignarVariable("foo", 21901650);
 
 		ASSERT_EQ(d.valorHistoricoVariable("foo", 0), 0);
@@ -375,7 +375,7 @@ TEST(test_driver, read) {
 		ASSERT_EQ(d.valorHistoricoVariable("foo", 3), 21901650);
 		ASSERT_EQ(d.valorHistoricoVariable("foo", 4), 21901650);
 	}
-}*/
+}
 /*
 TEST(test_driver, read_write) {
 	for (int tam_ventana = 1; tam_ventana < 10; tam_ventana++) {

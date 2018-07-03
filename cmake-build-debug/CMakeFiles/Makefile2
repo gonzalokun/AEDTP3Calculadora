@@ -66,7 +66,7 @@ CMakeFiles/correrTests.dir/all: tests/google-test/CMakeFiles/gtest_main.dir/all
 CMakeFiles/correrTests.dir/all: tests/google-test/CMakeFiles/gtest.dir/all
 	$(MAKE) -f CMakeFiles\correrTests.dir\build.make CMakeFiles/correrTests.dir/depend
 	$(MAKE) -f CMakeFiles\correrTests.dir\build.make CMakeFiles/correrTests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\diego\Documents\Facultad\ALGOII\AEDTP3Calculadora\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6 "Built target correrTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\diego\Documents\Facultad\ALGOII\AEDTP3Calculadora\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target correrTests"
 .PHONY : CMakeFiles/correrTests.dir/all
 
 # Include target in all.
@@ -76,7 +76,7 @@ all: CMakeFiles/correrTests.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/correrTests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\diego\Documents\Facultad\ALGOII\AEDTP3Calculadora\cmake-build-debug\CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\diego\Documents\Facultad\ALGOII\AEDTP3Calculadora\cmake-build-debug\CMakeFiles 14
 	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/correrTests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\diego\Documents\Facultad\ALGOII\AEDTP3Calculadora\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/correrTests.dir/rule
@@ -123,7 +123,7 @@ tests/google-test/preinstall:
 tests/google-test/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f tests\google-test\CMakeFiles\gtest.dir\build.make tests/google-test/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f tests\google-test\CMakeFiles\gtest.dir\build.make tests/google-test/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\diego\Documents\Facultad\ALGOII\AEDTP3Calculadora\cmake-build-debug\CMakeFiles --progress-num=7,8 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\diego\Documents\Facultad\ALGOII\AEDTP3Calculadora\cmake-build-debug\CMakeFiles --progress-num=11,12 "Built target gtest"
 .PHONY : tests/google-test/CMakeFiles/gtest.dir/all
 
 # Include target in all.
@@ -160,7 +160,7 @@ clean: tests/google-test/CMakeFiles/gtest.dir/clean
 tests/google-test/CMakeFiles/gtest_main.dir/all: tests/google-test/CMakeFiles/gtest.dir/all
 	$(MAKE) -f tests\google-test\CMakeFiles\gtest_main.dir\build.make tests/google-test/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f tests\google-test\CMakeFiles\gtest_main.dir\build.make tests/google-test/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\diego\Documents\Facultad\ALGOII\AEDTP3Calculadora\cmake-build-debug\CMakeFiles --progress-num=9,10 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\diego\Documents\Facultad\ALGOII\AEDTP3Calculadora\cmake-build-debug\CMakeFiles --progress-num=13,14 "Built target gtest_main"
 .PHONY : tests/google-test/CMakeFiles/gtest_main.dir/all
 
 # Include target in all.

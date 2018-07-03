@@ -339,6 +339,8 @@ set
 -
 
 C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Ventana.h
+iostream
+-
 Ventana.hpp
 C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Ventana.hpp
 
@@ -369,4 +371,34 @@ C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/tests/gtest/gtest.h
 C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Driver.h
 iostream
 -
+
+C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/tests/test_instruccion.cpp
+gtest/gtest.h
+C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/tests/gtest/gtest.h
+iostream
+-
+../src/Instruccion.h
+C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Instruccion.h
+
+C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/tests/test_programa.cpp
+gtest/gtest.h
+C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/tests/gtest/gtest.h
+iostream
+-
+../src/Programa.h
+C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Programa.h
+
+C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/tests/test_trie.cpp
+gtest/gtest.h
+-
+../src/trie.h
+C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/trie.h
+list
+-
+
+C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/tests/test_ventana.cpp
+gtest/gtest.h
+C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/tests/gtest/gtest.h
+../src/Ventana.h
+C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/src/Ventana.h
 

@@ -199,13 +199,13 @@ void Calculadora::ejecutarUnPaso(){
         //Si la variable tiene cosas en la ventana se usa, sino es 0
         if((*it).vent.tam() > 0){
             valor valorAPushear = get<1>((*it).vent[tamVent - 1]);
-            (*it).vent.registrar(make_tuple(instanteActual,valorAPushear));
-            (*it).valorHistorico.push_back(make_tuple(instanteActual,valorAPushear));
+            (*it).vent.registrar(make_tuple(instanteActual+1,valorAPushear));
+            (*it).valorHistorico.push_back(make_tuple(instanteActual+1,valorAPushear));
             pila.push(valorAPushear);
         }
         else{
-            (*it).vent.registrar(make_tuple(instanteActual,0));
-            (*it).valorHistorico.push_back(make_tuple(instanteActual,0));
+            (*it).vent.registrar(make_tuple(instanteActual+1,0));
+            (*it).valorHistorico.push_back(make_tuple(instanteActual+1,0));
             pila.push(0);
         }
 
@@ -400,12 +400,13 @@ valor Calculadora::valorEnInstante(variable var, instante inst){
                 return get<1>((variablePorNombre[make_tuple(var,W)].vent)[cantInstantesVar-1-(instanteActual-inst)]);
             }else {
                 variablePorNombre[make_tuple(var,W)].vent.registrar(make_tuple(instanteActual,0));
+                cout << "de"<<endl;
                 variablePorNombre[make_tuple(var,W)].valorHistorico.push_back(make_tuple(instanteActual,0));
                 return 0;
             }
 
         }else {
-            cout << "la var que busco NO Exisgte"<<endl;
+            cout << "la var que busco NO existe"<<endl;
         }
     } else {
         cout << "busco valor en historico"<<endl;

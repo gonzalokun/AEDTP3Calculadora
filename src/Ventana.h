@@ -1,6 +1,8 @@
 #ifndef VENTANA_H
 #define VENTANA_H
 
+#include <iostream>
+using namespace std;
 template<class T>
 class Ventana {
 public:
