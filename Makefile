@@ -194,60 +194,6 @@ gtest_main/fast:
 	$(MAKE) -f tests\google-test\CMakeFiles\gtest_main.dir\build.make tests/google-test/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
-src/Calculadora.obj: src/Calculadora.cpp.obj
-
-.PHONY : src/Calculadora.obj
-
-# target to build an object file
-src/Calculadora.cpp.obj:
-	$(MAKE) -f CMakeFiles\correrTests.dir\build.make CMakeFiles/correrTests.dir/src/Calculadora.cpp.obj
-.PHONY : src/Calculadora.cpp.obj
-
-src/Calculadora.i: src/Calculadora.cpp.i
-
-.PHONY : src/Calculadora.i
-
-# target to preprocess a source file
-src/Calculadora.cpp.i:
-	$(MAKE) -f CMakeFiles\correrTests.dir\build.make CMakeFiles/correrTests.dir/src/Calculadora.cpp.i
-.PHONY : src/Calculadora.cpp.i
-
-src/Calculadora.s: src/Calculadora.cpp.s
-
-.PHONY : src/Calculadora.s
-
-# target to generate assembly for a file
-src/Calculadora.cpp.s:
-	$(MAKE) -f CMakeFiles\correrTests.dir\build.make CMakeFiles/correrTests.dir/src/Calculadora.cpp.s
-.PHONY : src/Calculadora.cpp.s
-
-src/Driver.obj: src/Driver.cpp.obj
-
-.PHONY : src/Driver.obj
-
-# target to build an object file
-src/Driver.cpp.obj:
-	$(MAKE) -f CMakeFiles\correrTests.dir\build.make CMakeFiles/correrTests.dir/src/Driver.cpp.obj
-.PHONY : src/Driver.cpp.obj
-
-src/Driver.i: src/Driver.cpp.i
-
-.PHONY : src/Driver.i
-
-# target to preprocess a source file
-src/Driver.cpp.i:
-	$(MAKE) -f CMakeFiles\correrTests.dir\build.make CMakeFiles/correrTests.dir/src/Driver.cpp.i
-.PHONY : src/Driver.cpp.i
-
-src/Driver.s: src/Driver.cpp.s
-
-.PHONY : src/Driver.s
-
-# target to generate assembly for a file
-src/Driver.cpp.s:
-	$(MAKE) -f CMakeFiles\correrTests.dir\build.make CMakeFiles/correrTests.dir/src/Driver.cpp.s
-.PHONY : src/Driver.cpp.s
-
 src/Instruccion.obj: src/Instruccion.cpp.obj
 
 .PHONY : src/Instruccion.obj
@@ -302,60 +248,6 @@ src/Programa.cpp.s:
 	$(MAKE) -f CMakeFiles\correrTests.dir\build.make CMakeFiles/correrTests.dir/src/Programa.cpp.s
 .PHONY : src/Programa.cpp.s
 
-tests/test_driver.obj: tests/test_driver.cpp.obj
-
-.PHONY : tests/test_driver.obj
-
-# target to build an object file
-tests/test_driver.cpp.obj:
-	$(MAKE) -f CMakeFiles\correrTests.dir\build.make CMakeFiles/correrTests.dir/tests/test_driver.cpp.obj
-.PHONY : tests/test_driver.cpp.obj
-
-tests/test_driver.i: tests/test_driver.cpp.i
-
-.PHONY : tests/test_driver.i
-
-# target to preprocess a source file
-tests/test_driver.cpp.i:
-	$(MAKE) -f CMakeFiles\correrTests.dir\build.make CMakeFiles/correrTests.dir/tests/test_driver.cpp.i
-.PHONY : tests/test_driver.cpp.i
-
-tests/test_driver.s: tests/test_driver.cpp.s
-
-.PHONY : tests/test_driver.s
-
-# target to generate assembly for a file
-tests/test_driver.cpp.s:
-	$(MAKE) -f CMakeFiles\correrTests.dir\build.make CMakeFiles/correrTests.dir/tests/test_driver.cpp.s
-.PHONY : tests/test_driver.cpp.s
-
-tests/test_instruccion.obj: tests/test_instruccion.cpp.obj
-
-.PHONY : tests/test_instruccion.obj
-
-# target to build an object file
-tests/test_instruccion.cpp.obj:
-	$(MAKE) -f CMakeFiles\correrTests.dir\build.make CMakeFiles/correrTests.dir/tests/test_instruccion.cpp.obj
-.PHONY : tests/test_instruccion.cpp.obj
-
-tests/test_instruccion.i: tests/test_instruccion.cpp.i
-
-.PHONY : tests/test_instruccion.i
-
-# target to preprocess a source file
-tests/test_instruccion.cpp.i:
-	$(MAKE) -f CMakeFiles\correrTests.dir\build.make CMakeFiles/correrTests.dir/tests/test_instruccion.cpp.i
-.PHONY : tests/test_instruccion.cpp.i
-
-tests/test_instruccion.s: tests/test_instruccion.cpp.s
-
-.PHONY : tests/test_instruccion.s
-
-# target to generate assembly for a file
-tests/test_instruccion.cpp.s:
-	$(MAKE) -f CMakeFiles\correrTests.dir\build.make CMakeFiles/correrTests.dir/tests/test_instruccion.cpp.s
-.PHONY : tests/test_instruccion.cpp.s
-
 tests/test_programa.obj: tests/test_programa.cpp.obj
 
 .PHONY : tests/test_programa.obj
@@ -383,60 +275,6 @@ tests/test_programa.cpp.s:
 	$(MAKE) -f CMakeFiles\correrTests.dir\build.make CMakeFiles/correrTests.dir/tests/test_programa.cpp.s
 .PHONY : tests/test_programa.cpp.s
 
-tests/test_trie.obj: tests/test_trie.cpp.obj
-
-.PHONY : tests/test_trie.obj
-
-# target to build an object file
-tests/test_trie.cpp.obj:
-	$(MAKE) -f CMakeFiles\correrTests.dir\build.make CMakeFiles/correrTests.dir/tests/test_trie.cpp.obj
-.PHONY : tests/test_trie.cpp.obj
-
-tests/test_trie.i: tests/test_trie.cpp.i
-
-.PHONY : tests/test_trie.i
-
-# target to preprocess a source file
-tests/test_trie.cpp.i:
-	$(MAKE) -f CMakeFiles\correrTests.dir\build.make CMakeFiles/correrTests.dir/tests/test_trie.cpp.i
-.PHONY : tests/test_trie.cpp.i
-
-tests/test_trie.s: tests/test_trie.cpp.s
-
-.PHONY : tests/test_trie.s
-
-# target to generate assembly for a file
-tests/test_trie.cpp.s:
-	$(MAKE) -f CMakeFiles\correrTests.dir\build.make CMakeFiles/correrTests.dir/tests/test_trie.cpp.s
-.PHONY : tests/test_trie.cpp.s
-
-tests/test_ventana.obj: tests/test_ventana.cpp.obj
-
-.PHONY : tests/test_ventana.obj
-
-# target to build an object file
-tests/test_ventana.cpp.obj:
-	$(MAKE) -f CMakeFiles\correrTests.dir\build.make CMakeFiles/correrTests.dir/tests/test_ventana.cpp.obj
-.PHONY : tests/test_ventana.cpp.obj
-
-tests/test_ventana.i: tests/test_ventana.cpp.i
-
-.PHONY : tests/test_ventana.i
-
-# target to preprocess a source file
-tests/test_ventana.cpp.i:
-	$(MAKE) -f CMakeFiles\correrTests.dir\build.make CMakeFiles/correrTests.dir/tests/test_ventana.cpp.i
-.PHONY : tests/test_ventana.cpp.i
-
-tests/test_ventana.s: tests/test_ventana.cpp.s
-
-.PHONY : tests/test_ventana.s
-
-# target to generate assembly for a file
-tests/test_ventana.cpp.s:
-	$(MAKE) -f CMakeFiles\correrTests.dir\build.make CMakeFiles/correrTests.dir/tests/test_ventana.cpp.s
-.PHONY : tests/test_ventana.cpp.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -452,33 +290,15 @@ help:
 	@echo ... list_install_components
 	@echo ... gtest
 	@echo ... gtest_main
-	@echo ... src/Calculadora.obj
-	@echo ... src/Calculadora.i
-	@echo ... src/Calculadora.s
-	@echo ... src/Driver.obj
-	@echo ... src/Driver.i
-	@echo ... src/Driver.s
 	@echo ... src/Instruccion.obj
 	@echo ... src/Instruccion.i
 	@echo ... src/Instruccion.s
 	@echo ... src/Programa.obj
 	@echo ... src/Programa.i
 	@echo ... src/Programa.s
-	@echo ... tests/test_driver.obj
-	@echo ... tests/test_driver.i
-	@echo ... tests/test_driver.s
-	@echo ... tests/test_instruccion.obj
-	@echo ... tests/test_instruccion.i
-	@echo ... tests/test_instruccion.s
 	@echo ... tests/test_programa.obj
 	@echo ... tests/test_programa.i
 	@echo ... tests/test_programa.s
-	@echo ... tests/test_trie.obj
-	@echo ... tests/test_trie.i
-	@echo ... tests/test_trie.s
-	@echo ... tests/test_ventana.obj
-	@echo ... tests/test_ventana.i
-	@echo ... tests/test_ventana.s
 .PHONY : help
 
 

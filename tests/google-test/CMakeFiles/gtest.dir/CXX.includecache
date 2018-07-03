@@ -6,6 +6,7 @@
 
 #IncludeRegexTransform: 
 
+<<<<<<< HEAD
 C:/Proyectos/AEDTP3Calculadora/tests/google-test/src/gtest-all.cc
 gtest/gtest.h
 C:/Proyectos/AEDTP3Calculadora/tests/google-test/src/gtest/gtest.h
@@ -23,6 +24,25 @@ src/gtest-test-part.cc
 C:/Proyectos/AEDTP3Calculadora/tests/google-test/src/src/gtest-test-part.cc
 src/gtest-typed-test.cc
 C:/Proyectos/AEDTP3Calculadora/tests/google-test/src/src/gtest-typed-test.cc
+=======
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/tests/google-test/src/gtest-all.cc
+gtest/gtest.h
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/tests/google-test/src/gtest/gtest.h
+src/gtest.cc
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/tests/google-test/src/src/gtest.cc
+src/gtest-death-test.cc
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/tests/google-test/src/src/gtest-death-test.cc
+src/gtest-filepath.cc
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/tests/google-test/src/src/gtest-filepath.cc
+src/gtest-port.cc
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/tests/google-test/src/src/gtest-port.cc
+src/gtest-printers.cc
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/tests/google-test/src/src/gtest-printers.cc
+src/gtest-test-part.cc
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/tests/google-test/src/src/gtest-test-part.cc
+src/gtest-typed-test.cc
+/home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/tests/google-test/src/src/gtest-typed-test.cc
+>>>>>>> e5903d4a788f1cc2824e5d6ea5ae8d2dfe9da9bf
 
 tests/google-test/include/gtest/gtest-death-test.h
 gtest/internal/gtest-death-test-internal.h

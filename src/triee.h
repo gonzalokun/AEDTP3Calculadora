@@ -1,45 +1,38 @@
-#ifndef trie_H_
-#define trie_H_
+#ifndef trie2_H_
+#define trie2_H_
 
 #include <string>
-#include <vector>
 
 using namespace std;
 
 template<typename T>
-class trie {
+class triee {
 public:
     /**
     CONSTRUCTOR
     * Construye un diccionario vacio.
     **/
-    trie();
-
+    triee();
     /**
     CONSTRUCTOR POR COPIA
     * Construye un diccionario por copia.
     **/
-    trie(const trie<T>& aCopiar);
-
+    triee(const triee<T>& aCopiar);
     /**
     OPERADOR ASIGNACION
      */
-    trie& operator=(const trie& d);
-
+    triee& operator=(const triee& d);
     /**
     DESTRUCTOR
     **/
-    ~trie();
-
+    ~triee();
     /**
     operator[]
     * Acceso o definición de pares clave/valor
     **/
 
+    T &operator[](const string &key);
 
-    T &operator[](const string &);
-    T &operator[](const tuple<string, int>& clave_w);
-    T &operator[](const tuple<string,string>& c);
     /**
     COUNT
     * Devuelve la cantidad de apariciones de la clave (0 o 1).
@@ -76,51 +69,22 @@ public:
      * devuelve true si no hay ningún elemento en el diccionario */
     bool empty() const;
 
-
-
 private:
 
-    struct Nodo{
+    struct Nodo {
+        ~Nodo();
         Nodo** siguientes;
         T* definicion;
-        string clave;
     };
+
+    bool sonHijosNulos(Nodo* nodoARevisar);
+
+    Nodo* copiarNodos(Nodo* nodoACopiar);
 
     Nodo* raiz;
     int _size;
-    Nodo* iniciarNodo();
-    void copiarNivel(Nodo*&,Nodo*);
-    void borrarNodos(Nodo*);
-    int cantHijosNodoAct(Nodo*);
-
-
-public:
-<<<<<<< HEAD
-    Nodo* nodoSignificado(const string&);
-
-=======
-    //PRE clave pertenece al trie, es decir, count(clave)> 0
-    Nodo* nodoSignificado(const string& clave);
->>>>>>> e5903d4a788f1cc2824e5d6ea5ae8d2dfe9da9bf
-    class ItDiccTrie{
-
-        friend class trie<T>;
-
-    public:
-        ItDiccTrie();
-        ItDiccTrie(Nodo*);
-        T& operator*() const;
-        string claveActual() const;
-
-
-    private:
-        Nodo* _actual;
-        string clave; //clave del nodo actual
-
-    };
-
 };
 
-#include "trie.hpp"
+#include "triee.hpp"
 
-#endif // trie_H_
+#endif // trie2_H_

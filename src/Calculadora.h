@@ -1,6 +1,6 @@
 #ifndef H_CALCULADORA
 #define H_CALCULADORA
-
+/*
 using namespace std;
 #include "Instruccion.h"
 #include "Programa.h"
@@ -43,7 +43,7 @@ public:
         valor primeroPila() const;
         valor segundoPila();
         stack<valor>& getPilaSinDos();
-  
+
         bool escribiendoVariable(variable &var) const;
         bool haySalto();
 
@@ -65,15 +65,26 @@ private:
     };
 
     trie<vector<superInstruccion>> rutinasProg;
+<<<<<<< HEAD
 
     trie<vector<superInstruccion>>::ItDiccTrie rutinaActual;
 
     stack<int> pila;
     Programa* programa;
+=======
+
+    //VERSION DE RUTINA ACTUAL SIN ITER
+    //tuple<rutina, vector<superInstruccion>* > rutinaActual;
+
+    typename trie<vector<superInstruccion>>::ItDiccTrie rutinaActual;
+
+    stack<int> pila;
+    Programa programa;
+>>>>>>> e5903d4a788f1cc2824e5d6ea5ae8d2dfe9da9bf
     int W;
     int instanteActual;
     bool ejecutando;
     int indiceInstruccionActual;
 };
-
+*/
 #endif

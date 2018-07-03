@@ -2,7 +2,6 @@
 #include "../src/trie.h"
 #include <list>
 
-
 TEST(trie, probandoBorrar){
     trie<int> prueba;
     prueba["hola"] = 1;
@@ -240,7 +239,6 @@ TEST(trie_test, nuevoTest) {
     EXPECT_EQ(dic.count("Holi"),1);
 
 }
-
 
 //TEST ADICIONALES, PARA LOS ITERADORES
 

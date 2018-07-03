@@ -1,6 +1,10 @@
 #include "Calculadora.h"
+<<<<<<< HEAD
 #include <tuple>
 
+=======
+/*
+>>>>>>> e5903d4a788f1cc2824e5d6ea5ae8d2dfe9da9bf
 Calculadora::Calculadora() {
     cout << "Se inicializa la calculadora"<<endl;
     //get<0>(rutinaActual) = "";
@@ -75,6 +79,7 @@ bool Calculadora::getEjecutando() const{
 }
 void Calculadora::ejecutarUnPaso(){
 
+<<<<<<< HEAD
     //superInstruccion superIns = (*(get<1>(rutinaActual)))[indiceInstruccionActual];
 
     superInstruccion superIns = (*rutinaActual)[indiceInstruccionActual];
@@ -86,6 +91,16 @@ void Calculadora::ejecutarUnPaso(){
 
     if(op == oPush){ // Utiliza valor
         int valor = superIns.constanteNumerica;
+=======
+    superInstruccion superIns = (*(get<1>(rutinaActual)))[indiceInstruccionActual];
+    Operacion op = get<0>(superIns);
+
+    bool huboJump = false;
+
+
+    if(op == oPush){ // Utiliza valor
+        int valor = get<1>(superIns);
+>>>>>>> e5903d4a788f1cc2824e5d6ea5ae8d2dfe9da9bf
         pila.push(valor);
     }
     else if(op == oAdd){ // Sin parametros
@@ -148,6 +163,7 @@ void Calculadora::ejecutarUnPaso(){
         }
     }
     else if(op == oRead){ // Utiliza nombre de variable
+<<<<<<< HEAD
         trie<estructuraDeVariablePorNombre>::ItDiccTrie it = superIns.itVarNombre;
 
         // Podria cambiar segun como implementemos el diccTrie.
@@ -169,6 +185,20 @@ void Calculadora::ejecutarUnPaso(){
             pila.push(0);
         }
 
+=======
+        itVarNombre it = get<2>(superIns);
+
+        // Podria cambiar segun como implementemos el diccTrie.
+
+        if(it != NULL){ // Verificar que esto se puede hacer.
+            int v = get<0>((get<0>(*it))[get<0>(*it).tam()]);
+            pila.push(v);
+        }else{
+            pila.push(0);
+        }
+
+
+>>>>>>> e5903d4a788f1cc2824e5d6ea5ae8d2dfe9da9bf
     }
     else if(op == oWrite){ // Idem
         int v = pila.top();
@@ -179,6 +209,7 @@ void Calculadora::ejecutarUnPaso(){
         get<1>(t) = v;
 
         // Podria cambiar segun como implementemos el diccTrie.
+<<<<<<< HEAD
         //itVarNombre it = get<2>(superIns);
 
         trie<estructuraDeVariablePorNombre>::ItDiccTrie it = superIns.itVarNombre;
@@ -292,6 +323,62 @@ void Calculadora::ejecutarUnPaso(){
 //
 //    }
 
+=======
+        itVarNombre it = get<2>(superIns);
+
+
+        if(it != NULL){ // El iterador existe
+            (get<0>(*it)).registrar(t);
+            (get<1>(*it)).push_back(t);
+        }
+        else{ // Si no existe, creo un nuevo iterador y le agrego los valores correspondientes.
+            itVarNombre* newIt = new itVarNombre;
+            get<2>(superIns) = *newIt;
+            it = get<2>(superIns);
+
+            (get<0>(*it)).registrar(t);
+            (get<1>(*it)).push_back(t);
+        }
+
+
+    }
+    else if(op == oJump){ // Utiliza nombre de rutina
+        itRut it = get<3>(superIns);
+
+        if(it != NULL){ // El iterador existe
+            // Nombre de la rutina?? Wait for iterator.
+
+
+            huboJump = true;
+        }
+        else{ // Si no existe, termino el programa.
+
+        }
+    }
+    else if(op == oJumpz){ // Idem
+
+    }
+
+    if(op == oPush || op == oAdd || op == oSub || op == oMul){
+        indiceInstruccionActual++;
+        instanteActual++;
+    }
+    else if(op == oRead || op == oWrite){
+        indiceInstruccionActual++;
+        instanteActual++;
+    }
+    else{
+        if(huboJump){
+            indiceInstruccionActual = 0;
+        }
+        else{ // No saltó por algun motivo. (Z o normal?)
+            indiceInstruccionActual++;
+        }
+        instanteActual++;
+
+    }
+
+>>>>>>> e5903d4a788f1cc2824e5d6ea5ae8d2dfe9da9bf
 }
 
 void Calculadora::asignarVariable(variable x, valor v){
@@ -377,6 +464,7 @@ stack<valor>& Calculadora::getPilaSinDos() {
 }
 
 bool Calculadora::escribiendoVariable(variable &var) const{
+<<<<<<< HEAD
     //Operacion opActual = get<0>((*(get<1>(rutinaActual)))[indiceInstruccionActual]);
 
     //Operacion opActual = get<0>((*(*rutinaActual))[indiceInstruccionActual]);
@@ -393,6 +481,16 @@ bool Calculadora::escribiendoVariable(variable &var) const{
         else{
             return false;
         }
+=======
+//    Operacion opActual = get<0>((*(get<1>(rutinaActual)))[indiceInstruccionActual]);
+
+    Operacion opActual = get<0>((*(*rutinaActual))[indiceInstruccionActual]);
+
+    if(opActual == oWrite){
+        //Tengo que ver si la variable que esta en la instrucción actual es la que ingrese
+        variable varDeInstActual = get<2>((*(*rutinaActual))[indiceInstruccionActual]);
+
+>>>>>>> e5903d4a788f1cc2824e5d6ea5ae8d2dfe9da9bf
     }
 
     return false;
@@ -403,7 +501,12 @@ bool Calculadora::haySalto() {
     //superInstruccion instActual = (*(get<1>(rutinaActual)))[indiceInstruccionActual];
     //Operacion opActual = get<0>((*(get<1>(rutinaActual)))[indiceInstruccionActual]);
 
+<<<<<<< HEAD
     Operacion  opActual = (*rutinaActual)[indiceInstruccionActual].op;
+=======
+    Operacion opActual = get<0>((*(*rutinaActual))[indiceInstruccionActual]);
+>>>>>>> e5903d4a788f1cc2824e5d6ea5ae8d2dfe9da9bf
 
     return (opActual == oJump || opActual == oJumpz);
 }
+*/

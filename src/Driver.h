@@ -38,7 +38,7 @@ private:
 	bool comenzoEjecucion;
 	rutina rutinaActual;
 	Instruccion* instAct;
-	Calculadora* calc;
+	//Calculadora* calc;
 
 };
 
