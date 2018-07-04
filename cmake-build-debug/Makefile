@@ -329,114 +329,6 @@ tests/test_driver.cpp.s:
 	$(MAKE) -f CMakeFiles\correrTests.dir\build.make CMakeFiles/correrTests.dir/tests/test_driver.cpp.s
 .PHONY : tests/test_driver.cpp.s
 
-tests/test_instruccion.obj: tests/test_instruccion.cpp.obj
-
-.PHONY : tests/test_instruccion.obj
-
-# target to build an object file
-tests/test_instruccion.cpp.obj:
-	$(MAKE) -f CMakeFiles\correrTests.dir\build.make CMakeFiles/correrTests.dir/tests/test_instruccion.cpp.obj
-.PHONY : tests/test_instruccion.cpp.obj
-
-tests/test_instruccion.i: tests/test_instruccion.cpp.i
-
-.PHONY : tests/test_instruccion.i
-
-# target to preprocess a source file
-tests/test_instruccion.cpp.i:
-	$(MAKE) -f CMakeFiles\correrTests.dir\build.make CMakeFiles/correrTests.dir/tests/test_instruccion.cpp.i
-.PHONY : tests/test_instruccion.cpp.i
-
-tests/test_instruccion.s: tests/test_instruccion.cpp.s
-
-.PHONY : tests/test_instruccion.s
-
-# target to generate assembly for a file
-tests/test_instruccion.cpp.s:
-	$(MAKE) -f CMakeFiles\correrTests.dir\build.make CMakeFiles/correrTests.dir/tests/test_instruccion.cpp.s
-.PHONY : tests/test_instruccion.cpp.s
-
-tests/test_programa.obj: tests/test_programa.cpp.obj
-
-.PHONY : tests/test_programa.obj
-
-# target to build an object file
-tests/test_programa.cpp.obj:
-	$(MAKE) -f CMakeFiles\correrTests.dir\build.make CMakeFiles/correrTests.dir/tests/test_programa.cpp.obj
-.PHONY : tests/test_programa.cpp.obj
-
-tests/test_programa.i: tests/test_programa.cpp.i
-
-.PHONY : tests/test_programa.i
-
-# target to preprocess a source file
-tests/test_programa.cpp.i:
-	$(MAKE) -f CMakeFiles\correrTests.dir\build.make CMakeFiles/correrTests.dir/tests/test_programa.cpp.i
-.PHONY : tests/test_programa.cpp.i
-
-tests/test_programa.s: tests/test_programa.cpp.s
-
-.PHONY : tests/test_programa.s
-
-# target to generate assembly for a file
-tests/test_programa.cpp.s:
-	$(MAKE) -f CMakeFiles\correrTests.dir\build.make CMakeFiles/correrTests.dir/tests/test_programa.cpp.s
-.PHONY : tests/test_programa.cpp.s
-
-tests/test_trie.obj: tests/test_trie.cpp.obj
-
-.PHONY : tests/test_trie.obj
-
-# target to build an object file
-tests/test_trie.cpp.obj:
-	$(MAKE) -f CMakeFiles\correrTests.dir\build.make CMakeFiles/correrTests.dir/tests/test_trie.cpp.obj
-.PHONY : tests/test_trie.cpp.obj
-
-tests/test_trie.i: tests/test_trie.cpp.i
-
-.PHONY : tests/test_trie.i
-
-# target to preprocess a source file
-tests/test_trie.cpp.i:
-	$(MAKE) -f CMakeFiles\correrTests.dir\build.make CMakeFiles/correrTests.dir/tests/test_trie.cpp.i
-.PHONY : tests/test_trie.cpp.i
-
-tests/test_trie.s: tests/test_trie.cpp.s
-
-.PHONY : tests/test_trie.s
-
-# target to generate assembly for a file
-tests/test_trie.cpp.s:
-	$(MAKE) -f CMakeFiles\correrTests.dir\build.make CMakeFiles/correrTests.dir/tests/test_trie.cpp.s
-.PHONY : tests/test_trie.cpp.s
-
-tests/test_ventana.obj: tests/test_ventana.cpp.obj
-
-.PHONY : tests/test_ventana.obj
-
-# target to build an object file
-tests/test_ventana.cpp.obj:
-	$(MAKE) -f CMakeFiles\correrTests.dir\build.make CMakeFiles/correrTests.dir/tests/test_ventana.cpp.obj
-.PHONY : tests/test_ventana.cpp.obj
-
-tests/test_ventana.i: tests/test_ventana.cpp.i
-
-.PHONY : tests/test_ventana.i
-
-# target to preprocess a source file
-tests/test_ventana.cpp.i:
-	$(MAKE) -f CMakeFiles\correrTests.dir\build.make CMakeFiles/correrTests.dir/tests/test_ventana.cpp.i
-.PHONY : tests/test_ventana.cpp.i
-
-tests/test_ventana.s: tests/test_ventana.cpp.s
-
-.PHONY : tests/test_ventana.s
-
-# target to generate assembly for a file
-tests/test_ventana.cpp.s:
-	$(MAKE) -f CMakeFiles\correrTests.dir\build.make CMakeFiles/correrTests.dir/tests/test_ventana.cpp.s
-.PHONY : tests/test_ventana.cpp.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -467,18 +359,6 @@ help:
 	@echo ... tests/test_driver.obj
 	@echo ... tests/test_driver.i
 	@echo ... tests/test_driver.s
-	@echo ... tests/test_instruccion.obj
-	@echo ... tests/test_instruccion.i
-	@echo ... tests/test_instruccion.s
-	@echo ... tests/test_programa.obj
-	@echo ... tests/test_programa.i
-	@echo ... tests/test_programa.s
-	@echo ... tests/test_trie.obj
-	@echo ... tests/test_trie.i
-	@echo ... tests/test_trie.s
-	@echo ... tests/test_ventana.obj
-	@echo ... tests/test_ventana.i
-	@echo ... tests/test_ventana.s
 .PHONY : help
 
 

@@ -29,6 +29,7 @@ public:
     valor constanteNumerica() const;
     variable nombreVariable() const;
     rutina nombreRutina() const;
+    rutina getRutinaJump();
 
 
 private:
@@ -36,6 +37,7 @@ private:
     int consNum;
     variable nombreVar;
     rutina nombreRut;
+    rutina rutinaJump;
 };
 
 #endif

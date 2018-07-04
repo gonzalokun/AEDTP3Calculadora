@@ -19,6 +19,8 @@ void Calculadora::nuevaCalculadora(Programa p, rutina r, int capVent){
     indiceInstruccionActual = 0;
     variablePorNombre.cv = W;
     rutinasProg.cv = W;
+
+
     //pasada 1: recorremos rutinas de p y las guardamos
     list<rutina>::const_iterator it = (p.getRutinas()).begin();
     while (it != (p.getRutinas()).end()) {
@@ -26,12 +28,9 @@ void Calculadora::nuevaCalculadora(Programa p, rutina r, int capVent){
         rutinasProg[*it] = vector<superInstruccion>();
 
         if(*it == r) { //si es la rutina con la que hay que empezar
-            //entonces definimos un puntero hacia la rutina
-            //get<0>(rutinaActual) = (*it);
-            //get<1>(rutinaActual) = rutinasProg[r];
-            cout << "def rutinaActual"<<endl;
+            cout <<"--iniciando rutinaactual"<<endl;
             rutinaActual = trie<vector<superInstruccion>>::ItDiccTrie(rutinasProg.nodoSignificado(r));
-            cout << "clave def: "<<rutinaActual.claveActual()<<endl;
+            //cout <<"LA CLAVE ASOCIADA A LA RUTINA ACTUAL ES: " <<(*rutinaActual).back().itRut->claveActual()<<endl;
         }
         it++;
     }
@@ -43,7 +42,10 @@ void Calculadora::nuevaCalculadora(Programa p, rutina r, int capVent){
     while (it != (p.getRutinas()).end()) {
         for (int i = 0; i < p.longitud(*it); ++i) { //recorro instrucciones de la rutina actual
             if(p.instruccion(*it,i).getOp() == oWrite || p.instruccion(*it,i).getOp() == oRead) {
-                variablePorNombre[make_tuple(p.instruccion(*it,i).nombreVariable(), capVent)] = estructuraDeVariablePorNombre(capVent);
+                estructuraDeVariablePorNombre est =estructuraDeVariablePorNombre(capVent);
+                est.vent.registrar(make_tuple(0,0));
+                est.valorHistorico.push_back(make_tuple(0,0));
+                variablePorNombre[make_tuple(p.instruccion(*it,i).nombreVariable(), capVent)] = est;
             }
         }
         it++;
@@ -57,43 +59,40 @@ void Calculadora::nuevaCalculadora(Programa p, rutina r, int capVent){
         cout << "ANALIZANDO RUTINA: "<<(*it)<<endl;
         vector<superInstruccion> vec;
         if(p.longitud(*it) == 0) {
-            cout << "se define el vec vacio en rutinasProg"<<endl;
             rutinasProg[*it] = vec;
         }
         //si tiene instrucciones
         for (int i = 0; i < p.longitud(*it); ++i) {
-            cout << "i: "<<i<<endl;
             Operacion op;
             int cNum;
             op = p.instruccion(*it,i).getOp();
+            Instruccion instr = p.instruccion(*it,i);
             cNum = p.instruccion(*it,i).constanteNumerica();
             trie<estructuraDeVariablePorNombre>::ItDiccTrie auxItVar;
             auxItVar = trie<estructuraDeVariablePorNombre>::ItDiccTrie(variablePorNombre.nodoSignificado(""));
-            cout <<"sigue1"<<endl;
+
             if(op == oRead || op == oWrite) {
                 auxItVar = trie<estructuraDeVariablePorNombre>::ItDiccTrie(variablePorNombre.nodoSignificado(p.instruccion(*it,i).nombreVariable()));
             }else{
                 //auxItVar =  trie<estructuraDeVariablePorNombre>::ItDiccTrie(variablePorNombre.nodoSignificado(""));
             }
-            cout <<"sigue2"<<endl;
 
             trie<vector<superInstruccion>>::ItDiccTrie* auxItRut;
-            cout <<"sigue3"<<endl;
 
             if(oJump == op || op == oJumpz) {
-                auxItRut = new trie<vector<superInstruccion>>::ItDiccTrie(rutinasProg.nodoSignificado(p.instruccion(*it,i).nombreRutina()));
+                cout <<"EL NOMBRE DE LA RUTINA DEL JUMP -------------"<<p.instruccion(*it,i).getRutinaJump()<<endl;
+                auxItRut = new trie<vector<superInstruccion>>::ItDiccTrie(rutinasProg.nodoSignificado(p.instruccion(*it,i).getRutinaJump()));
             }else {
                 auxItRut = new trie<vector<superInstruccion>>::ItDiccTrie(rutinasProg.nodoSignificado(""));
             }
             superInstruccion sp;
             sp.constanteNumerica=cNum;
             sp.op = op;
+            sp.i = instr;
             sp.itVarNombre = auxItVar;
             sp.itRut = auxItRut;
             vec.push_back(sp);
-            cout <<"p1"<<endl;
             rutinasProg[*it] = vec;
-            cout << "p2"<<endl;
         }
         it++;
     }
@@ -112,18 +111,22 @@ bool Calculadora::getEjecutando() const{
 void Calculadora::ejecutarUnPaso(){
 
     //superInstruccion superIns = (*(get<1>(rutinaActual)))[indiceInstruccionActual];
-
     superInstruccion superIns = (*rutinaActual)[indiceInstruccionActual];
 
     Operacion op = superIns.op;
-
+    /*cout <<"el tipo de operacion de la instrucciona  ejecutar es: "<<op<<endl;
+    if(op==6){
+        cout<<"la rutina a la q apunta es: "<<(superIns.itRut)->claveActual()<<endl;
+    }
+    cout <<"LA CLAVE ASOCIADA A LA RUTINA ACTUAL ES: " <<(*rutinaActual).back().itRut->claveActual()<<endl;
+*/
     bool jumpValido;
 
-    if((op != oJump || op != oJumpz) && (instanteActual!=0)){
+    if((op != oJump && op != oJumpz)){
 
         //Operaciones Push, Add, Sub, Mul, Read, Write
-        /*indiceInstruccionActual++;
-        instanteActual++;*/
+        indiceInstruccionActual++;
+        instanteActual++;
     }
 
     if(op == oPush){ // Utiliza valor
@@ -192,18 +195,12 @@ void Calculadora::ejecutarUnPaso(){
     else if(op == oRead){ // Utiliza nombre de variable
         trie<estructuraDeVariablePorNombre>::ItDiccTrie it = superIns.itVarNombre;
 
-        // Podria cambiar segun como implementemos el diccTrie.
-//        if(it != NULL){ // Verificar que esto se puede hacer.
-//            int v = get<0>((get<0>(*it))[get<0>(*it).tam()]);
-//            pila.push(v);
-//        }else{
-//            pila.push(0);
-//        }
-
         int tamVent = (*it).vent.tam();
 
         //Si la variable tiene cosas en la ventana se usa, sino es 0
+        cout << "creo nueva ventana de valores en instante "<<instanteActual <<endl;
         if((*it).vent.tam() > 0){
+
             valor valorAPushear = get<1>((*it).vent[tamVent - 1]);
             (*it).vent.registrar(make_tuple(instanteActual,valorAPushear));
             (*it).valorHistorico.push_back(make_tuple(instanteActual,valorAPushear));
@@ -224,41 +221,23 @@ void Calculadora::ejecutarUnPaso(){
             v = pila.top();
             pila.pop();
         }
-
-        cout <<"ESTOY EN WRITE Y MI INSTANTE ACTUAL DONDE VOY A CREAR ES "<< instanteActual<<endl;
         tuple<instante, valor> t;
         get<0>(t) = instanteActual;
         get<1>(t) = v;
-
-        // Podria cambiar segun como implementemos el diccTrie.
-        //itVarNombre it = get<2>(superIns);
-
+        cout <<"ESTOY EN WRITE Y MI INSTANTE ACTUAL DONDE VOY A CREAR ES "<< instanteActual<<endl;
+        cout <<"con valor: "<<v<<endl;
         trie<estructuraDeVariablePorNombre>::ItDiccTrie it = superIns.itVarNombre;
-
         //Se registra directamente en la variable
         (*it).vent.registrar(t);
         (*it).valorHistorico.push_back(t);
 
-//        if(it != NULL){ // El iterador existe
-//            (get<0>(*it)).registrar(t);
-//            (get<1>(*it)).push_back(t);
-//        }
-//        else{ // Si no existe, creo un nuevo iterador y le agrego los valores correspondientes.
-//            itVarNombre* newIt = new itVarNombre;
-//            get<2>(superIns) = *newIt;
-//            it = get<2>(superIns);
-//
-//            (get<0>(*it)).registrar(t);
-//            (get<1>(*it)).push_back(t);
-//        }
     }
     else if(op == oJump){ // Utiliza nombre de rutina
-        //itRut it = get<3>(superIns);
-
-        trie<vector<superInstruccion>>::ItDiccTrie* punteroIt = superIns.itRut;
-        trie<vector<superInstruccion>>::ItDiccTrie it = *(punteroIt);
-
-        if((*it).empty()){
+        // necesito acceder al vector de isntrucciones de la rutina asociada al jump de la rutina actual
+        cout << "----*-*-cantidad de instrucciones de la rutina: " << (*rutinaActual).size() <<endl;
+        cout <<"nombre de la instruccion " << (*rutinaActual)[indiceInstruccionActual].i.getRutinaJump();
+        rutina rJump=(*rutinaActual)[indiceInstruccionActual].i.getRutinaJump();
+        if(rutinasProg[rJump].size() != 0){
             //Hay instrucciones en la nueva rutina
             jumpValido = true;
         }
@@ -266,32 +245,30 @@ void Calculadora::ejecutarUnPaso(){
             //No hay instrucciones, la rutina ingresada no es válida
             jumpValido = false;
         }
-
     }
     else if(op == oJumpz){ // Idem
         //
 
         trie<vector<superInstruccion>>::ItDiccTrie* punteroIt = superIns.itRut;
         trie<vector<superInstruccion>>::ItDiccTrie it = *(punteroIt);
-
-        if((*it).empty()){
+        /*if((*it).empty()){
             //Hay instrucciones en la nueva rutina
             jumpValido = true;
-        }
-        else{
+        }else{
             //No hay instrucciones, la rutina ingresada no es válida
             jumpValido = false;
-        }
+        }*/
     }
 
     if(op == oJump){
         //Jump a otra rutina
+        instanteActual++;
         if(jumpValido){
             indiceInstruccionActual = 0;
             rutinaActual = *(superIns.itRut);
-            instanteActual++;
         }
         else{
+            cout << "ES JUMP INCORRECTO"<<endl;
             //Jump incorrecto, se termina la ejecucion
             ejecutando = false;
         }
@@ -305,6 +282,7 @@ void Calculadora::ejecutarUnPaso(){
                 instanteActual++;
             }
             else{
+                cout << "ES JUMP INCORRECTO"<<endl;
                 //Jump incorrecto, se termina la ejecucion
                 ejecutando = false;
             }
@@ -315,12 +293,13 @@ void Calculadora::ejecutarUnPaso(){
         }
     }
     else{
-
-        indiceInstruccionActual++;
-        instanteActual++;
-
+       // if(instanteActual==0){
+            /*indiceInstruccionActual++;
+            instanteActual++;*/
+        //}
     }
-
+    cout <<"NOMBRE DE RUTINA ACTUAL : " << (*rutinaActual).back().itRut->claveActual()<<endl;
+    cout << "cant inst: " <<(*rutinaActual).size()<<endl;
     if(indiceInstruccionActual >= (*rutinaActual).size()){
         //Llegamos al final de la rutina
         ejecutando = false;
@@ -344,7 +323,7 @@ void Calculadora::ejecutarUnPaso(){
 //        instanteActual++;
 //
 //    }
-    cout << "TERMINADA instante actual " <<instanteActual-1<<endl;
+    cout << "TERMINADA instante actual " <<instanteActual<<endl;
 }
 
 void Calculadora::asignarVariable(variable x, valor v){
@@ -398,45 +377,63 @@ int Calculadora::getIndiceInstruccionActual() const{
     return indiceInstruccionActual;
 }
 
+int Calculadora::indiceInstante(int i,int s,instante busc,variable var){
+    if(variablePorNombre[make_tuple(var,W)].vent.tam()>0) {
+        int med = (s - i) / 2;
+        if (med == 1 && get<0>(variablePorNombre[make_tuple(var,W)].vent[med]) != busc && get<0>(variablePorNombre[make_tuple(var,W)].vent[med]) > busc)
+            return get<0>(variablePorNombre[make_tuple(var,W)].vent[med - 1]);
+        else if (med == 1 && get<0>(variablePorNombre[make_tuple(var,W)].vent[med]) != busc && get<0>(variablePorNombre[make_tuple(var,W)].vent[med]) < busc)
+            return get<0>(variablePorNombre[make_tuple(var,W)].vent[med + 1]);
+        if (get<0>(variablePorNombre[make_tuple(var,W)].vent[med]) == busc)
+            return med;
+
+        if (get<0>(variablePorNombre[make_tuple(var,W)].vent[med]) > busc)
+            return indiceInstante(i, med, busc, var);
+
+        if (get<0>(variablePorNombre[make_tuple(var,W)].vent[med]) < busc)
+            return indiceInstante(med, s, busc, var);
+        return 0;
+    }else {
+        return 0;
+    }
+}
+
+
 valor Calculadora::valorEnInstante(variable var, instante inst){
     cout << "CONSULTANDO VALOR EN INSTANTE, VAR: "<<var<< " inst: "<< inst<< " inst act:"<<instanteActual<<endl;
     cout << "W:" <<W<<endl;
-    if(instanteActual - inst < W) {
+   /* if(instanteActual - inst < W) {
         if(variablePorNombre.count(var) > 0){
             cout << "LA VAR QUE BUSCO EXISTE"<<endl;
             int cantInstantesVar = (variablePorNombre[make_tuple(var,W)].vent).tam();
-            cout << "cant de instruc de la var: "<< cantInstantesVar<<endl;
+            cout << "cant de vent de la var: "<< cantInstantesVar<<endl;
             if(cantInstantesVar>instanteActual-inst){
-                cout << "?"<<endl;
-                cout << "instante a index: "<< cantInstantesVar-1-(instanteActual-inst)<<endl;
-                cout << "devuelve: "<<get<1>((variablePorNombre[make_tuple(var,W)].vent)[cantInstantesVar-1-(instanteActual-inst)])<<endl;
-                return get<1>((variablePorNombre[make_tuple(var,W)].vent)[cantInstantesVar-1-(instanteActual-inst)]);
+                int tam = variablePorNombre[make_tuple(var,W)].vent.tam();
+                int indice = indiceInstante(0,tam,inst,var);
+                return get<1>((variablePorNombre[make_tuple(var,W)].vent)[indice]);//cantInstantesVar-1-(instanteActual-inst)
             }else {
                 variablePorNombre[make_tuple(var,W)].vent.registrar(make_tuple(instanteActual,0));
-                cout << "de"<<endl;
                 variablePorNombre[make_tuple(var,W)].valorHistorico.push_back(make_tuple(instanteActual,0));
                 return 0;
             }
 
         }else {
-            cout << "la var que busco NO existe"<<endl;
         }
-    } else {
+    } else {*/
         cout << "busco valor en historico"<<endl;
         //valorHistorico::const_iterator it = (variablePorNombre[make_tuple(var,W)].valorHistorico).end();
 
         valorHistorico::const_iterator itend = (variablePorNombre[make_tuple(var,W)].valorHistorico).end();
         valorHistorico::const_iterator it = (variablePorNombre[make_tuple(var,W)].valorHistorico).begin();
-        while(get<0>(*it) != inst && it !=itend ){
+        while(get<0>(*it) < inst && it !=itend ){
             cout << "comparando inst: "<<get<0>(*it)<<endl;
             it++;
         }
-        /*while(i >= inst && it != (variablePorNombre[make_tuple(var,W)].valorHistorico).begin()) {
-            i--;
-            it--;
-        }*/
+        if(it == itend) it--;
+        //if(get<0>(*it) > inst) it--;
+        cout <<"devolviendo instante: " << get<0>(*it)<<" valor: "<<get<1>(*it)<<endl;
         return get<1>(*it);
-    }
+    //}
 }
 
 valor Calculadora::valorActualVariable(variable var){

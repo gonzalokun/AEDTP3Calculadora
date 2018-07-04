@@ -6,6 +6,7 @@ Instruccion::Instruccion(rutina r) {
     nombreVar = "";
     consNum = 0;
     op = oNada;
+    rutinaJump="";
 }
 
 
@@ -15,6 +16,7 @@ Instruccion::Instruccion() {
     nombreVar = "";
     consNum = 0;
     op=oNada;
+    rutinaJump="";
 }
 
 Instruccion::~Instruccion(){
@@ -45,11 +47,15 @@ void Instruccion::write(const variable& var){
 }
 void Instruccion::jump(const rutina& r){
     op = oJump;
-    nombreRut = r;
+    rutinaJump=r;
 }
 void Instruccion::jumpz(const rutina& r){
     op = oJumpz;
-    nombreRut = r;
+    rutinaJump=r;
+}
+
+rutina Instruccion::getRutinaJump() {
+    return rutinaJump;
 }
 
 

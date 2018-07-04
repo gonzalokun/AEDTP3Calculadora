@@ -265,18 +265,6 @@
 		<Unit filename="C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/tests/test_driver.cpp">
 			<Option target="correrTests"/>
 		</Unit>
-		<Unit filename="C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/tests/test_instruccion.cpp">
-			<Option target="correrTests"/>
-		</Unit>
-		<Unit filename="C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/tests/test_programa.cpp">
-			<Option target="correrTests"/>
-		</Unit>
-		<Unit filename="C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/tests/test_trie.cpp">
-			<Option target="correrTests"/>
-		</Unit>
-		<Unit filename="C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/tests/test_ventana.cpp">
-			<Option target="correrTests"/>
-		</Unit>
 		<Unit filename="C:/Users/diego/Documents/Facultad/ALGOII/AEDTP3Calculadora/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

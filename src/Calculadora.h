@@ -54,10 +54,11 @@ private:
         list<tuple<instante,valor> > valorHistorico;
         estructuraDeVariablePorNombre(int w) : vent(Ventana<tuple<instante,valor> >(w)), valorHistorico(list<tuple<instante, valor> >()){        };
     };
-
+    int indiceInstante(int i,int s,instante busc,variable var);
     trie<estructuraDeVariablePorNombre> variablePorNombre;
 
     struct superInstruccion{
+        Instruccion i;
         Operacion op;
         int constanteNumerica;
         trie<estructuraDeVariablePorNombre>::ItDiccTrie itVarNombre;

@@ -388,13 +388,14 @@ TEST(test_driver, read_write) {
 		d.read("bar");
 		d.end("klb");
 		d.comenzarEjecucion("klb", tam_ventana);
-
+//inst 0
 		ASSERT_EQ(d.instanteActual(), 0);
 		ASSERT_FALSE(d.ejecucionFinalizada());
 
 		ASSERT_EQ(d.valorHistoricoVariable("bar", 0), 0);
-
+//inst 0
 		d.ejecutarInstruccionActual();
+//inst 1
 		ASSERT_EQ(d.valorVariable("bar"), 0);
 		ASSERT_EQ(d.instanteActual(), 1);
 		ASSERT_EQ(d.topePila(), 70435714);
@@ -402,8 +403,9 @@ TEST(test_driver, read_write) {
 
 		ASSERT_EQ(d.valorHistoricoVariable("bar", 0), 0);
 		ASSERT_EQ(d.valorHistoricoVariable("bar", 1), 0);
-
+//inst 1
 		d.ejecutarInstruccionActual(); //INST WRITE
+//inst 2
 		ASSERT_EQ(d.valorVariable("bar"), 70435714);
 		ASSERT_EQ(d.instanteActual(), 2);
 		ASSERT_EQ(d.topePila(), 0);
@@ -412,7 +414,9 @@ TEST(test_driver, read_write) {
 		ASSERT_EQ(d.valorHistoricoVariable("bar", 0), 0);
 		ASSERT_EQ(d.valorHistoricoVariable("bar", 1), 70435714);//DDEBE SER 70435714
 		ASSERT_EQ(d.valorHistoricoVariable("bar", 2), 70435714);
-/*
+//inst 2
+
+
 		d.ejecutarInstruccionActual();//INSTR READ
         //A PARTIR DE ACA INSTANTE ACTUAL = 3
 		ASSERT_EQ(d.valorVariable("bar"), 70435714);
@@ -441,10 +445,10 @@ TEST(test_driver, read_write) {
 		ASSERT_EQ(d.valorHistoricoVariable("bar", 1), 70435714);
 		ASSERT_EQ(d.valorHistoricoVariable("bar", 2), 70435714);
 		ASSERT_EQ(d.valorHistoricoVariable("bar", 3), 60157375);
-		ASSERT_EQ(d.valorHistoricoVariable("bar", 4), 60157375);*/
+		ASSERT_EQ(d.valorHistoricoVariable("bar", 4), 60157375);
 	}
 }
-/*
+
 TEST(test_driver, jump_rutina_inexistente) {
 	Driver d;
 	d.begin("mjixfob");
@@ -505,7 +509,7 @@ TEST(test_driver, jump_rutina_existente) {
 	ASSERT_EQ(d.topePila(), 122700288);
 	ASSERT_TRUE(d.ejecucionFinalizada());
 }
-
+/*
 TEST(test_driver, loop_infinito) {
 	Driver d;
 	d.begin("a");
