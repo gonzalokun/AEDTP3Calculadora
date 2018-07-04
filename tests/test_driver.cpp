@@ -3,22 +3,48 @@
 #include <iostream>
 using namespace std;
 
+// Devuelve un vector con todas las cadenas de longitud n
+// formadas con las letras del alfabeto.
+vector<string> combinaciones_eq(vector<string> alfabeto, int n) {
+    vector<string> v;
+    if (n == 0) {
+        v.push_back("");
+        return v;
+    } else {
+        for (auto s : combinaciones_eq(alfabeto, n - 1)) {
+            for (auto x : alfabeto) {
+                v.push_back(x + s);
+            }
+        }
+        return v;
+    }
+}
+
+// Devuelve un vector con todas las cadenas de longitud entre 1 y n
+// formadas con las letras del alfabeto.
+vector<string> combinaciones_le(vector<string> alfabeto, int n) {
+    vector<string> v;
+    for (int i = 1; i <= n; i++) {
+        for (auto s : combinaciones_eq(alfabeto, i)) {
+            v.push_back(s);
+        }
+    }
+    return v;
+}
+
+
+
 TEST(test_driver, primer_test){
-    cout << "hello world";
+    //cout << "hello world";
     Driver d;
-    cout << "Finish"<<endl;
+    //cout << "Finish"<<endl;
     d.begin("r");
     d.push(5);
     EXPECT_EQ(d.prog.longitud("r"),1);
     d.push(2);
     EXPECT_EQ(d.prog.longitud("r"),2);
     d.add();
-    cout <<"operacion 0 de Rutina1: "<< d.prog.instruccion2("r", 0)<<endl;
-    cout <<"op == oPush? : " << (d.prog.instruccion2("r",0) == oPush )  <<endl;
-    d.asignarVariable("a",5);
-    EXPECT_EQ(d.valorVariable("a"),5);
-    cout << "fin2"<<endl;
-    d.end("r");
+    //cout << "fin2"<<endl;
 
 }
 
@@ -36,9 +62,9 @@ TEST(test_driver, push) {
 	d.begin("tpo");
 	d.push(6073366);
 	d.end("tpo");
-    cout <<"antes"<<endl;
+    //cout <<"antes"<<endl;
 	d.comenzarEjecucion("tpo", 1024);
-    cout <<"dsp"<<endl;
+    //cout <<"dsp"<<endl;
     ASSERT_EQ(d.instanteActual(), 0);
 	ASSERT_EQ(d.topePila(), 0);
 	ASSERT_FALSE(d.ejecucionFinalizada());
@@ -313,7 +339,7 @@ TEST(test_driver, read_variable_indefinida) {
 
 TEST(test_driver, read) {
 	for (int tam_ventana = 1; tam_ventana < 10; tam_ventana++) {
-        cout << "NUEVO FOR: CAP VENTANA: "<< tam_ventana<<"------------------------------------"<<endl;
+        //cout << "NUEVO FOR: CAP VENTANA: "<< tam_ventana<<"------------------------------------"<<endl;
 		Driver d;
 		d.begin("avwsno");
 		d.read("foo");
@@ -379,7 +405,7 @@ TEST(test_driver, read) {
 
 TEST(test_driver, read_write) {
 	for (int tam_ventana = 1; tam_ventana < 10; tam_ventana++) {
-		cout << "CAP VENTANA: "<<tam_ventana<<endl;
+		//cout << "CAP VENTANA: "<<tam_ventana<<endl;
 		Driver d;
 		d.begin("klb");
 		d.push(70435714);
@@ -509,7 +535,7 @@ TEST(test_driver, jump_rutina_existente) {
 	ASSERT_EQ(d.topePila(), 122700288);
 	ASSERT_TRUE(d.ejecucionFinalizada());
 }
-/*
+
 TEST(test_driver, loop_infinito) {
 	Driver d;
 	d.begin("a");
@@ -523,34 +549,7 @@ TEST(test_driver, loop_infinito) {
 	}
 }
 
-// Devuelve un vector con todas las cadenas de longitud n
-// formadas con las letras del alfabeto.
-vector<string> combinaciones_eq(vector<string> alfabeto, int n) {
-	vector<string> v;
-	if (n == 0) {
-		v.push_back("");
-		return v;
-	} else {
-		for (auto s : combinaciones_eq(alfabeto, n - 1)) {
-			for (auto x : alfabeto) {
-				v.push_back(x + s);
-			}
-		}
-		return v;
-	}
-}
 
-// Devuelve un vector con todas las cadenas de longitud entre 1 y n
-// formadas con las letras del alfabeto.
-vector<string> combinaciones_le(vector<string> alfabeto, int n) {
-	vector<string> v;
-	for (int i = 1; i <= n; i++) {
-		for (auto s : combinaciones_eq(alfabeto, i)) {
-			v.push_back(s);
-		}
-	}
-	return v;
-}
 
 // Usa la calculadora como un diccionario.
 TEST(test_driver, stress_diccionario) {
@@ -558,26 +557,29 @@ TEST(test_driver, stress_diccionario) {
 	vector<string> alfabeto = {"a", "b", "c"};
 	vector<string> nombres_variables = combinaciones_le(alfabeto, 4);
 	for (int tam_ventana = 1; tam_ventana <= max_tiempo; tam_ventana++) {
+        //cout << "empieza con w = " <<tam_ventana<<endl;
 		Driver d;
 		d.begin("main");
 		for (int t = 0; t < max_tiempo; t++) {
 			d.push(t);
 		}
 		d.end("main");
-		d.comenzarEjecucion("main", tam_ventana);
-
+		d.comenzarEjecucion("main", tam_ventana);//gato
 		for (int t = 0; t < max_tiempo; t++) {
 			int valor = 1000 * t;
 			for (auto v : nombres_variables) {
+                //cout << "asignamos a var " << v << " el valor: "<< valor<<endl;
 				d.asignarVariable(v, valor);
 				valor++;
 			}
 			d.ejecutarInstruccionActual();
 		}
-
+        //cout << "gatel valor en 0 de b es : " << d.valorHistoricoVariable("b",0)<<endl;
+        //cout << "gatel valor en 0 de b es : " << d.valorHistoricoVariable("c",0)<<endl;
 		for (int t = 0; t < max_tiempo; t++) {
 			int valorEsperado = 1000 * t;
 			for (auto v : nombres_variables) {
+                //cout << "v: "<< v << "t: "<<t<<endl;
 				ASSERT_EQ(
 					d.valorHistoricoVariable(v, t),
 					valorEsperado
@@ -588,31 +590,51 @@ TEST(test_driver, stress_diccionario) {
 	}
 }
 
+
+
 // Escritura y lectura de variables.
 TEST(test_driver, stress_read_write) {
 	vector<string> alfabeto = {"0", "1"};
 	vector<string> v = combinaciones_le(alfabeto, 8);
 
 	Driver d;
+    int taux = v.size();
 	d.begin("main");
-	for (int i = 1; i < v.size(); i++) {
+    //cout << "LA CANTIDAD INSTRUCCIONES: "<< taux<< "* 4" <<endl;
+	for (int i = 1; i < taux; i++) {
+        //cout << "Ciclo " << i << ":" << endl;
+
+
 		d.read(v[i - 1]);
+        //cout << "pushj"<<endl;
 		d.push(i);
-		d.add();
+        //cout << "add"<<endl;
+        d.add();
+        //cout << "-----------esccribiendo variable: "<<v[i]<<endl;
 		d.write(v[i]);
 	}
 	d.end("main");
 
 	d.comenzarEjecucion("main", 101);
-	while (!d.ejecucionFinalizada()) {
+
+
+
+
+	//*
+	 while (!d.ejecucionFinalizada()) {
+        //cout << "ejecuta inst "<<endl;
 		d.ejecutarInstruccionActual();
 	}
+//*/
 
-	for (int i = 0; i < v.size(); i++) {
+
+	for (int i = 0; i <taux; i++) {
 		ASSERT_EQ(d.valorVariable(v[i]), i * (i + 1) / 2);
 	}
 
 }
+
+
 
 // Stress de llamados a rutinas.
 TEST(test_driver, stress_jump) {
@@ -685,4 +707,3 @@ TEST(test_driver, programa_factorial) {
 		ASSERT_EQ(d.valorVariable("y"), factorial(a));
 	}
 }
-*/

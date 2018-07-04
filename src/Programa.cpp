@@ -3,7 +3,7 @@
 
 
 Programa::Programa(){
-    cout << "Se crea nuevo programa"<<endl;
+    //cout << "Se crea nuevo programa"<<endl;
 }
 
 
@@ -18,7 +18,9 @@ void Programa::nuevaRutina(const rutina r) {
 
 void Programa::agregarInstruccion(rutina r, Instruccion i){
     i.setRutina(r);
+    //cout << "EMPIEZA READ"<<endl;
     rutinasPorNombre[r].push_back(i);
+    //cout << "termina read"<<endl;
 }
 
 const list<rutina>& Programa::getRutinas() const{
@@ -40,7 +42,7 @@ Instruccion Programa::instruccion(const rutina r, const int iesima){
 
 
 Operacion Programa::instruccion2(const rutina r, const int iesima){
-    cout << "entro a inst2"<<endl;
+    //cout << "entro a inst2"<<endl;
     list<Instruccion>::iterator it = (rutinasPorNombre[r]).begin();
     int rest = iesima;
     while(rest >= 0 && it != (rutinasPorNombre[r]).end()) {

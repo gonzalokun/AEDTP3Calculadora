@@ -1,7 +1,7 @@
 #include "Driver.h"
 
 Driver::Driver() {
-	cout << "Se crea nuevo driver"<<endl;
+	//cout << "Se crea nuevo driver"<<endl;
     comenzoEjecucion = false;
 }
 

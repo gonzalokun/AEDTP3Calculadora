@@ -1,7 +1,7 @@
 #include "Instruccion.h"
 
 Instruccion::Instruccion(rutina r) {
-    //cout << "Nueva instruccion perteneciente a rutina: " << r<<endl;
+    ////cout << "Nueva instruccion perteneciente a rutina: " << r<<endl;
     nombreRut = r;
     nombreVar = "";
     consNum = 0;
@@ -11,7 +11,7 @@ Instruccion::Instruccion(rutina r) {
 
 
 Instruccion::Instruccion() {
-    //cout << "Nueva instruccion sin rutina"<<endl;
+    ////cout << "Nueva instruccion sin rutina"<<endl;
     nombreRut = "";
     nombreVar = "";
     consNum = 0;

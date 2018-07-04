@@ -58,6 +58,7 @@ private:
     trie<estructuraDeVariablePorNombre> variablePorNombre;
 
     struct superInstruccion{
+        ~superInstruccion();
         Instruccion i;
         Operacion op;
         int constanteNumerica;
