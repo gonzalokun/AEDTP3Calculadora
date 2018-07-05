@@ -32,11 +32,12 @@ public:
 	const int valorVariable(string idVariable)  ;
 	const int valorHistoricoVariable(string idVariable, int t);
 	int instanteActual() const;
-    Programa prog;
+
 private:
 	// COMPLETAR
 	bool comenzoEjecucion;
 	rutina rutinaActual;
+	Programa prog;
 	Instruccion* instAct;
 	Calculadora calc;
 

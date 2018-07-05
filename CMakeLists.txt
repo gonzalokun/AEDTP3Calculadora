@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5.1)
+cmake_minimum_required(VERSION 3.8)
 project(solucion)
 
 set(CMAKE_CXX_STANDARD 11)
@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD 11)
 file(GLOB SOURCE_FILES src/*.cpp src/*.h src/*.hpp)
 
 # Leemos todos los archivos de test en ./tests
-file(GLOB TEST_SOURCES tests/test_driver.cpp)
+file(GLOB TEST_SOURCES tests/*.cpp)
 
 #file(GLOB SOURCE_FILES src/Instruccion.h src/Instruccion.cpp src/Programa.h src/Programa.cpp)
 #file(GLOB TEST_SOURCES tests/test_trie.cpp)

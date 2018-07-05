@@ -32,22 +32,6 @@ vector<string> combinaciones_le(vector<string> alfabeto, int n) {
     return v;
 }
 
-
-
-TEST(test_driver, primer_test){
-    //cout << "hello world";
-    Driver d;
-    //cout << "Finish"<<endl;
-    d.begin("r");
-    d.push(5);
-    EXPECT_EQ(d.prog.longitud("r"),1);
-    d.push(2);
-    EXPECT_EQ(d.prog.longitud("r"),2);
-    d.add();
-    //cout << "fin2"<<endl;
-
-}
-
 TEST(test_driver, programa_vacio) {
 	Driver d;
 	d.comenzarEjecucion("uzvpmxxq", 10);
@@ -617,16 +601,9 @@ TEST(test_driver, stress_read_write) {
 
 	d.comenzarEjecucion("main", 101);
 
-
-
-
-	//*
 	 while (!d.ejecucionFinalizada()) {
-        //cout << "ejecuta inst "<<endl;
 		d.ejecutarInstruccionActual();
 	}
-//*/
-
 
 	for (int i = 0; i <taux; i++) {
 		ASSERT_EQ(d.valorVariable(v[i]), i * (i + 1) / 2);
