@@ -1,36 +1,6 @@
 #include "gtest/gtest.h"
+
 #include "../src/Driver.h"
-#include <iostream>
-using namespace std;
-
-// Devuelve un vector con todas las cadenas de longitud n
-// formadas con las letras del alfabeto.
-vector<string> combinaciones_eq(vector<string> alfabeto, int n) {
-    vector<string> v;
-    if (n == 0) {
-        v.push_back("");
-        return v;
-    } else {
-        for (auto s : combinaciones_eq(alfabeto, n - 1)) {
-            for (auto x : alfabeto) {
-                v.push_back(x + s);
-            }
-        }
-        return v;
-    }
-}
-
-// Devuelve un vector con todas las cadenas de longitud entre 1 y n
-// formadas con las letras del alfabeto.
-vector<string> combinaciones_le(vector<string> alfabeto, int n) {
-    vector<string> v;
-    for (int i = 1; i <= n; i++) {
-        for (auto s : combinaciones_eq(alfabeto, i)) {
-            v.push_back(s);
-        }
-    }
-    return v;
-}
 
 TEST(test_driver, programa_vacio) {
 	Driver d;
@@ -40,16 +10,14 @@ TEST(test_driver, programa_vacio) {
 	ASSERT_TRUE(d.ejecucionFinalizada());
 }
 
-
 TEST(test_driver, push) {
 	Driver d;
 	d.begin("tpo");
 	d.push(6073366);
 	d.end("tpo");
-    //cout <<"antes"<<endl;
 	d.comenzarEjecucion("tpo", 1024);
-    //cout <<"dsp"<<endl;
-    ASSERT_EQ(d.instanteActual(), 0);
+
+	ASSERT_EQ(d.instanteActual(), 0);
 	ASSERT_EQ(d.topePila(), 0);
 	ASSERT_FALSE(d.ejecucionFinalizada());
 
@@ -320,10 +288,8 @@ TEST(test_driver, read_variable_indefinida) {
 
 
 
-
 TEST(test_driver, read) {
 	for (int tam_ventana = 1; tam_ventana < 10; tam_ventana++) {
-        //cout << "NUEVO FOR: CAP VENTANA: "<< tam_ventana<<"------------------------------------"<<endl;
 		Driver d;
 		d.begin("avwsno");
 		d.read("foo");
@@ -337,20 +303,22 @@ TEST(test_driver, read) {
 		ASSERT_FALSE(d.ejecucionFinalizada());
 
 		ASSERT_EQ(d.valorHistoricoVariable("foo", 0), 0);
-
+		d.calc.ver("foo");
 		d.ejecutarInstruccionActual();
-        //a partir de aca instante actual = 1
+		d.calc.ver("foo");
 		ASSERT_EQ(d.valorVariable("foo"), 0);
 		ASSERT_EQ(d.instanteActual(), 1);
 		ASSERT_EQ(d.topePila(), 0);
 		ASSERT_FALSE(d.ejecucionFinalizada());
 
 		d.asignarVariable("foo", 94984087);
-
+		d.calc.ver("foo");
 		ASSERT_EQ(d.valorHistoricoVariable("foo", 0), 0);
+		d.calc.ver("foo");
 		ASSERT_EQ(d.valorHistoricoVariable("foo", 1), 94984087);
-
+		d.calc.ver("foo");
 		d.ejecutarInstruccionActual();
+		d.calc.ver("foo");
 		ASSERT_EQ(d.valorVariable("foo"), 94984087);
 		ASSERT_EQ(d.instanteActual(), 2);
 		ASSERT_EQ(d.topePila(), 94984087);
@@ -365,7 +333,7 @@ TEST(test_driver, read) {
 		ASSERT_EQ(d.instanteActual(), 3);
 		ASSERT_EQ(d.topePila(), 94984087);
 		ASSERT_FALSE(d.ejecucionFinalizada());
-        ASSERT_EQ(d.valorHistoricoVariable("foo", 0), 0);
+
 		d.asignarVariable("foo", 21901650);
 
 		ASSERT_EQ(d.valorHistoricoVariable("foo", 0), 0);
@@ -387,9 +355,10 @@ TEST(test_driver, read) {
 	}
 }
 
+
+
 TEST(test_driver, read_write) {
 	for (int tam_ventana = 1; tam_ventana < 10; tam_ventana++) {
-		//cout << "CAP VENTANA: "<<tam_ventana<<endl;
 		Driver d;
 		d.begin("klb");
 		d.push(70435714);
@@ -398,14 +367,13 @@ TEST(test_driver, read_write) {
 		d.read("bar");
 		d.end("klb");
 		d.comenzarEjecucion("klb", tam_ventana);
-//inst 0
+
 		ASSERT_EQ(d.instanteActual(), 0);
 		ASSERT_FALSE(d.ejecucionFinalizada());
 
 		ASSERT_EQ(d.valorHistoricoVariable("bar", 0), 0);
-//inst 0
+
 		d.ejecutarInstruccionActual();
-//inst 1
 		ASSERT_EQ(d.valorVariable("bar"), 0);
 		ASSERT_EQ(d.instanteActual(), 1);
 		ASSERT_EQ(d.topePila(), 70435714);
@@ -413,26 +381,23 @@ TEST(test_driver, read_write) {
 
 		ASSERT_EQ(d.valorHistoricoVariable("bar", 0), 0);
 		ASSERT_EQ(d.valorHistoricoVariable("bar", 1), 0);
-//inst 1
-		d.ejecutarInstruccionActual(); //INST WRITE
-//inst 2
+
+		d.ejecutarInstruccionActual();
 		ASSERT_EQ(d.valorVariable("bar"), 70435714);
 		ASSERT_EQ(d.instanteActual(), 2);
 		ASSERT_EQ(d.topePila(), 0);
 		ASSERT_FALSE(d.ejecucionFinalizada());
 
 		ASSERT_EQ(d.valorHistoricoVariable("bar", 0), 0);
-		ASSERT_EQ(d.valorHistoricoVariable("bar", 1), 70435714);//DDEBE SER 70435714
+		ASSERT_EQ(d.valorHistoricoVariable("bar", 1), 70435714);
 		ASSERT_EQ(d.valorHistoricoVariable("bar", 2), 70435714);
-//inst 2
 
-
-		d.ejecutarInstruccionActual();//INSTR READ
-        //A PARTIR DE ACA INSTANTE ACTUAL = 3
+		d.ejecutarInstruccionActual();
 		ASSERT_EQ(d.valorVariable("bar"), 70435714);
 		ASSERT_EQ(d.instanteActual(), 3);
 		ASSERT_EQ(d.topePila(), 70435714);
 		ASSERT_FALSE(d.ejecucionFinalizada());
+
 		ASSERT_EQ(d.valorHistoricoVariable("bar", 0), 0);
 		ASSERT_EQ(d.valorHistoricoVariable("bar", 1), 70435714);
 		ASSERT_EQ(d.valorHistoricoVariable("bar", 2), 70435714);
@@ -458,6 +423,7 @@ TEST(test_driver, read_write) {
 		ASSERT_EQ(d.valorHistoricoVariable("bar", 4), 60157375);
 	}
 }
+
 
 TEST(test_driver, jump_rutina_inexistente) {
 	Driver d;
@@ -534,6 +500,34 @@ TEST(test_driver, loop_infinito) {
 }
 
 
+// Devuelve un vector con todas las cadenas de longitud n
+// formadas con las letras del alfabeto.
+vector<string> combinaciones_eq(vector<string> alfabeto, int n) {
+	vector<string> v;
+	if (n == 0) {
+		v.push_back("");
+		return v;
+	} else {
+		for (auto s : combinaciones_eq(alfabeto, n - 1)) {
+			for (auto x : alfabeto) {
+				v.push_back(x + s);
+			}
+		}
+		return v;
+	}
+}
+
+// Devuelve un vector con todas las cadenas de longitud entre 1 y n
+// formadas con las letras del alfabeto.
+vector<string> combinaciones_le(vector<string> alfabeto, int n) {
+	vector<string> v;
+	for (int i = 1; i <= n; i++) {
+		for (auto s : combinaciones_eq(alfabeto, i)) {
+			v.push_back(s);
+		}
+	}
+	return v;
+}
 
 // Usa la calculadora como un diccionario.
 TEST(test_driver, stress_diccionario) {
@@ -541,29 +535,26 @@ TEST(test_driver, stress_diccionario) {
 	vector<string> alfabeto = {"a", "b", "c"};
 	vector<string> nombres_variables = combinaciones_le(alfabeto, 4);
 	for (int tam_ventana = 1; tam_ventana <= max_tiempo; tam_ventana++) {
-        //cout << "empieza con w = " <<tam_ventana<<endl;
 		Driver d;
 		d.begin("main");
 		for (int t = 0; t < max_tiempo; t++) {
 			d.push(t);
 		}
 		d.end("main");
-		d.comenzarEjecucion("main", tam_ventana);//gato
+		d.comenzarEjecucion("main", tam_ventana);
+
 		for (int t = 0; t < max_tiempo; t++) {
 			int valor = 1000 * t;
 			for (auto v : nombres_variables) {
-                //cout << "asignamos a var " << v << " el valor: "<< valor<<endl;
 				d.asignarVariable(v, valor);
 				valor++;
 			}
 			d.ejecutarInstruccionActual();
 		}
-        //cout << "gatel valor en 0 de b es : " << d.valorHistoricoVariable("b",0)<<endl;
-        //cout << "gatel valor en 0 de b es : " << d.valorHistoricoVariable("c",0)<<endl;
+
 		for (int t = 0; t < max_tiempo; t++) {
 			int valorEsperado = 1000 * t;
 			for (auto v : nombres_variables) {
-                //cout << "v: "<< v << "t: "<<t<<endl;
 				ASSERT_EQ(
 					d.valorHistoricoVariable(v, t),
 					valorEsperado
@@ -574,38 +565,27 @@ TEST(test_driver, stress_diccionario) {
 	}
 }
 
-
-
 // Escritura y lectura de variables.
 TEST(test_driver, stress_read_write) {
 	vector<string> alfabeto = {"0", "1"};
 	vector<string> v = combinaciones_le(alfabeto, 8);
 
 	Driver d;
-    int taux = v.size();
 	d.begin("main");
-    //cout << "LA CANTIDAD INSTRUCCIONES: "<< taux<< "* 4" <<endl;
-	for (int i = 1; i < taux; i++) {
-        //cout << "Ciclo " << i << ":" << endl;
-
-
+	for (int i = 1; i < v.size(); i++) {
 		d.read(v[i - 1]);
-        //cout << "pushj"<<endl;
 		d.push(i);
-        //cout << "add"<<endl;
-        d.add();
-        //cout << "-----------esccribiendo variable: "<<v[i]<<endl;
+		d.add();
 		d.write(v[i]);
 	}
 	d.end("main");
 
 	d.comenzarEjecucion("main", 101);
-
-	 while (!d.ejecucionFinalizada()) {
+	while (!d.ejecucionFinalizada()) {
 		d.ejecutarInstruccionActual();
 	}
 
-	for (int i = 0; i <taux; i++) {
+	for (int i = 0; i < v.size(); i++) {
 		ASSERT_EQ(d.valorVariable(v[i]), i * (i + 1) / 2);
 	}
 
@@ -653,6 +633,7 @@ int factorial(int n) {
 	return y;
 }
 
+
 TEST(test_driver, programa_factorial) {
 	for (int a = 0; a < 10; a++) {
 		Driver d;
@@ -683,4 +664,5 @@ TEST(test_driver, programa_factorial) {
 		}
 		ASSERT_EQ(d.valorVariable("y"), factorial(a));
 	}
+
 }

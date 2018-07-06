@@ -105,8 +105,6 @@ gtest/gtest.h
 /home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/tests/gtest/gtest.h
 ../src/Driver.h
 /home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/src/Driver.h
-iostream
--
 
 /home/diego/Documentos/Facultad/Algoritmos/tp3/AEDTP3Calculadora/tests/test_instruccion.cpp
 gtest/gtest.h

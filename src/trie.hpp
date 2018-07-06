@@ -381,6 +381,7 @@ bool trie<T>::empty() const{
 
 template<typename T>
 trie<T>::ItDiccTrie::ItDiccTrie(){
+    clave = "";
 }
 
 template<typename T>

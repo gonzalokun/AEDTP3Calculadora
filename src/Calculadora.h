@@ -12,24 +12,12 @@ using namespace std;
 
 typedef int instante;
 typedef list<tuple<instante,valor> > valorHistorico;
-
-//typedef tuple<Ventana<tuple<instante, valor> >, valorHistorico>* itVarNombre;
-
-//struct estructuraDeVariablePorNombre;
-
-//typedef trie<estructuraDeVariablePorNombre>::ItDiccTrie itVarNombre;
-
-//typedef vector<Instruccion>* itRut;
-
-//typedef trie<vector<Instruccion>>::ItDiccTrie itRut;
-
-//typedef tuple<Operacion, int, itVarNombre, itRut> superInstruccion;
-
 class Calculadora {
 
 public:
     Calculadora();
     ~Calculadora();
+    void ver(variable var);
     void nuevaCalculadora(Programa p, rutina r, int capVent);
     bool getEjecutando() const;
     void ejecutarUnPaso();
@@ -54,7 +42,7 @@ private:
         list<tuple<instante,valor> > valorHistorico;
         estructuraDeVariablePorNombre(int w) : vent(Ventana<tuple<instante,valor> >(w)), valorHistorico(list<tuple<instante, valor> >()){        };
     };
-    const int indiceInstante(int i,int s,instante busc,variable var)const;
+    const int indiceInstante(int i,int s,instante busc,variable var);
     trie<estructuraDeVariablePorNombre> variablePorNombre;
 
     struct superInstruccion{

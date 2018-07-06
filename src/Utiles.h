@@ -3,20 +3,23 @@
 #define SOLUCION_UTILES_H
 
 #include "string"
+#include "Instruccion.h"
+#include "Programa.h"
+#include "Ventana.h"
+#include <queue>
+#include <map>
+#include <stack>
+#include <tuple>
 
 using namespace std;
 
 typedef int Operacion;
+typedef string rutina;
+typedef int valor;
+typedef string variable;
+enum Operacion {oAdd, oSub, oMul, oPush, oRead, oWrite, oJump, oJumpz, oNada};
+typedef int instante;
+typedef list<tuple<instante,valor> > valorHistorico;
 
-const Operacion PUSH = 1;
-const Operacion ADD = 2;
-const Operacion SUB = 3;
-const Operacion MUL = 4;
-const Operacion WRITE = 5;
-const Operacion READ = 6;
-const Operacion JUMP = 7;
-const Operacion JUMPZ = 8;
-
-typedef string Id;
 
 #endif //SOLUCION_UTILES_H

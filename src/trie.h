@@ -108,7 +108,6 @@ public:
         T& operator*() const;
         string claveActual() const;
 
-
     private:
         Nodo* _actual;
         string clave; //clave del nodo actual
