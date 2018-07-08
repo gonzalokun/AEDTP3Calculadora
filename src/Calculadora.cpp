@@ -17,6 +17,7 @@ Calculadora::~Calculadora() {
             rutinasProg[vecRutinas[i]][x].itRut = nullptr;
         }
     }
+
 }
 
 Calculadora::superInstruccion::~superInstruccion(   ) {
@@ -33,97 +34,110 @@ void Calculadora::nuevaCalculadora(Programa p, rutina const r, int const capVent
     indiceInstruccionActual = 0;
     variablePorNombre.cv = W;
     rutinasProg.cv = W;
-
-    rutinaActual = trie<vector<superInstruccion>>::ItDiccTrie(rutinasProg.nodoSignificado(""));
-    //pasada 1: recorremos rutinas de p y las guardamos
+    int rExist = false;
     list<rutina>::const_iterator it = (p.getRutinas()).begin();
     while (it != (p.getRutinas()).end()) {
-        //cout <<" cargando rutina: "<< *it<<endl;
-        rutinasProg[*it] = vector<superInstruccion>();
-        vecRutinas.push_back(*it);
         if(*it == r) { //si es la rutina con la que hay que empezar
-            //cout <<"--iniciando rutinaactual"<<endl;
-            rutinaActual = trie<vector<superInstruccion>>::ItDiccTrie(rutinasProg.nodoSignificado(r));
-            ////cout <<"LA CLAVE ASOCIADA A LA RUTINA ACTUAL ES: " <<(*rutinaActual).back().itRut->claveActual()<<endl;
+            rExist = true;
         }
         it++;
     }
+    if(rExist) //tenemos una rutina con la cual empezar, si no ni cargamos la calculadora
+        rutinaActual = trie<vector<superInstruccion>>::ItDiccTrie(rutinasProg.nodoSignificado(""));
+        //pasada 1: recorremos rutinas de p y las guardamos
+        it = (p.getRutinas()).begin();
+        while (it != (p.getRutinas()).end()) {
+            //cout <<" cargando rutina: "<< *it<<endl;
+            rutinasProg[*it] = vector<superInstruccion>();
+            vecRutinas.push_back(*it);
+            if(*it == r) { //si es la rutina con la que hay que empezar
+                //cout <<"--iniciando rutinaactual"<<endl;
+                rutinaActual = trie<vector<superInstruccion>>::ItDiccTrie(rutinasProg.nodoSignificado(r));
+            }
+            it++;
+        }
 
-    //cout << "EMPIEZA PASADA 2"<<endl;
-    //pasada 2: variables
-    //recorro instrucciones de rutina para ver las variables
-    it = (p.getRutinas()).begin();
-    while (it != (p.getRutinas()).end()) {
-        ////cout << "PASANDO POR RUTINA " <<  p.instruccion(*it,0).nombreRutina()<<" QUE TIENE #INST = "<< p.longitud(*it)<<endl;
-        for (int i = 0; i < p.longitud(*it); ++i) { //recorro instrucciones de la rutina actual
-            ////cout << "INSTRUCCION I: "<< i<< "OPERACION : " << p.instruccion(*it,i).getOp()<<endl;
-            if(p.instruccion(*it,i).getOp() == oWrite || p.instruccion(*it,i).getOp() == oRead) {
+        //cout << "EMPIEZA PASADA 2"<<endl;
+        //pasada 2: variables
+        //recorro instrucciones de rutina para ver las variables
+        it = (p.getRutinas()).begin();
+        while (it != (p.getRutinas()).end()) {
+            ////cout << "PASANDO POR RUTINA " <<  p.instruccion(*it,0).nombreRutina()<<" QUE TIENE #INST = "<< p.longitud(*it)<<endl;
+            for (int i = 0; i < p.longitud(*it); ++i) { //recorro instrucciones de la rutina actual
                 ////cout << "INSTRUCCION I: "<< i<< "OPERACION : " << p.instruccion(*it,i).getOp()<<endl;
-                estructuraDeVariablePorNombre est = estructuraDeVariablePorNombre(capVent);
-                est.vent.registrar(make_tuple(0,0));
-                est.valorHistorico.push_back(make_tuple(0,0));
-                variablePorNombre[make_tuple(p.instruccion(*it,i).nombreVariable(), capVent)] = est;
+                if(p.instruccion(*it,i).getOp() == oWrite || p.instruccion(*it,i).getOp() == oRead) {
+                    ////cout << "INSTRUCCION I: "<< i<< "OPERACION : " << p.instruccion(*it,i).getOp()<<endl;
+                    estructuraDeVariablePorNombre est = estructuraDeVariablePorNombre(capVent);
+                    est.vent.registrar(make_tuple(0,0));
+                    est.valorHistorico.push_back(make_tuple(0,0));
+                    variablePorNombre[make_tuple(p.instruccion(*it,i).nombreVariable(), capVent)] = est;
 
+                }
+            }
+            it++;
+        }
+
+        //cout << "TERMINA PASADA 2"<<endl;
+        //pasada 3: lista de instrucciones a cada rutinas.
+        it = (p.getRutinas()).begin();
+        ////cout << "cnatidad de rutinas: "<<p.getRutinas().size()<<endl;
+        while(it!= (p.getRutinas()).end()) {
+            //cout << "ANALIZANDO RUTINA: "<<(*it)<<endl;
+            vector<superInstruccion> vec;
+            if(p.longitud(*it) == 0) {
+                rutinasProg[*it] = vec;
+            }
+            //si tiene instrucciones
+            for (int i = 0; i < p.longitud(*it); ++i) {
+                Operacion op;
+                int cNum;
+                op = p.instruccion(*it,i).getOp();
+                Instruccion instr = p.instruccion(*it,i);
+                cNum = p.instruccion(*it,i).constanteNumerica();
+                trie<estructuraDeVariablePorNombre>::ItDiccTrie auxItVar;
+                auxItVar = trie<estructuraDeVariablePorNombre>::ItDiccTrie(variablePorNombre.nodoSignificado(""));
+
+                if(op == oRead || op == oWrite) {
+                    auxItVar = trie<estructuraDeVariablePorNombre>::ItDiccTrie(variablePorNombre.nodoSignificado(p.instruccion(*it,i).nombreVariable()));
+                }else{
+                    //auxItVar =  trie<estructuraDeVariablePorNombre>::ItDiccTrie(variablePorNombre.nodoSignificado(""));
+                }
+
+                trie<vector<superInstruccion>>::ItDiccTrie* auxItRut;
+
+                if(oJump == op || op == oJumpz) {
+                    ////cout <<"EL NOMBRE DE LA RUTINA DEL JUMP -------------"<<p.instruccion(*it,i).getRutinaJump()<<endl;
+
+                    auxItRut = new trie<vector<superInstruccion>>::ItDiccTrie(rutinasProg.nodoSignificado(p.instruccion(*it,i).getRutinaJump()));
+                }else {
+                    auxItRut = new trie<vector<superInstruccion>>::ItDiccTrie(rutinasProg.nodoSignificado(""));
+                }
+                superInstruccion sp;
+                sp.constanteNumerica=cNum;
+                sp.op = op;
+                sp.itVarNombre = auxItVar;
+                sp.itRut = auxItRut;
+                vec.push_back(sp);
+                rutinasProg[*it] = vec;
+            }
+            it++;
+        }
+
+
+        if(rutinaActual.claveActual() == "") {
+            ejecutando = false;
+        }
+        if(rutinasProg.size() == 0){
+            ejecutando = false;
+        } else {
+            if(rutinasProg[rutinaActual.claveActual()].size()==0){
+                ejecutando=false;
             }
         }
-        it++;
-    }
-
-    //cout << "TERMINA PASADA 2"<<endl;
-    //pasada 3: lista de instrucciones a cada rutinas.
-    it = (p.getRutinas()).begin();
-    ////cout << "cnatidad de rutinas: "<<p.getRutinas().size()<<endl;
-    while(it!= (p.getRutinas()).end()) {
-        //cout << "ANALIZANDO RUTINA: "<<(*it)<<endl;
-        vector<superInstruccion> vec;
-        if(p.longitud(*it) == 0) {
-            rutinasProg[*it] = vec;
-        }
-        //si tiene instrucciones
-        for (int i = 0; i < p.longitud(*it); ++i) {
-            Operacion op;
-            int cNum;
-            op = p.instruccion(*it,i).getOp();
-            Instruccion instr = p.instruccion(*it,i);
-            cNum = p.instruccion(*it,i).constanteNumerica();
-            trie<estructuraDeVariablePorNombre>::ItDiccTrie auxItVar;
-            auxItVar = trie<estructuraDeVariablePorNombre>::ItDiccTrie(variablePorNombre.nodoSignificado(""));
-
-            if(op == oRead || op == oWrite) {
-                auxItVar = trie<estructuraDeVariablePorNombre>::ItDiccTrie(variablePorNombre.nodoSignificado(p.instruccion(*it,i).nombreVariable()));
-            }else{
-                //auxItVar =  trie<estructuraDeVariablePorNombre>::ItDiccTrie(variablePorNombre.nodoSignificado(""));
-            }
-
-            trie<vector<superInstruccion>>::ItDiccTrie* auxItRut;
-
-            if(oJump == op || op == oJumpz) {
-                ////cout <<"EL NOMBRE DE LA RUTINA DEL JUMP -------------"<<p.instruccion(*it,i).getRutinaJump()<<endl;
-
-                auxItRut = new trie<vector<superInstruccion>>::ItDiccTrie(rutinasProg.nodoSignificado(p.instruccion(*it,i).getRutinaJump()));
-            }else {
-                auxItRut = new trie<vector<superInstruccion>>::ItDiccTrie(rutinasProg.nodoSignificado(""));
-            }
-            superInstruccion sp;
-            sp.constanteNumerica=cNum;
-            sp.op = op;
-            sp.itVarNombre = auxItVar;
-            sp.itRut = auxItRut;
-            vec.push_back(sp);
-            rutinasProg[*it] = vec;
-        }
-        it++;
-    }
-
-    if(rutinaActual.claveActual() == "") ejecutando = false;
-
-    if(rutinasProg.size() == 0){
+    }else {
         ejecutando = false;
-    } else {
-        if(rutinasProg[rutinaActual.claveActual()].size()==0){
-            ejecutando=false;
-        }
     }
+
 
 }
 bool Calculadora::getEjecutando() const{

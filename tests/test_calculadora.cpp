@@ -28,14 +28,16 @@ TEST(test_calculadora, test_comportamientos_2) {
     Programa p;
     Instruccion i1,i2;
     Calculadora c,c2;
+    i1.push(5);
     i2.jumpz("jump_rutina_inexistente");
     p.nuevaRutina("rutina1");
     p.agregarInstruccion("rutina1",i1);
     p.agregarInstruccion("rutina1",i2);
 
-    c.nuevaCalculadora(p,"rutina_no_existe",20); //iniciamos con rutina q no existe
-
-    EXPECT_EQ(c.getInstanteActual(),0);
+    c.nuevaCalculadora(p,"rutina1",20); //iniciamos con rutina q no existe
+    c.ejecutarUnPaso();
+    c.ejecutarUnPaso();
+    EXPECT_EQ(c.getInstanteActual(),2);
     EXPECT_FALSE(c.getEjecutando());
 }
 

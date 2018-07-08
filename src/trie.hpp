@@ -382,11 +382,14 @@ bool trie<T>::empty() const{
 template<typename T>
 trie<T>::ItDiccTrie::ItDiccTrie(){
     clave = "";
+    _actual = nullptr;
 }
 
 template<typename T>
 trie<T>::ItDiccTrie::ItDiccTrie(Nodo *nodo){
     //cout << "INICIO DIC CON NODO DE CLAVE: "<< nodo->clave<<endl;
+    _actual = nullptr;
+
     if(nodo->clave!="") {
         _actual = nodo;
         _actual->definicion = nodo->definicion;
@@ -402,6 +405,20 @@ trie<T>::ItDiccTrie::ItDiccTrie(Nodo *nodo){
 }
 
 template<typename T>
+typename trie<T>::Nodo* trie<T>::ItDiccTrie::getNodo() {
+    return _actual;
+}
+
+template<typename T>
+trie<T>::ItDiccTrie::~ItDiccTrie() {
+    if (clave!="" && _actual==nullptr) {
+        borrarNodos(_actual);
+        _actual = nullptr;
+    }
+}
+
+
+template<typename T>
 T& trie<T>::ItDiccTrie::operator*() const{
     if(_actual->clave != ""){
         return *(_actual->definicion);
@@ -411,6 +428,35 @@ T& trie<T>::ItDiccTrie::operator*() const{
         return *aux;
     }*/
 }
+
+template<typename T>
+void trie<T>::ItDiccTrie::borrarNodos(Nodo *nodo) {
+    ////cout << "entro a borrar Nodos"<<endl;
+    for (int i = 0; i < 256; i++)
+    {
+        if(nodo->siguientes[i] != nullptr){
+            ////cout << "entro al nodo " << char(97+i)<< " y tiene hijos, elimino hijos y dspa  el"<<endl;
+            //delete raiz->siguientes[i]->definicion;
+            if(nodo->siguientes[i]->definicion != nullptr) {
+                ////cout << "borramos definicion en "<<char(97+i)<<"="<<*(nodo->siguientes[i]->definicion)<<endl;
+                ////cout << "borramos def------------------------------------------------------------------------"<<endl;
+                delete nodo->siguientes[i]->definicion;
+                nodo->siguientes[i]->definicion = nullptr;
+            }
+
+            borrarNodos(nodo->siguientes[i]);
+            ////cout << "----finalmente elimino ----" << char(97+i)<<endl;
+            delete[] nodo->siguientes[i]->siguientes;
+            delete nodo->siguientes[i];
+            nodo->siguientes[i] = nullptr;
+        }else {
+            ////cout << "    entro al nodo "<< char(97+i)<< " y no tiene hijos, asi q loelimino"<<endl;
+            delete nodo->siguientes[i];
+            nodo->siguientes[i] = nullptr;
+        }
+    }
+}
+
 template<typename T>
 string trie<T>::ItDiccTrie::claveActual() const{
     return _actual->clave;

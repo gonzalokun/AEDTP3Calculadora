@@ -15,7 +15,7 @@ void Driver::begin(string rutina) {
     {
         prog.nuevaRutina(rutina);
         rutinaActual = rutina;
-        instAct = new Instruccion(rutina);
+        instAct = Instruccion(rutina);
     }
 
 }
@@ -24,16 +24,16 @@ void Driver::end(string rutina) {
     if(!comenzoEjecucion)
     {
         rutinaActual =rutina;
-        delete instAct;
-        instAct = nullptr;
+        //delete instAct;
+        //instAct = nullptr;
     }
 }
 
 void Driver::push(int n) {
     if(!comenzoEjecucion)
     {
-        instAct->push(n);
-        prog.agregarInstruccion(rutinaActual, *instAct);
+        instAct.push(n);
+        prog.agregarInstruccion(rutinaActual, instAct);
     }
 
 }
@@ -41,8 +41,8 @@ void Driver::push(int n) {
 void Driver::add() {
     if(!comenzoEjecucion)
     {
-        instAct->add();
-        prog.agregarInstruccion(rutinaActual, *instAct);
+        instAct.add();
+        prog.agregarInstruccion(rutinaActual, instAct);
     }
 
 }
@@ -50,8 +50,8 @@ void Driver::add() {
 void Driver::sub() {
     if(!comenzoEjecucion)
     {
-        instAct->sub();
-        prog.agregarInstruccion(rutinaActual, *instAct);
+        instAct.sub();
+        prog.agregarInstruccion(rutinaActual, instAct);
     }
 
 }
@@ -59,8 +59,8 @@ void Driver::sub() {
 void Driver::mul() {
     if(!comenzoEjecucion)
     {
-        instAct->mul();
-        prog.agregarInstruccion(rutinaActual, *instAct);
+        instAct.mul();
+        prog.agregarInstruccion(rutinaActual, instAct);
     }
 
 }
@@ -68,8 +68,8 @@ void Driver::mul() {
 void Driver::read(string variable) {
     if(!comenzoEjecucion)
     {
-        instAct->read(variable);
-        prog.agregarInstruccion(rutinaActual, *instAct);
+        instAct.read(variable);
+        prog.agregarInstruccion(rutinaActual, instAct);
     }
 
 }
@@ -77,8 +77,8 @@ void Driver::read(string variable) {
 void Driver::write(string variable) {
     if(!comenzoEjecucion)
     {
-        instAct->write(variable);
-        prog.agregarInstruccion(rutinaActual, *instAct);
+        instAct.write(variable);
+        prog.agregarInstruccion(rutinaActual, instAct);
     }
 
 }
@@ -86,8 +86,8 @@ void Driver::write(string variable) {
 void Driver::jump(string rutina) {
     if(!comenzoEjecucion)
     {
-        instAct->jump(rutina);
-        prog.agregarInstruccion(rutinaActual, *instAct);
+        instAct.jump(rutina);
+        prog.agregarInstruccion(rutinaActual, instAct);
     }
 
 }
@@ -95,8 +95,8 @@ void Driver::jump(string rutina) {
 void Driver::jumpz(string rutina) {
     if(!comenzoEjecucion)
     {
-        instAct->jumpz(rutina);
-        prog.agregarInstruccion(rutinaActual, *instAct);
+        instAct.jumpz(rutina);
+        prog.agregarInstruccion(rutinaActual, instAct);
     }
 
 

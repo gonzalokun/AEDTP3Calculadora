@@ -27,30 +27,36 @@ void Instruccion::push(valor n){
     op = oPush;
     consNum = n;
     nombreVar = "";
+    rutinaJump="";
 }
 void Instruccion::add(){
     op = oAdd;
     nombreVar = "";
+    rutinaJump="";
     consNum = 0;
 }
 void Instruccion::sub(){
     op = oSub;
     nombreVar = "";
+    rutinaJump="";
     consNum = 0;
 }
 void Instruccion::mul(){
     op = oMul;
     nombreVar = "";
+    rutinaJump="";
     consNum = 0;
 }
 void Instruccion::read(const variable& var){
     op = oRead;
     nombreVar = var;
+    rutinaJump="";
     consNum = 0;
 }
 void Instruccion::write(const variable& var){
     op = oWrite;
     nombreVar = var;
+    rutinaJump="";
     consNum = 0;
 }
 void Instruccion::jump(const rutina& r){
