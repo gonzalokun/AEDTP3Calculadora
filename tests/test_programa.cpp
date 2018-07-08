@@ -20,6 +20,37 @@ TEST(test_programa, testProgramaVacio){
 
 }
 
+TEST(test_programa, programaRaro) {
+    Programa p;
+    Instruccion i1;
+    i1.push(5);
+    ASSERT_EQ(p.getRutinas().size(),0);
+    p.nuevaRutina("A");
+    EXPECT_EQ(p.longitud("A"),0);
+    p.agregarInstruccion("B",i1);//agrego rutina que no existe, internamente la crea
+    i1.push(2);
+    EXPECT_EQ(p.longitud("B"),1);
+    p.agregarInstruccion("B",i1);
+    EXPECT_EQ(p.getRutinas().size(),2);
+    i1.add();
+    p.agregarInstruccion("B",i1);
+    EXPECT_EQ(p.getRutinas().size(),2);
+    EXPECT_EQ(p.longitud("B"),3);
+}
+
+TEST(test_programa, programaRaro2) {
+    Programa p;
+    Instruccion i;
+    i.push(4);
+    i.write("x");
+    i.push(10);
+    p.nuevaRutina("A");
+    p.agregarInstruccion("A",i);
+    //La instruccion que vale es la ultima;
+    EXPECT_EQ(p.instruccion("A", p.longitud("B")-1).getOp(),oPush);
+    EXPECT_EQ(p.instruccion("A", p.longitud("B")-1).constanteNumerica(),10);
+
+}
 
 TEST(test_programa, testPrograma) {
     Programa p;

@@ -18,9 +18,11 @@ void Programa::nuevaRutina(const rutina r) {
 
 void Programa::agregarInstruccion(rutina r, Instruccion i){
     i.setRutina(r);
-    //cout << "EMPIEZA READ"<<endl;
+    if(rutinasPorNombre.count(r) > 0) {
+    }else {
+        nuevaRutina(r);
+    }
     rutinasPorNombre[r].push_back(i);
-    //cout << "termina read"<<endl;
 }
 
 const list<rutina>& Programa::getRutinas() const{

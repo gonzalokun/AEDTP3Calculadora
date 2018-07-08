@@ -285,9 +285,6 @@ TEST(test_driver, read_variable_indefinida) {
 	ASSERT_TRUE(d.ejecucionFinalizada());
 }
 
-
-
-
 TEST(test_driver, read) {
 	for (int tam_ventana = 1; tam_ventana < 10; tam_ventana++) {
 		Driver d;
@@ -303,22 +300,19 @@ TEST(test_driver, read) {
 		ASSERT_FALSE(d.ejecucionFinalizada());
 
 		ASSERT_EQ(d.valorHistoricoVariable("foo", 0), 0);
-		d.calc.ver("foo");
+
 		d.ejecutarInstruccionActual();
-		d.calc.ver("foo");
 		ASSERT_EQ(d.valorVariable("foo"), 0);
 		ASSERT_EQ(d.instanteActual(), 1);
 		ASSERT_EQ(d.topePila(), 0);
 		ASSERT_FALSE(d.ejecucionFinalizada());
 
 		d.asignarVariable("foo", 94984087);
-		d.calc.ver("foo");
+
 		ASSERT_EQ(d.valorHistoricoVariable("foo", 0), 0);
-		d.calc.ver("foo");
 		ASSERT_EQ(d.valorHistoricoVariable("foo", 1), 94984087);
-		d.calc.ver("foo");
+
 		d.ejecutarInstruccionActual();
-		d.calc.ver("foo");
 		ASSERT_EQ(d.valorVariable("foo"), 94984087);
 		ASSERT_EQ(d.instanteActual(), 2);
 		ASSERT_EQ(d.topePila(), 94984087);
@@ -354,8 +348,6 @@ TEST(test_driver, read) {
 		ASSERT_EQ(d.valorHistoricoVariable("foo", 4), 21901650);
 	}
 }
-
-
 
 TEST(test_driver, read_write) {
 	for (int tam_ventana = 1; tam_ventana < 10; tam_ventana++) {
@@ -423,7 +415,6 @@ TEST(test_driver, read_write) {
 		ASSERT_EQ(d.valorHistoricoVariable("bar", 4), 60157375);
 	}
 }
-
 
 TEST(test_driver, jump_rutina_inexistente) {
 	Driver d;
@@ -498,7 +489,6 @@ TEST(test_driver, loop_infinito) {
 		ASSERT_FALSE(d.ejecucionFinalizada());
 	}
 }
-
 
 // Devuelve un vector con todas las cadenas de longitud n
 // formadas con las letras del alfabeto.
@@ -591,8 +581,6 @@ TEST(test_driver, stress_read_write) {
 
 }
 
-
-
 // Stress de llamados a rutinas.
 TEST(test_driver, stress_jump) {
 	vector<string> alfabeto = {"0", "1"};
@@ -633,7 +621,6 @@ int factorial(int n) {
 	return y;
 }
 
-
 TEST(test_driver, programa_factorial) {
 	for (int a = 0; a < 10; a++) {
 		Driver d;
@@ -664,5 +651,5 @@ TEST(test_driver, programa_factorial) {
 		}
 		ASSERT_EQ(d.valorVariable("y"), factorial(a));
 	}
-
 }
+

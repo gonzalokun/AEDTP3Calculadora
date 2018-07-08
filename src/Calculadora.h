@@ -54,7 +54,6 @@ private:
     };
     vector<rutina> vecRutinas; //lo usamos en el destructor.
     trie<vector<superInstruccion>> rutinasProg;
-
     trie<vector<superInstruccion>>::ItDiccTrie rutinaActual;
 
     stack<int> pila;

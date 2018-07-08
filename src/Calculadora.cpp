@@ -366,23 +366,23 @@ const int Calculadora::getIndiceInstruccionActual() const{
 }
 
 const int Calculadora::indiceInstante(int const i,int const s,instante const busc,variable const var){
-    cout << "busco el valor de " << var << " en el instante: "<<busc<<endl;
+   //cout << "busco el valor de " << var << " en el instante: "<<busc<<endl;
     //hacemos busqueda binaria para buscar el valor de la variable en el instante perteneciente a la capcidad de VENTANA
     Ventana<tuple<instante,valor> > ventBusqueda = variablePorNombre[make_tuple(var,W)].vent;
     int medio = ((s-i)/2)+i;
     int tamTotal = variablePorNombre[make_tuple(var,W)].vent.tam();
-    cout << "i: "<< i<< " tope: "<< s <<"medio: "<<medio<<endl;
+   //cout << "i: "<< i<< " tope: "<< s <<"medio: "<<medio<<endl;
     for (int j = i; j < s; ++j)
     {
-        cout<< "instante j= "<<j<<" vale: "<<get<0>(ventBusqueda[j])<<endl;
+       //cout<< "instante j= "<<j<<" vale: "<<get<0>(ventBusqueda[j])<<endl;
     }
-    cout << "valor de medio: "<<medio<<endl;
+   //cout << "valor de medio: "<<medio<<endl;
     if(get<0>(ventBusqueda[medio]) == busc) {
         return medio;
     }
 
     if(s-i == 1){
-    cout << "por aca no sigue"<<endl;
+   //cout << "por aca no sigue"<<endl;
         if(get<0>(ventBusqueda[medio]) > busc) {
             return 0;
         }else if(get<0>(ventBusqueda[medio]) < busc){
@@ -410,15 +410,15 @@ const int Calculadora::indiceInstante(int const i,int const s,instante const bus
 
 
 void Calculadora::ver(variable var) {
-    cout << "ENTRO A VER ------------------------"<<endl;
+   //cout << "ENTRO A VER ------------------------"<<endl;
     for (int i = 0; i < variablePorNombre[make_tuple(var,W)].vent.tam(); ++i)
     {
-        cout << "instantes guardados: "<< get<0>(variablePorNombre[make_tuple(var,W)].vent[i])<<endl;
+       //cout << "instantes guardados: "<< get<0>(variablePorNombre[make_tuple(var,W)].vent[i])<<endl;
     }
 }
 
 const valor Calculadora::valorEnInstante(variable const var, instante const inst) {
-    cout << "busco "<<var << " en inst:"<<inst<<endl;
+   //cout << "busco "<<var << " en inst:"<<inst<<endl;
     if(instanteActual == inst) return valorActualVariable(var);
     if(instanteActual >= inst && inst >=0) {
        if(variablePorNombre.count(var) > 0){ //el valor esta comprendido en la capacidad de ventana
@@ -428,9 +428,9 @@ const valor Calculadora::valorEnInstante(variable const var, instante const inst
                 //busco el indice de instante
                 int indiceEnVentana = indiceInstante(0,variablePorNombre[make_tuple(var,W)].vent.tam(),inst,var);
                 //indexamos
-                cout << "indice de vent: "<<indiceEnVentana<<endl;
-                cout << "inst en ese indice: "<< (get<0>(variablePorNombre[make_tuple(var,W)].vent[indiceEnVentana]))<<endl;
-                cout << "retorno valor en ese indice: "<< (get<1>(variablePorNombre[make_tuple(var,W)].vent[indiceEnVentana]))<<endl;
+               //cout << "indice de vent: "<<indiceEnVentana<<endl;
+               //cout << "inst en ese indice: "<< (get<0>(variablePorNombre[make_tuple(var,W)].vent[indiceEnVentana]))<<endl;
+               //cout << "retorno valor en ese indice: "<< (get<1>(variablePorNombre[make_tuple(var,W)].vent[indiceEnVentana]))<<endl;
                 return (get<1>(variablePorNombre[make_tuple(var,W)].vent[indiceEnVentana]));
 
             }else {//el valor pertenece al valor historico y no hay complejidad para buscarlo
