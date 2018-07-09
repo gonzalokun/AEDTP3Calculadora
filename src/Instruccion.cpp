@@ -1,20 +1,22 @@
 #include "Instruccion.h"
 
 Instruccion::Instruccion(rutina r) {
-    //cout << "Nueva instruccion perteneciente a rutina: " << r<<endl;
+    ////cout << "Nueva instruccion perteneciente a rutina: " << r<<endl;
     nombreRut = r;
     nombreVar = "";
     consNum = 0;
     op = oNada;
+    rutinaJump="";
 }
 
 
 Instruccion::Instruccion() {
-    //cout << "Nueva instruccion sin rutina"<<endl;
+    ////cout << "Nueva instruccion sin rutina"<<endl;
     nombreRut = "";
     nombreVar = "";
     consNum = 0;
     op=oNada;
+    rutinaJump="";
 }
 
 Instruccion::~Instruccion(){
@@ -24,32 +26,54 @@ Instruccion::~Instruccion(){
 void Instruccion::push(valor n){
     op = oPush;
     consNum = n;
+    nombreVar = "";
+    rutinaJump="";
 }
 void Instruccion::add(){
     op = oAdd;
-
+    nombreVar = "";
+    rutinaJump="";
+    consNum = 0;
 }
 void Instruccion::sub(){
     op = oSub;
+    nombreVar = "";
+    rutinaJump="";
+    consNum = 0;
 }
 void Instruccion::mul(){
     op = oMul;
+    nombreVar = "";
+    rutinaJump="";
+    consNum = 0;
 }
 void Instruccion::read(const variable& var){
     op = oRead;
     nombreVar = var;
+    rutinaJump="";
+    consNum = 0;
 }
 void Instruccion::write(const variable& var){
     op = oWrite;
     nombreVar = var;
+    rutinaJump="";
+    consNum = 0;
 }
 void Instruccion::jump(const rutina& r){
     op = oJump;
-    nombreRut = r;
+    rutinaJump=r;
+    nombreVar = "";
+    consNum = 0;
 }
 void Instruccion::jumpz(const rutina& r){
     op = oJumpz;
-    nombreRut = r;
+    rutinaJump=r;
+    nombreVar = "";
+    consNum = 0;
+}
+
+rutina Instruccion::getRutinaJump() {
+    return rutinaJump;
 }
 
 

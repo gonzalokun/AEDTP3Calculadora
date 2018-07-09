@@ -13,6 +13,46 @@ TEST(test_instruccion, instrConstSinParam) {
     ASSERT_TRUE(i.nombreRutina() == "RutinaUno");
 }
 
+TEST(test_instruccion, instrCambiadas){
+    Instruccion i("r");
+    ASSERT_TRUE(i.nombreRutina()=="r");
+    ASSERT_TRUE(i.constanteNumerica()==0);
+    ASSERT_TRUE(i.nombreVariable() == "");
+    i.sub();
+    ASSERT_TRUE(i.nombreVariable() == "");
+    ASSERT_TRUE(i.getOp()==oSub);
+    i.add();
+    ASSERT_TRUE(i.nombreVariable()=="");
+    ASSERT_FALSE(i.getOp()==oSub);
+    ASSERT_TRUE(i.getOp()==oAdd);
+    ASSERT_FALSE(i.getOp()==oWrite);
+    i.write("x");
+    ASSERT_FALSE(i.getOp()==oSub);
+    ASSERT_FALSE(i.getOp()==oAdd);
+}
+TEST(test_instruccion, compotamientosDiferentes){
+    Instruccion i;
+    ASSERT_TRUE(i.nombreRutina()=="");
+    ASSERT_TRUE(i.constanteNumerica()==0);
+    ASSERT_TRUE(i.nombreVariable() == "");
+    ASSERT_FALSE(i.getOp()==oWrite);
+    i.write("w");
+    ASSERT_TRUE(i.getOp()==oWrite);
+    i.read("w");
+    ASSERT_FALSE(i.getOp()==oWrite);
+    ASSERT_TRUE(i.getOp()==oRead);
+    ASSERT_TRUE(i.nombreRutina()=="");
+    ASSERT_TRUE(i.constanteNumerica()==0);
+    ASSERT_TRUE(i.nombreVariable() == "w");
+    ASSERT_TRUE(i.constanteNumerica()==0);
+    i.push(2);
+    ASSERT_TRUE(i.nombreVariable() == "");
+    ASSERT_TRUE(i.getOp() == oPush);
+    ASSERT_TRUE(i.nombreRutina() == "");
+    i.setRutina("NuevaRutina");
+    ASSERT_TRUE(i.constanteNumerica()==2);
+    ASSERT_TRUE(i.nombreRutina() == "NuevaRutina");
+}
 
 TEST(test_instruccion, instrConstConParam) {
     Instruccion i("Rutina");

@@ -1,26 +1,6 @@
 #include "gtest/gtest.h"
+
 #include "../src/Driver.h"
-#include <iostream>
-using namespace std;
-
-TEST(test_driver, primer_test){
-    cout << "hello world";
-    Driver d;
-    cout << "Finish"<<endl;
-    d.begin("r");
-    d.push(5);
-    EXPECT_EQ(d.prog.longitud("r"),1);
-    d.push(2);
-    EXPECT_EQ(d.prog.longitud("r"),2);
-    d.add();
-    cout <<"operacion 0 de Rutina1: "<< d.prog.instruccion2("r", 0)<<endl;
-    cout <<"op == oPush? : " << (d.prog.instruccion2("r",0) == oPush )  <<endl;
-    d.asignarVariable("a",5);
-    EXPECT_EQ(d.valorVariable("a"),5);
-    cout << "fin2"<<endl;
-    d.end("r");
-
-}
 
 TEST(test_driver, programa_vacio) {
 	Driver d;
@@ -30,16 +10,14 @@ TEST(test_driver, programa_vacio) {
 	ASSERT_TRUE(d.ejecucionFinalizada());
 }
 
-
 TEST(test_driver, push) {
 	Driver d;
 	d.begin("tpo");
 	d.push(6073366);
 	d.end("tpo");
-    cout <<"antes"<<endl;
 	d.comenzarEjecucion("tpo", 1024);
-    cout <<"dsp"<<endl;
-    ASSERT_EQ(d.instanteActual(), 0);
+
+	ASSERT_EQ(d.instanteActual(), 0);
 	ASSERT_EQ(d.topePila(), 0);
 	ASSERT_FALSE(d.ejecucionFinalizada());
 
@@ -307,13 +285,8 @@ TEST(test_driver, read_variable_indefinida) {
 	ASSERT_TRUE(d.ejecucionFinalizada());
 }
 
-
-
-
-
 TEST(test_driver, read) {
 	for (int tam_ventana = 1; tam_ventana < 10; tam_ventana++) {
-        cout << "NUEVO FOR: CAP VENTANA: "<< tam_ventana<<"------------------------------------"<<endl;
 		Driver d;
 		d.begin("avwsno");
 		d.read("foo");
@@ -329,7 +302,6 @@ TEST(test_driver, read) {
 		ASSERT_EQ(d.valorHistoricoVariable("foo", 0), 0);
 
 		d.ejecutarInstruccionActual();
-        //a partir de aca instante actual = 1
 		ASSERT_EQ(d.valorVariable("foo"), 0);
 		ASSERT_EQ(d.instanteActual(), 1);
 		ASSERT_EQ(d.topePila(), 0);
@@ -355,7 +327,7 @@ TEST(test_driver, read) {
 		ASSERT_EQ(d.instanteActual(), 3);
 		ASSERT_EQ(d.topePila(), 94984087);
 		ASSERT_FALSE(d.ejecucionFinalizada());
-        ASSERT_EQ(d.valorHistoricoVariable("foo", 0), 0);
+
 		d.asignarVariable("foo", 21901650);
 
 		ASSERT_EQ(d.valorHistoricoVariable("foo", 0), 0);
@@ -376,7 +348,7 @@ TEST(test_driver, read) {
 		ASSERT_EQ(d.valorHistoricoVariable("foo", 4), 21901650);
 	}
 }
-/*
+
 TEST(test_driver, read_write) {
 	for (int tam_ventana = 1; tam_ventana < 10; tam_ventana++) {
 		Driver d;
@@ -680,4 +652,4 @@ TEST(test_driver, programa_factorial) {
 		ASSERT_EQ(d.valorVariable("y"), factorial(a));
 	}
 }
-*/
+

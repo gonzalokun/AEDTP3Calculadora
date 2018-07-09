@@ -104,11 +104,12 @@ public:
 
     public:
         ItDiccTrie();
+        ~ItDiccTrie();
         ItDiccTrie(Nodo*);
         T& operator*() const;
+        void borrarNodos(Nodo*);
         string claveActual() const;
-
-
+        Nodo* getNodo();
     private:
         Nodo* _actual;
         string clave; //clave del nodo actual
