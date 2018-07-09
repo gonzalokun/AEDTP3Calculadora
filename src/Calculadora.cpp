@@ -42,7 +42,7 @@ void Calculadora::nuevaCalculadora(Programa p, rutina const r, int const capVent
         }
         it++;
     }
-    if(rExist) //tenemos una rutina con la cual empezar, si no ni cargamos la calculadora
+    if(rExist){ //tenemos una rutina con la cual empezar, si no ni cargamos la calculadora
         rutinaActual = trie<vector<superInstruccion>>::ItDiccTrie(rutinasProg.nodoSignificado(""));
         //pasada 1: recorremos rutinas de p y las guardamos
         it = (p.getRutinas()).begin();
